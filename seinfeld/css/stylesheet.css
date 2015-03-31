@@ -8,6 +8,8 @@ div {
     transform: translate(-50%, -50%)
 }
 
+
+
 div2 {
 	 padding-right: 100px;
 	 padding-left: 100px;
@@ -61,6 +63,10 @@ position: fixed;
 	position: fixed;
 	left:55%;
 	top:35%;
+}
+.kramer{
+	background-image: url(images/kramerhead.png);
+	
 }
 .link{
 	background-color: transparent;
