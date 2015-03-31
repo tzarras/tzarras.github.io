@@ -1,0 +1,55 @@
+<html>
+<head>
+<meta charset="UTF-8">
+ <link rel="stylesheet" href="/Users/TimKitchen/Downloads/firstpapersite/css/paperstyle.css">
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/paperscript" canvas="canvas">
+
+
+
+var path;
+tool.minDistance = 5;
+var x;
+
+
+function onMouseDown(event) {
+	path = new Path();
+	path.fillColor = {
+		hue: 'red' ,
+		saturation: 1,
+		brightness: 1,
+	};
+	path.strokeColor = 'blue';
+	path.strokeWidth = 3;
+	path.dashArray = [3, 3];
+	path.add(event.point);
+	path2.add(event.point);
+	var copy = path.clone();
+copy.position.x += 150;
+
+// Flatten the path, with a max distance of 20:
+copy.flatten(20);
+
+}
+
+function onMouseDrag(event) {
+	path.add(event.point);
+}
+
+function onMouseup (event) {
+	path.closed = true;
+
+	
+}
+
+
+
+
+</script>
+
+</head>
+<body>
+
+	<canvas id="canvas" resize></canvas>
+</body>
+</html>
