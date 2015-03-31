@@ -65,7 +65,7 @@ position: fixed;
 	top:35%;
 }
 body{
-	background-image: url(images/kramerhead.png);
+	background-image: url("kramerhead.jpg");
 
 }
 .link{
