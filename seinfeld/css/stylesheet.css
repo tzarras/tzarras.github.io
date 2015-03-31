@@ -1,9 +1,10 @@
 @font-face {
     font-family: "Minion";
+    src: url(fonts/MinionPro_Regular.otf);
 }
 
 div {
-	font-family: 'Minion';
+	font-family: "Minion";
 	position:absolute;
 	left: 50%;
 	top:35%;
@@ -13,7 +14,7 @@ div {
 div2 {
 	 padding-right: 100px;
 	 padding-left: 100px;
-	 font-family: 'Minion';
+	 font-family: "Minion";
 	 font-size: 30px;
 	 position: absolute;
      top: 910px;
@@ -27,7 +28,7 @@ div2 {
 }
 
 p {
-	font-family: 'Minion';
+	font-family: "Minion";
 	font-size: 30px;
 	 position: absolute;
      top: 350px;
@@ -42,7 +43,7 @@ p {
 div3{
  	 padding-right: 100px;
 	 padding-left: 100px;
-	 font-family: 'Minion';
+	 font-family: "Minion";
 	 font-size: 30px;
 	 position: absolute;
      top: 650px;
