@@ -1,0 +1,60 @@
+<html>
+<head>
+<meta charset="UTF-8">
+ <link rel="stylesheet" href="css/paperstyle.css">
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/paperscript" canvas="canvas">
+
+
+var path = new Path.Rectangle({
+	point: [375, 100],
+	size: [200, 900],
+	strokeColor: 'black'
+    });
+
+path.fillColor = '#009562';
+path.strokeWidth = 0;
+
+var copy = path.clone();
+copy.fillColor = 'blue';
+copy.position = new Point(400, 200);
+
+var copy2 = path.clone();
+copy2.fillColor = 'red';
+copy2.position = new Point(400, 400);
+
+var copy3 = path.clone();
+copy3.fillColor = null;
+copy3.strokeWidth = .5;
+copy3.position = new Point(500, 10);
+
+copy.blendMode = 'soft-light';
+copy2.blendMode = 'difference';
+path.blendMode = 'multiply';
+copy3.blendMode = 'soft-light';
+
+
+function onFrame(event) {
+	// Each frame, rotate the path by 3 degrees:
+	path.rotate(-.09);
+	copy.rotate(.1);
+	copy2.rotate(.2);
+	copy3.rotate(-.09);
+}
+
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+	<canvas id="canvas" resize>
+	</canvas>
+
+</body>
+</html>
