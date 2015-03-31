@@ -64,9 +64,9 @@ position: fixed;
 	left:55%;
 	top:35%;
 }
-.kramer{
+body{
 	background-image: url(images/kramerhead.png);
-	
+
 }
 .link{
 	background-color: transparent;
