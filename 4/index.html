@@ -5,10 +5,10 @@
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
 
-var path = new Path.Circle({
-    center: view.center,
-    radius: 100,
-    fillColor: 'black'
+var path = new Path.Rectangle({
+    point: [75, 75],
+    size: [100, 100],
+    fillColor: 'blue'
 });
 
 var path2 = new Path.Rectangle({
@@ -19,6 +19,7 @@ var path2 = new Path.Rectangle({
 
 function onFrame(event) {
 	path.position.x += 4;
+	path.radius(1.01);
 	if (path.bounds.left > view.size.width) {
 			path.position.x = -path.bounds.width;
 		}
