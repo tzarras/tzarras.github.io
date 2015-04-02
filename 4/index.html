@@ -19,7 +19,10 @@ function onFrame(event) {
 }
 
 path.onMouseEnter= function(event) {
-	path.position = event.point;
+	path.position.y+ = 5;
+	if (path.bounds.top > view.size.height) {
+			path.position.y = -path.bounds.height;
+		}
 }
 
 </script>
