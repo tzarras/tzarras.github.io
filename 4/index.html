@@ -5,20 +5,8 @@
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
 
-var path = new Path.Rectangle({
-    point: [75, 500],
-    size: [100, 100],
-    fillColor: 'blue'
-});
-
-var path2 = new Path.Rectangle({
-    point: [75, 75],
-    size: [75, 75],
-    fillColor: 'blue'
-});
-
 var text = new PointText({
-    point: [50, 400],
+    point: [50, 100],
     content: 'Hello!',
     fillColor: 'black',
     fontFamily: 'Minion Pro',
@@ -26,22 +14,26 @@ var text = new PointText({
     fontSize: 50
 });
 
-function onFrame(event) {
-	path.position.x += 4;
-	path.rotate(-1);
-	if (path.bounds.left > view.size.width) {
-			path.position.x = -path.bounds.width;
-		}
+var text2 = new PointText({
+    point: [50, 450],
+    content: 'timzarras.me is a less formal, sketchbook-like site for my web "stuff."',
+    fillColor: 'black',
+    fontFamily: 'Minion Pro',
+    fontWeight: 'bold',
+    fontSize: 50
+});
 
-	path2.position.x += 10;
-	path2.rotate(1);
-	if (path2.bounds.left > view.size.width) {
-			path2.position.x = -path2.bounds.width;
-		}
+
+function onFrame(event) {
 	text.position.x += 10;
 	text.rotate(1);
 	if (text.bounds.left > view.size.width) {
 			text.position.x = -text.bounds.width;
+		}
+	text2.position.x += 10;
+	text2.rotate(-1);
+	if (text2.bounds.left > view.size.width) {
+			text2.position.x = -text2.bounds.width;
 		}
 }
 
