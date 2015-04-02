@@ -31,7 +31,7 @@ function onFrame(event) {
 
 path.onMouseEnter= function(event) {
 var copy = path.clone();
-copy.fillColor = 'blue';
+copy.fillColor = new Point(255,255) * math.random();
 copy.opacity = .6;
 copy.blendMode = 'multiply';
 PointText.position = event.point;
