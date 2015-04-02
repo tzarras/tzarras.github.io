@@ -16,7 +16,7 @@ var text2 = new PointText({
 var text = new PointText({
     point: [50, 375],
     content: 'Hello?',
-    fillColor: 'green',
+    fillColor: 'black',
     fontFamily: 'Minion Pro',
     fontWeight: 'bold',
     fontSize: 100
@@ -32,11 +32,9 @@ function onFrame(event) {
 }
 
 text.onClick= function(event) {
-	this.fillColor.hue +=-40;
-	this.fillColor.saturation +=30;
+	this.fillColor= new fillColor ('blue','yellow','red','brown') * math.random();
 	this.fontSize +=10;
 	var copy = text.clone();
-	copy.fillColor = new fillColor() * math.random();
 	copy.opacity = .6;
 	copy.blendMode = 'multiply';
 }
