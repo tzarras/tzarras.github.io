@@ -14,6 +14,15 @@ var text = new PointText({
     fontSize: 100
 });
 
+var text2 = new PointText({
+    point: [500, 100],
+    content: 'Click it!',
+    fillColor: 'blue',
+    fontFamily: 'Minion Pro',
+    fontWeight: 'bold',
+    fontSize: 20
+});
+
 function onFrame(event) {
 	text.activeLayer.fillColor = 'blue';
 	text.position.x += 10;
