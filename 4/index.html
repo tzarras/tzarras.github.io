@@ -28,9 +28,8 @@ function onFrame(event) {
 		}
 }
 
-function onMouseMove(event) {
-	path.position.x += 1;
-	path2.postion.x += 1;
+path.onMouseEnter= function(event) {
+	this.position.x+= 1;
 }
 
 
