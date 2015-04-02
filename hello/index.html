@@ -10,7 +10,7 @@ var text = new PointText({
     content: 'Hello?',
     fillColor: 'black',
     fontFamily: 'Minion Pro',
-    fontWeight: 'bold',
+    fontWeight: 'blue',
     fontSize: 100
 });
 
@@ -23,7 +23,7 @@ function onFrame(event) {
 }
 
 text.onClick= function(event) {
-	this.fillColor = new Point (100,100) * Point.random();
+	this.fillColor.hue +=1;
 }
 
 
