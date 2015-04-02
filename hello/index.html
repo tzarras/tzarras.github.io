@@ -10,7 +10,7 @@ var text2 = new PointText({
     fillColor: 'Black',
     fontFamily: 'Helvetica',
     fontWeight: 'bold',
-    fontSize: 20
+    fontSize: 12
 });
 
 var text = new PointText({
@@ -32,7 +32,8 @@ function onFrame(event) {
 }
 
 text.onClick= function(event) {
-	this.fillColor= new fillColor ('blue','yellow','red','brown') * math.random();
+	this.fillColor.hue +=-40;
+	this.fillColor.saturation += 40;
 	this.fontSize +=10;
 	var copy = text.clone();
 	copy.fillColor = new fillColor() * math.random();
