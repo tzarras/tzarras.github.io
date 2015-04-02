@@ -23,6 +23,9 @@ function onFrame(event) {
 			path.position.x = -path.bounds.width;
 			path.scale(.5);
 		}
+		else {
+			path.scale(1.002);
+		}
 
 	path2.position.x += 10;
 	if (path2.bounds.left > view.size.width) {
