@@ -35,6 +35,7 @@ text.onClick= function(event) {
 	this.fillColor= new fillColor ('blue','yellow','red','brown') * math.random();
 	this.fontSize +=10;
 	var copy = text.clone();
+	copy.fillColor = new fillColor() * math.random();
 	copy.opacity = .6;
 	copy.blendMode = 'multiply';
 }
