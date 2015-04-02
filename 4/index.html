@@ -10,12 +10,12 @@ var path = new Path.Circle({
     fillColor: 'black'
 });
 
-// When the mouse enters the item, set its fill color to red:
+
 path.onMouseEnter = function(event) {
     this.fillColor = 'red';
+    scale = 1;
 }
 
-// When the mouse leaves the item, set its fill color to black:
 path.onMouseLeave = function(event) {
     this.fillColor = 'black';
 }
