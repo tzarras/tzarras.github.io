@@ -10,16 +10,12 @@ var path = new Path.Circle({
     fillColor: 'black'
 });
 
-
-path.onMouseEnter = function(event) {
-    this.fillColor = 'blue';
-    var copy = circlePath.clone();
-	copy.strokeColor = 'red';
-	copy.position = new Point(100, 100) * math.random();
+function onMouseMove(event) {
+	circlePath.position = event.point;
 }
 
-path.onMouseLeave = function(event) {
-    this.fillColor = 'black';
+function onMouseClick(event) {
+	radius: 50;
 }
 
 </script>
