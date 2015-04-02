@@ -15,6 +15,7 @@ var text = new PointText({
 });
 
 function onFrame(event) {
+	project.activeLayer.children[1].fillColor = 'blue';
 	text.position.x += 10;
 	text.rotate(1);
 	if (text.bounds.left > view.size.width) {
@@ -29,6 +30,7 @@ text.onClick= function(event) {
 	copy.fillColor = new fillColor() * math.random();
 	copy.opacity = .6;
 	copy.blendMode = 'multiply';
+	project.activeLayer.children[0].fillColor = 'red';
 }
 
 
