@@ -4,6 +4,14 @@
  <link rel="stylesheet" href="css/paperstyle.css">
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
+var text2 = new PointText({
+    point: [600, 100],
+    content: 'Click it!',
+    fillColor: 'Black',
+    fontFamily: 'Minion Pro',
+    fontWeight: 'bold',
+    fontSize: 20
+});
 
 var text = new PointText({
     point: [50, 375],
@@ -14,14 +22,7 @@ var text = new PointText({
     fontSize: 100
 });
 
-var text2 = new PointText({
-    point: [500, 100],
-    content: 'Click it!',
-    fillColor: 'blue',
-    fontFamily: 'Minion Pro',
-    fontWeight: 'bold',
-    fontSize: 20
-});
+
 
 function onFrame(event) {
 	text.activeLayer.fillColor = 'blue';
