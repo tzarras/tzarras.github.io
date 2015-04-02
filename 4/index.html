@@ -17,6 +17,15 @@ var path2 = new Path.Rectangle({
     fillColor: 'blue'
 });
 
+var text = new PointText({
+    point: [50, 200],
+    content: 'Hello!',
+    fillColor: 'black',
+    fontFamily: 'Minion Pro',
+    fontWeight: 'bold',
+    fontSize: 25
+});
+
 function onFrame(event) {
 	path.position.x += 4;
 	path.rotate(-1);
@@ -28,6 +37,11 @@ function onFrame(event) {
 	path2.rotate(1);
 	if (path2.bounds.left > view.size.width) {
 			path2.position.x = -path2.bounds.width;
+		}
+	text.position.x += 10;
+	text.rotate(1);
+	if (text.bounds.left > view.size.width) {
+			text.position.x = -text.bounds.width;
 		}
 }
 
