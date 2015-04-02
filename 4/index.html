@@ -10,20 +10,26 @@ var path = new Path.Circle({
     fillColor: 'black'
 });
 
+var path2 = new Path.Rectangle({
+    center: view.center,
+    radius: 100,
+    fillColor: 'black'
+});
+
 function onFrame(event) {
 	path.position.x += 4;
-
 	if (path.bounds.left > view.size.width) {
 			path.position.x = -path.bounds.width;
 		}
 }
 
-path.onMouseEnter= function(event) {
-	path.position.y+ = 5;
-	if (path.bounds.top > view.size.height) {
-			path.position.y = -path.bounds.height;
+	path2.position.x += 10;
+	if (path2.bounds.left > view.size.width) {
+			path2.position.x = -path2.bounds.width;
 		}
 }
+
+
 
 </script>
 
