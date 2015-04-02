@@ -6,34 +6,19 @@
 <script type="text/paperscript" canvas="canvas">
 
 var text = new PointText({
-    point: [50, 100],
-    content: 'Hello!',
+    point: [50, 400],
+    content: 'Hello?',
     fillColor: 'black',
     fontFamily: 'Minion Pro',
     fontWeight: 'bold',
-    fontSize: 25
+    fontSize: 100
 });
-
-var text2 = new PointText({
-    point: [50, 450],
-    content: 'timzarras.me is a less formal, sketchbook-like site for my web "stuff."',
-    fillColor: 'black',
-    fontFamily: 'Minion Pro',
-    fontWeight: 'bold',
-    fontSize: 25
-});
-
 
 function onFrame(event) {
 	text.position.x += 10;
 	text.rotate(1);
 	if (text.bounds.left > view.size.width) {
 			text.position.x = -text.bounds.width;
-		}
-	text2.position.x += 10;
-	text2.rotate(-1);
-	if (text2.bounds.left > view.size.width) {
-			text2.position.x = -text2.bounds.width;
 		}
 }
 
