@@ -33,11 +33,10 @@ function onFrame(event) {
 
 text.onClick= function(event) {
 	this.fillColor.hue +=-40;
-	this.fillColor.saturation += 40;
 	this.fontSize +=10;
 	var copy = text.clone();
 	copy.fillColor = 'black';
-	copy.opacity = .9;
+	copy.opacity = .75;
 	copy.blendMode = 'multiply';
 }
 
