@@ -21,10 +21,10 @@ function onFrame(event) {
 	path.position.x += 4;
 	if (path.bounds.left > view.size.width) {
 			path.position.x = -path.bounds.width;
-			path.scale(.5);
+			path.radius: 10;
 		}
 		else {
-			path.scale(0);
+			path.scale(1.01);
 		}
 
 	path2.position.x += 10;
