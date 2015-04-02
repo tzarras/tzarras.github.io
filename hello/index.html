@@ -36,6 +36,7 @@ text.onClick= function(event) {
 	this.fillColor.saturation += 40;
 	this.fontSize +=10;
 	var copy = text.clone();
+	copy.fillColor = 'black';
 	copy.fillColor.hue+ = 20;
 	copy.opacity = .8;
 	copy.blendMode = 'multiply';
