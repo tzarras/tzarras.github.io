@@ -4,14 +4,14 @@
  <link rel="stylesheet" href="css/paperstyle.css">
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
-var topLeft = view.center - new Point [80, 80] * math.random();
-var bottomRight = view.center + new Point [80, 80] * math.random();
+var topLeft = view.center - [80, 80];
+var bottomRight = view.center + [80, 80];
 var path = new Path.Circle({
     topLeft: topLeft,
     bottomRight: bottomRight,
     fillColor: {
         gradient: {
-            stops: ['black', 'red', 'blue']
+            stops: ['yellow', 'red', 'blue']
         },
         origin: topLeft,
         destination: bottomRight
