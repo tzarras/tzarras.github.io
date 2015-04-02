@@ -15,7 +15,7 @@ var text = new PointText({
 });
 
 function onFrame(event) {
-	project.activeLayer.lastChild.fillColor = 'blue';
+	text.activeLayer.fillColor = 'blue';
 	text.position.x += 10;
 	text.rotate(1);
 	if (text.bounds.left > view.size.width) {
