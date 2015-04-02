@@ -29,8 +29,12 @@ function onFrame(event) {
 }
 
 path.onMouseEnter= function(event) {
-	this.position.y+= 8;
+var copy = path.clone();
+copy.fillColor = 'blue';
+copy.opacity = .6;
+copy.blendMode = 'multiply';
 }
+
 
 
 
