@@ -5,7 +5,7 @@
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
 var text2 = new PointText({
-    point: [600, 100],
+    point: [550, 100],
     content: 'Click it!',
     fillColor: 'Black',
     fontFamily: 'Minion Pro',
@@ -23,9 +23,7 @@ var text = new PointText({
 });
 
 
-
 function onFrame(event) {
-	text.activeLayer.fillColor = 'blue';
 	text.position.x += 10;
 	text.rotate(1);
 	if (text.bounds.left > view.size.width) {
