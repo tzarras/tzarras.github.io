@@ -24,7 +24,7 @@ function onFrame(event) {
 }
 
 text.onClick= function(event) {
-	this.fillColor.hue +=40;
+	this.fillColor.hue +=10;
 	this.fontSize +=10;
 	var copy = text.clone();
 	copy.fillColor = new fillColor() * math.random();
