@@ -7,7 +7,7 @@
 var text2 = new PointText({
     point: [550, 100],
     content: 'Click it!',
-    fillColor: 'black',
+    fillColor: 'Black',
     fontFamily: 'Helvetica',
     fontWeight: 'bold',
     fontSize: 12
@@ -36,8 +36,7 @@ text.onClick= function(event) {
 	this.fillColor.saturation += 40;
 	this.fontSize +=10;
 	var copy = text.clone();
-	copy.fillColor = 'blue';
-	copy.fillColor.hue+ = 20;
+	copy.fillColor = new fillColor() * math.random();
 	copy.opacity = .6;
 	copy.blendMode = 'multiply';
 }
