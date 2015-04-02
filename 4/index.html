@@ -4,21 +4,25 @@
  <link rel="stylesheet" href="css/paperstyle.css">
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
+var topLeft = view.center - [80, 80];
+var bottomRight = view.center + [80, 80];
 var path = new Path.Circle({
     center: view.center,
     radius: 100,
-    fillColor: 'black'
+    topLeft: topLeft,
+    bottomRight: bottomRight,
+    fillColor: {
+        gradient: {
+            stops: ['yellow', 'red', 'blue']
+        },
+        origin: topLeft,
+        destination: bottomRight
+    }
 });
-
 var path2 = new Path.Rectangle({
     point: [75, 75],
     size: [75, 75],
     fillColor: 'blue'
-});
-
-var text = new PointText(;
-text.fillColor = 'red';
-text.content = 'circle!';
 });
 
 function onFrame(event) {
