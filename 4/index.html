@@ -19,10 +19,9 @@ var path2 = new Path.Rectangle({
 
 function onFrame(event) {
 	path.position.x += 4;
-	path.radius.x+= 5;
 	if (path.bounds.left > view.size.width) {
 			path.position.x = -path.bounds.width;
-			path.radius = 10;
+			path.scale(.5);
 		}
 
 	path2.position.x += 10;
