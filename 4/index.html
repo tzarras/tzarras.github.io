@@ -14,6 +14,10 @@ function onFrame(event) {
 	path.position.x += 1;
 }
 
+path.onClick= function(event) {
+	path.position = event.point;
+}
+
 </script>
 
 </head>
