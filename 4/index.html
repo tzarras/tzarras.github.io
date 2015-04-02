@@ -12,11 +12,10 @@ var path = new Path.Circle({
 
 
 path.onMouseEnter = function(event) {
-    this.fillColor = 'red';
-    this.position = new Point(1000, 1000) * Point.random();
-     if (this.bounds.left > view.size.width) {
-			this.position.x = center;
-		}
+    this.fillColor = 'blue';
+    var copy = circlePath.clone();
+	copy.strokeColor = 'red';
+	copy.position = new Point(100, 100) * math.random();
 }
 
 path.onMouseLeave = function(event) {
