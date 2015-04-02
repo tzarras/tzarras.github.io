@@ -4,10 +4,9 @@
  <link rel="stylesheet" href="css/paperstyle.css">
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
-var topLeft = view.center - [80, 80];
-var bottomRight = view.center + [80, 80];
+var topLeft = event.point - [80, 80];
+var bottomRight = event.point + [80, 80];
 var path = new Path.Circle({
-	radius: 500,
     topLeft: topLeft,
     bottomRight: bottomRight,
     fillColor: {
