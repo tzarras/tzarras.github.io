@@ -19,6 +19,7 @@ var path2 = new Path.Rectangle({
 
 function onFrame(event) {
 	path.position.x += 4;
+	path.scale = 1.01;
 	if (path.bounds.left > view.size.width) {
 			path.position.x = -path.bounds.width;
 		}
@@ -29,20 +30,6 @@ function onFrame(event) {
 		}
 }
 
-path.onMouseEnter= function(event) {
-var copy = path.clone();
-copy.fillColor = new Point(255,255) * math.random();
-copy.opacity = .6;
-copy.blendMode = 'multiply';
-PointText.position = event.point;
-}
-
-path2.onMouseEnter= function(event) {
-var copy = path2.clone();
-copy.fillColor = 'blue';
-copy.opacity = .6;
-copy.blendMode = 'multiply';
-}
 
 
 
