@@ -16,6 +16,11 @@ var path2 = new Path.Rectangle({
     fillColor: 'blue'
 });
 
+var text = new PointText();
+text.fillColor = 'black';
+
+text.content = 'circle!';
+
 function onFrame(event) {
 	path.position.x += 4;
 	if (path.bounds.left > view.size.width) {
@@ -33,6 +38,7 @@ var copy = path.clone();
 copy.fillColor = 'blue';
 copy.opacity = .6;
 copy.blendMode = 'multiply';
+PointText.position = event.point;
 }
 
 path2.onMouseEnter= function(event) {
