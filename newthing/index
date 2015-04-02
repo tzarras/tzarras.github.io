@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta charset="UTF-8">
+ <link rel="stylesheet" href="css/paperstyle.css">
+<script type="text/javascript" src="js/paper.js"></script>
+<script type="text/paperscript" canvas="canvas">
+var path = new Path.Circle({
+    center: view.center,
+    radius: 25,
+    fillColor: 'black'
+});
+
+// When the mouse enters the item, set its fill color to red:
+path.onMouseEnter = function(event) {
+    this.fillColor = 'red';
+}
+
+// When the mouse leaves the item, set its fill color to black:
+path.onMouseLeave = function(event) {
+    this.fillColor = 'black';
+}
+
+</script>
+
+</head>
+<body >
+
+	<canvas id="canvas" resize></canvas>
+
+</body>
+</html>
