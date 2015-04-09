@@ -8,6 +8,10 @@
 var path;
 tool.minDistance = 5;
 
+if(event.key == 'h') {
+		path.fillColor.hue +=40;
+	}
+
 
 function onMouseDown(event) {
 	path = new Path();
@@ -18,11 +22,6 @@ function onMouseDown(event) {
 	path.add(event.point);
 	path2.add(event.point);
 }
-
-function onKeyDown(event) {
-	if(event.key == 'h') {
-		path.fillColor.hue +=40;
-	}
 
 function onMouseDrag(event) {
 	path.add(event.point);
