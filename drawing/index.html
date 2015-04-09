@@ -18,16 +18,6 @@ function onMouseDown(event) {
 	path.add(event.point, event.point);
 }
 
-function onMouseDrag(event) {
-	if(Key.isDown('a')) {
-		// If the 'a' key is down, change the point of
-		// the last segment to the position of the mouse:
-		path.strokeWidth.point = 20;
-	} else {
-		// If the a key is not down, add a segment
-		// to the path at the position of the mouse:
-		path.strokeWidth.point = 10;
-}
 
 
 
