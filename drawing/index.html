@@ -26,11 +26,12 @@ function onMouseDown(event) {
 
 function onMouseDrag(event) {
 	path.add(event.point);
-	path
+	copy.add(event.point);
 }
 
 function onMouseup (event) {
 	path.closed = true;
+	copy.closed = true;
 }
 
 
