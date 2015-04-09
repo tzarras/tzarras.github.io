@@ -23,9 +23,9 @@ function onMouseDown(event) {
 function onMouseDrag(event) {
 	path.add(event.point);
 
-	if(event.key == 'h') {
-		path.fillColor.hue +=40;
-	}
+	if(event.modifiers.shift) {
+		this.fillColor.hue +=-40;
+	} 
 }
 
 function onMouseup (event) {
