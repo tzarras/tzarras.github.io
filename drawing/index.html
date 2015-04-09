@@ -5,19 +5,28 @@
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
 
-
+var path;
 tool.minDistance = 5;
 
-var path;
+
+
 function onMouseDown(event) {
 	path = new Path();
-	path.strokeColor = 'black';
 	path.fillColor = 'blue';
+	path.strokeColor = 'black';
 	path.strokeJoin = 'round';
 	path.strokeWidth = 50;
-	path.add(event.point, event.point);
+	path.add(event.point);
+	path2.add(event.point);
 }
 
+function onMouseDrag(event) {
+	path.add(event.point);
+}
+
+function onMouseup (event) {
+	path.closed = true;
+}
 
 
 
