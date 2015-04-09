@@ -24,6 +24,13 @@ function onKeyDown(event) {
 		path.fillColor.hue +=40;
 	}
 
+function onMouseDrag(event) {
+	path.add(event.point);
+}
+
+function onMouseup (event) {
+	path.closed = true;
+}
 
 
 
