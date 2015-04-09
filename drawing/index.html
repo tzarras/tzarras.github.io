@@ -18,6 +18,10 @@ function onMouseDown(event) {
 	path.blendMode = ('lighten','difference');
 	path.add(event.point);
 	path2.add(event.point);
+	var copy = path.clone();
+	path.fillColor= 'red'
+	path.position.x = 500;
+}
 }
 
 function onMouseDrag(event) {
