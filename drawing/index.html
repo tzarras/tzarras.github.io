@@ -16,19 +16,19 @@ function onMouseDown(event) {
 	path.strokeJoin = 'round';
 	path.strokeWidth = 50;
 	path.add(event.point, event.point);
-}
 
-function onMouseDrag(event) {
-	if(event.modifiers.shift) {
-		// If the shift key is down, change the point of
+	if(Key.isDown('h')) {
+		// If the 'a' key is down, change the point of
 		// the last segment to the position of the mouse:
-		fillColor = 'green';
+		path.fillColor = 'red';
 	} else {
-		// If the shift key is not down, add a segment
+		// If the a key is not down, add a segment
 		// to the path at the position of the mouse:
-		fillColor = 'blue';
+		path.fillColor = 'blue';
 	}
 }
+
+
 
 
 
