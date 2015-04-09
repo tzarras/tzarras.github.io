@@ -9,7 +9,6 @@ var path;
 tool.minDistance = 5;
 
 
-
 function onMouseDown(event) {
 	path = new Path();
 	path.fillColor = 'blue';
@@ -26,7 +25,10 @@ function onMouseDrag(event) {
 
 function onMouseup (event) {
 	path.closed = true;
-	path.fillColor.hue + = 40;
+}
+
+path.onClick= function(event) {
+	this.fillColor.hue +=-40;
 }
 
 
