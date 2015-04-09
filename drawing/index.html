@@ -20,12 +20,11 @@ function onMouseDown(event) {
 	path2.add(event.point);
 	var copy = path.clone();
 	copy.fillColor= 'red';
-	copy.position.x = 100;
 }
 
 function onMouseDrag(event) {
 	path.add(event.point);
-	copy.add(event.point);
+	copy.add(event.point.x.+15);
 
 
 }
