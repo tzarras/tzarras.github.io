@@ -13,8 +13,8 @@ body {
 
 
 #a1 {
-    -webkit-transform: rotate(80deg) skew(-40deg,40deg) scale(1.0,0.864);
-    -moz-transform: rotate(80deg) skew(-40deg,40deg) scale(1.0,0.864);
+    -webkit-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
+    -moz-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
     background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
     position:absolute;
     width:200px;
