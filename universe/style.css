@@ -11,11 +11,6 @@ body {
     width:100%;
 }
 
-.face{
-    border-style: solid;
-    border-width: 1px;
-    color: white;
-}
 
 #a1 {
     -webkit-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
