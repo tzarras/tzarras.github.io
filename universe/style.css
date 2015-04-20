@@ -13,111 +13,26 @@ body {
 
 
 #a1 {
-    -webkit-transform: rotate(10deg) skew(-40deg,40deg) scale(1.0,0.864);
-    -moz-transform: rotate(10deg) skew(-40deg,40deg) scale(1.0,0.864);
     position:absolute;
     left:45%;
     top:40%;
    
 }
-#a2 {
-    -webkit-transform: skew(40deg,0deg) scale(1.0,0.864);
-    -moz-transform: skew(40deg,0deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
+
+#a2{
     position:absolute;
-    width:200px;
-    height:200px;
-    left: 25%;
-    top:15%;
-}
-#a3 {
-    -webkit-transform: rotate(80deg) skew(-10deg,0deg) scale(1.0,0.864);
-    -moz-transform: rotate(80deg) skew(-10deg,0deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-    width:200px;
-    height:200px;
-    left: 35%;
-    top:60%;
-}
-#a4 {
-    -webkit-transform: rotate(40deg) skew(-10deg,20deg) scale(1.0,0.864);
-    -moz-transform: rotate(40deg) skew(-10deg,20deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-    width:200px;
-    height:200px;
-    left: 80%;
-    top:40%;
-}
-#a5 {
-    -webkit-transform: rotate(60deg) skew(-10deg,10deg) scale(1.0,0.864);
-    -moz-transform: rotate(60deg) skew(-10deg,10deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-   	width:200px;
-    height:200px;
-    left: 70%;
-    top:80%;
-}
-#a6 {
-    -webkit-transform: skew(5deg,0deg) scale(1.0,0.864);
-    -moz-transform: skew(5deg,0deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-    width:200px;
-    height:200px;
-    left: 35%;
-    top:30%;
-}
-#a7 {
-    -webkit-transform: skew(50deg,0deg) scale(1.0,0.864);
-    -moz-transform: skew(50deg,0deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-    width:200px;
-    height:200px;
-    left: 75%;
-    top:60%;
-}
-#a8 {
-    -webkit-transform: rotate(40deg) skew(-10deg,0deg) scale(1.0,0.864);
-    -moz-transform: rotate(40deg) skew(-10deg,0deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-    width:200px;
-    height:200px;
-    left: 85%;
-    top:40%;
-}
-#a9 {
-    -webkit-transform: rotate(60deg) skew(-10deg,20deg) scale(1.0,0.864);
-    -moz-transform: rotate(60deg) skew(-10deg,20deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-    width:200px;
-    height:200px;
-    left: 60%;
-    top:50%;
-}
-#a10 {
-    -webkit-transform: rotate(60deg) skew(-10deg,10deg) scale(1.0,0.864);
-    -moz-transform: rotate(60deg) skew(-10deg,10deg) scale(1.0,0.864);
-    background-image: url("http://upload.wikimedia.org/wikipedia/commons/8/80/Hyades.jpg");
-    position:absolute;
-   	width:200px;
-    height:200px;
-    left: 80%;
-    top:10%;
+    left:40%;
+    top: 50%;
 }
 
-#a11{
+
+#a3{
     position: absolute;
     left: 50%;
     top: 50%;
 }
 
-#a12{
+#a4{
     position: absolute;
     left: 20%;
     top: 50%;
