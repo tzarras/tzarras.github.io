@@ -12,12 +12,12 @@
 			$(document).ready(function() {
 		        $.zoomooz.setup({nativeanimation:true, debug:false});
 				
-				$(".face").hover(function(evt) {
+				$(".face").click(function(evt) {
 					evt.stopPropagation();
 					$(this).zoomTo();
 				});
 				
-				$(window).hover(function(evt) {
+				$(window).click(function(evt) {
 					evt.stopPropagation();
 					$("body").zoomTo({targetsize:2.0});
 					$(".cover").show();
