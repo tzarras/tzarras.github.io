@@ -12,6 +12,11 @@
 			$(document).ready(function() {
 		        $.zoomooz.setup({nativeanimation:true, debug:false});
 				
+				$("container").click(function(evt) {
+					evt.stopPropagation();
+					$(this).zoomTo(800);
+				});
+				
 				$(".face").click(function(evt) {
 					evt.stopPropagation();
 					$(this).zoomTo(800);
