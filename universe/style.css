@@ -13,8 +13,8 @@ body {
 
 
 #a1 {
-    -webkit-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
-    -moz-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
+    -webkit-transform: rotate(10deg) skew(-40deg,40deg) scale(1.0,0.864);
+    -moz-transform: rotate(10deg) skew(-40deg,40deg) scale(1.0,0.864);
     position:absolute;
     left:15%;
     top:40%;
