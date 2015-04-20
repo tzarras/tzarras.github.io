@@ -24,7 +24,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left:50px;
+    left:15%;
     top:40%;
    
 }
@@ -35,7 +35,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left: 80px;
+    left: 25%;
     top:40%;
 }
 #a3 {
@@ -45,7 +45,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left: 140px;
+    left: 35%;
     top:60%;
 }
 #a4 {
@@ -55,7 +55,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left: 400px;
+    left: 40%;
     top:40%;
 }
 #a5 {
@@ -65,7 +65,7 @@ body {
     position:absolute;
    	width:200px;
     height:200px;
-    left: 400px;
+    left: 60%;
     top:80%;
 }
 #a6 {
@@ -75,7 +75,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left: 425px;
+    left: 50%;
     top:30%;
 }
 #a7 {
@@ -85,7 +85,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left: 550px;
+    left: 75%;
     top:60%;
 }
 #a8 {
@@ -95,7 +95,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left: 700px;
+    left: 85%;
     top:40%;
 }
 #a9 {
@@ -105,7 +105,7 @@ body {
     position:absolute;
     width:200px;
     height:200px;
-    left: 750px;
+    left: 80%;
     top:50%;
 }
 #a10 {
@@ -115,7 +115,7 @@ body {
     position:absolute;
    	width:200px;
     height:200px;
-    left: 900px;
+    left: 48%;
     top:40%;
 }
 
