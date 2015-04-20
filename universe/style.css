@@ -16,7 +16,7 @@ body {
     -webkit-transform: rotate(10deg) skew(-40deg,40deg) scale(1.0,0.864);
     -moz-transform: rotate(10deg) skew(-40deg,40deg) scale(1.0,0.864);
     position:absolute;
-    left:15%;
+    left:35%;
     top:40%;
    
 }
