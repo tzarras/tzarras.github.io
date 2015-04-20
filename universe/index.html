@@ -12,7 +12,7 @@
 			$(document).ready(function() {
 		        $.zoomooz.setup({nativeanimation:true, debug:false});
 				
-				$(".face").hover(function(evt) {
+				$(".face").click(function(evt) {
 					evt.stopPropagation();
 					$(this).zoomTo();
 				});
