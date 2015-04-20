@@ -17,7 +17,7 @@
 					$(this).zoomTo();
 				});
 				
-				$(window).click(function(evt) {
+				$(window).hover(function(evt) {
 					evt.stopPropagation();
 					$("body").zoomTo({targetsize:2.0});
 					$(".cover").show();
