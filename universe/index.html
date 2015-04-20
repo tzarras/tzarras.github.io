@@ -2,13 +2,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>?</title>
-		<audio controls preload="auto" loop style="display:none"> 
-    	<source src="space.mp3" />
-		</audio>
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
-		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.1.10/buzz.min.js"></script>
 		<script type="text/javascript" src="http://jaukia.github.io/zoomooz/jquery.zoomooz.min.js"></script>
+
 		
 		<script type="text/javascript">
 		
@@ -25,6 +23,18 @@
 					$("body").zoomTo({targetsize:2.0});
 					$(".face").show();
 				});
+
+				var mySound = new buzz.sound( "space.mp3", {
+    			formats: [ "ogg", "mp3", "aac" ]
+				});
+
+				mySound.play()
+    			.fadeIn()
+    			.loop()
+    			.bind( "timeupdate", function() {
+       			var timer = buzz.toTimer( this.getTime() );
+       			document.getElementById( "timer" ).innerHTML = timer;
+    			});
 			});
 
 		</script>
