@@ -14,7 +14,7 @@
 				
 				$(".face").click(function(evt) {
 					evt.stopPropagation();
-					$(this).zoomTo();
+					$(this).zoomTo({targetsize:1.0, duration:2000});
 				});
 				
 				$(window).click(function(evt) {
