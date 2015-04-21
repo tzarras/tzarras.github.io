@@ -14,12 +14,12 @@
 				
 				$(".face").click(function(evt) {
 					evt.stopPropagation();
-					$(this).zoomTo(800);
+					$(this).zoomTo(duration:1000);
 				});
 				
 				$(window).click(function(evt) {
 					evt.stopPropagation();
-					$("body").zoomTo({targetsize:1.0});
+					$("body").zoomTo({targetsize:1.0, duration:1000});
 					$(".face").show();
 				});
 			});
