@@ -27,7 +27,6 @@ body {
 }
 
 #a2{
-    -webkit-transform: rotate(-50deg);
     position:absolute;
     left:35%;
     top: 55%;
