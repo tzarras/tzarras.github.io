@@ -39,6 +39,12 @@ body {
     top: 50%;
 }
 
+#a4{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
 #a5{
     position: absolute;
     left: 70%;
