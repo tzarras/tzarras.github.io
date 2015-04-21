@@ -48,7 +48,9 @@ body {
 }
 
 #object1 {
-    position: absolute; left: -200px; top: 0px;
+    position: absolute; 
+    left: -200px; 
+    top: 0px;
 }
 
 
