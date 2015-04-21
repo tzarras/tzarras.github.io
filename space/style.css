@@ -27,8 +27,6 @@ body {
 }
 
 #a2{
-    -webkit-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
-    -moz-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
     position:absolute;
     left:35%;
     top: 55%;
@@ -51,6 +49,11 @@ body {
     position: absolute;
     left: 70%;
     top: 70%;
+}
+
+#astro {
+    -webkit-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
+    -moz-transform: rotate(180deg) skew(-40deg,40deg) scale(1.0,0.864);
 }
 
 
