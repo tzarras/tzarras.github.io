@@ -13,7 +13,7 @@
 				
 				$(".face").click(function(evt) {
 					evt.stopPropagation();
-					$(this).zoomTo();
+					$(this).zoomTo({targetsize:1.0, duration:1500});
 				});
 				
 				$(window).click(function(evt) {
