@@ -31,6 +31,10 @@ body {
     top: 20%;
 }
 
+.face:hover{
+    cursor: url('magnify.png'), default;
+}
+
 
 
 
