@@ -13,14 +13,12 @@
 				$(".face").click(function(evt) {
 					evt.stopPropagation();
 					$(this).zoomTo({targetsize:1.0, duration:2000});
-					$( "#back" ).show( 800 );
 				});
 				
-				$("#back").click(function(evt) {
+				$(window).click(function(evt) {
 					evt.stopPropagation();
 					$("body").zoomTo({targetsize:1.0, duration:10000});
 					$(".face").show(8000);
-					$( "#back" ).hide( 800 );
 				});
 
 				$( "#a4" ).hover(function() {
@@ -33,8 +31,6 @@
 	</head>
 
 		<body>
-
-		<p id="back"> Go back </p>
 
 		<img class="face" id="neptune" src="http://i.imgur.com/BVS65bo.png" alt="neptune" height="6">
 		<img class="face" id="a2" src="http://i.imgur.com/KC01eSU.png?1" alt="sun" height="120" width="120">

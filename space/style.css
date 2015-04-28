@@ -9,6 +9,7 @@ body {
     overflow: visible;
     height:100%;
     width:100%;
+    cursor: zoom-out;
 }
 
 #container{
@@ -45,10 +46,6 @@ body {
 
 .face:hover{
     cursor: zoom-in;
-}
-
-#back {
-    color: white;
 }
 
 
