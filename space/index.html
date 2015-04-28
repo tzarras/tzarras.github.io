@@ -13,14 +13,14 @@
 				$(".face").click(function(evt) {
 					evt.stopPropagation();
 					$(this).zoomTo({targetsize:1.0, duration:2000});
-					$( ".back" ).show( 800 );
+					$( "#back" ).show( 800 );
 				});
 				
-				$(".back").click(function(evt) {
+				$("#back").click(function(evt) {
 					evt.stopPropagation();
 					$("body").zoomTo({targetsize:1.0, duration:10000});
 					$(".face").show(8000);
-					$( ".back" ).hide( 800 );
+					$( "#back" ).hide( 800 );
 				});
 
 				$( "#a4" ).hover(function() {
