@@ -16,7 +16,7 @@ body {
 	position: absolute;
 	width:400px;
 	height:400px;
-	background-color: blue;
+	background-color: transparent;
 	left: 7%;
 	overflow: scroll;
 
