@@ -38,3 +38,7 @@ body {
 #image {
 	width: 100%;
 }
+
+#rightimage {
+	width: 40px;
+}
