@@ -15,3 +15,7 @@
 	background-color: black;
 	left:60%;
 }
+
+.container , .rightcontainer {
+	top: 20%;
+}
