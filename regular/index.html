@@ -8,10 +8,14 @@
 		<script type="text/javascript">
 		
 		$(document).ready(function() {
-			$( ".image" ).click(function() {
+			$( "image" ).click(function() {
   				$( ".2" ).slideDown();
 				});
+			$( ".2" ).click(function() {
+  				$( ".3" ).slideDown();
+				});
 			});
+	
 		</script>
 
 	</head>
@@ -20,6 +24,7 @@
 		<div class="container">
 			<img class="image" id="image" src="4.jpg" alt="">
 			<img class="2" id="image" src="3.jpg" alt="" style="display: none;">
+			<img class="3" id="image" src="5.jpg" alt="" style="display: none;">
 
 		</div>
 		<div class="rightcontainer"></div>
