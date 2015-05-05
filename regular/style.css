@@ -1,3 +1,8 @@
+html {
+	margin-right: 100px;
+}
+
+
 .container {
 	position: absolute;
 	width:400px;
