@@ -15,13 +15,26 @@
   				$( ".3" ).slideDown();
 				});
 			});
+
+		$('#submit_form')click(function(){
+  $.ajax({
+    type: 'POST',
+    url: path/phpfile.php,
+    data: image_input_name
+  });
+
+//after submitting, get the url of the image form the server
+
+  $('#div_to_display_image').html("<img src='path/image_file.jpg' alt='this' />");
+
+});
 	
 		</script>
 
 	</head>
 
 		<body>
-		<form action="imageUpload.php" method="post" enctype="multipart/form-data" target="upload_target"  onsubmit="jupload();"  id="form1" >
+		<input type='button' id='submit_form' value='upload' />
     <div style="visibility:'hidden';" class="imageholder"> <!-- a gif image to show that the process wasn't finished -->
     </div>
     <input type="file" name="imgfile" /> 
