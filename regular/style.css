@@ -3,7 +3,7 @@
 	width:400px;
 	height:400px;
 	background-color: blue;
-	left: 10%;
+	left: 7%;
 
 }
 
@@ -17,5 +17,5 @@
 }
 
 .container , .rightcontainer {
-	top: 10%;
+	top: 20%;
 }
