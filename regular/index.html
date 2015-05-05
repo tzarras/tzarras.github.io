@@ -6,7 +6,33 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 
 		<script type="text/javascript">
+		$(document).ready(function() {
 
+		    var speed = 500;
+
+    $(".prev").click(function() {
+        var now = $(this).parent().next("ul.gallery").children(":visible"),
+            last = $(this).parent().next("ul.gallery").children(":last"),
+            prev = now.prev();
+            prev = prev.index() == -1 ? last : prev;
+        now.fadeOut(speed, function() {prev.fadeIn(speed);});
+    });
+
+    $(".next").click(function() {
+        var now = $(this).parent().next("ul.gallery").children(':visible'),
+            first = $(this).parent().next("ul.gallery").children(':first'),
+            next = now.next();
+            next = next.index() == -1 ? first : next;
+        now.fadeOut(speed, function() {next.fadeIn(speed);});
+    });
+
+    $(".gallery li").click(function() {
+        var first = $(this).parent().children(':first'),
+            next = $(this).next();
+            next = next.index() == -1 ? first : next;
+        $(this).fadeOut(speed, function() {next.fadeIn(speed);});
+    }); 
+});
 		</script>
 
 	</head>
