@@ -35,6 +35,11 @@ body {
 	top: 20%;
 }
 
+.groupone {
+	width:400px;
+	height: 400px;
+}
+
 #image {
 	width: 100%;
 }
