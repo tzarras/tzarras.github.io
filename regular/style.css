@@ -1,5 +1,7 @@
 .container {
 	position: absolute;
+	width:300px;
+	height:400px;
 	background-color: blue;
 	left: 20%;
 
@@ -8,12 +10,12 @@
 .rightcontainer {
 	float:left;
 	position: relative;
+	width:300px;
+	height:400px;
 	background-color: black;
 	left:60%;
 }
 
 .container , .rightcontainer {
-	width: 500px;
-	height: 800px;
 	top: 10%;
 }
