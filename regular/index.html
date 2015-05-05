@@ -21,6 +21,12 @@
 	</head>
 
 		<body>
+		<form action="imageUpload.php" method="post" enctype="multipart/form-data" target="upload_target"  onsubmit="jupload();"  id="form1" >
+    <div style="visibility:'hidden';" class="imageholder"> <!-- a gif image to show that the process wasn't finished -->
+    </div>
+    <input type="file" name="imgfile" /> 
+    <input type="submit" name="uploadButton" class="upbtn" value="Submit" />
+</form>
 		<div class="container">
 			<img class="image" id="image" src="4.jpg" alt="">
 			<img class="2" id="image" src="3.jpg" alt="" style="display: none;">
