@@ -18,7 +18,7 @@ body {
 	height:400px;
 	background-color: blue;
 	left: 7%;
-	overflow: hidden;
+	overflow: scroll;
 
 }
 
