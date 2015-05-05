@@ -1,10 +1,14 @@
 .container {
+	width:200px;
+	height:600px;
 	background-color: blue;
 	left: 20%;
 
 }
 
 .rightcontainer {
+	width:200px;
+	height:600px;
 	background-color: black;
 	left:60%;
 }
