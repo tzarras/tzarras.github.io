@@ -9,58 +9,18 @@
 		
 		$(document).ready(function() {
 			$( ".image" ).click(function() {
-  				$( ".2" ).slideDown();
+  				$( ".2" ).show();
 				});
 			$( ".2" ).click(function() {
-  				$( ".3" ).slideDown();
+  				$( ".3" ).show();
 				});
 			});
-		function jupload()
-{
-    $(".imageholder").append('<img src="./images/loading.gif">');
-}
-
-function juploadstop(result)
-{
-    if(result==0)
-    {
-        $(".imageholder").html("");
-
-    }
-    // the result will be the path to the image
-    else if(result!=0)
-    {
-        $(".imageholder").html("");
-        // imageplace is the class of the div where you want to add the image  
-        $(".imageplace").append("<img src='"+result+"'>");
-    }   
-}
-<?php
-    $target = "http://www.mockcourt.org.uk/user/htdocs/pics/2012/";
-    $target = $target . basename( $_FILES['uploaded']['name']) ; 
-    $ok=1; 
-
-    if (move_uploaded_file($_FILES['uploaded']['tmp_name'], $target)) 
-    {
-        $result=$target;
-    } 
-    else
-    {
-        $result=0;
-    }
-?>
 	
 		</script>
 
 	</head>
 
 		<body>
-		<form action="imageUpload.php" method="post" enctype="multipart/form-data" target="upload_target"  onsubmit="jupload();"  id="form1" >
-    <div style="visibility:'hidden';" class="imageholder"> <!-- a gif image to show that the process wasn't finished -->
-    </div>
-    <input type="file" name="imgfile" /> 
-    <input type="submit" name="uploadButton" class="upbtn" value="Submit" />
-</form>
 		<div class="container">
 			<img class="image" id="image" src="4.jpg" alt="">
 			<img class="2" id="image" src="3.jpg" alt="" style="display: none;">
