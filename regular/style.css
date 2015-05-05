@@ -1,16 +1,16 @@
 .container {
 	position: absolute;
-	width:300px;
+	width:400px;
 	height:400px;
 	background-color: blue;
-	left: 20%;
+	left: 10%;
 
 }
 
 .rightcontainer {
 	float:left;
 	position: absolute;
-	width:300px;
+	width:400px;
 	height:400px;
 	background-color: black;
 	left:60%;
