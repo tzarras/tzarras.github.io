@@ -26,9 +26,8 @@
   				$( ".image" ).show();
   				$( ".groupone" ).show();
 				});
-			$('#rightimage').on('click', function (){
-        		$(this).css( "width", "+=40%" ).css( "height", "+=40%" function (){
-        		$(this).css( "width", "-=40%" ).css( "height", "-=40%"); }  });
+			$('#rightimage').click(function() {
+        		$(this).toggleClass('enlarged');
 				});
 			});
 	
