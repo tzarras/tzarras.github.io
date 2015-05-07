@@ -45,9 +45,13 @@ body {
 }
 
 .enlarged {
-    max-width: none;
+	max-height: none;
 }
 
 #rightimage {
+	height: 100px;
+}
+
+.rightimage {
 	height: 100px;
 }
