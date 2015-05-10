@@ -35,23 +35,12 @@ body {
 	top: 20%;
 }
 
-.groupone , .grouptwo , .groupthree {
-	width:400px;
-	height: 400px;
-}
-
 #image {
-	max-width: 100%;
+	width: 100%;
 }
 
-.enlarged {
-	max-height: none;
-}
-
-#rightimage {
-	height: 100px;
-}
-
-.rightimage {
-	height: 100px;
+.10,.11,.12 {
+	-ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+    transform: rotate(90deg);
 }
