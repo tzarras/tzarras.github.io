@@ -96,6 +96,16 @@ body {
 	z-index: 999;
 }
 
+.e {
+	position: absolute;
+	width:10px;
+	height:10px;
+	background-color: red;
+	top:60%;
+	left:45%;
+	z-index: 999;
+}
+
 
 
 .zz {

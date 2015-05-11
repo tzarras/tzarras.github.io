@@ -44,7 +44,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('a.a,a.b,a.c,a.d').hover(function(e) {
+    		$('a.a,a.b,a.c,a.d,a.e').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -56,7 +56,7 @@
         	$(target).hide();
     		});
  
-    		$('a.a,a.b,a.c,a.d').mousemove(function(e) {
+    		$('a.a,a.b,a.c,a.d,a.e').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
@@ -88,7 +88,7 @@
 			});
 			
 			$( ".notesbutton" ).click(function() {
-  				$(".a,.b,.c,.d").toggle();
+  				$(".a,.b,.c,.d,.e").toggle();
   				$(this).text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
@@ -126,7 +126,13 @@
 				<div id="pop4" class="zz" >
 						<b> 6/6/13 9:00PM </b> <br><br>
 						Too good to be true
-				</div>	
+				</div>
+			<a href="#" class="e" data-popbox="pop5" style="display: none;"></a>
+				<div id="pop5" class="zz" >
+						<b> 5/10/15 6:12PM </b> <br><br>
+						Holy shit, someone call Sight Unseen, we've got a winner
+				</div>
+
 		</div>
 		<div class="sp" id="slide">
 			<img id="image" src="3.jpg" alt="">
