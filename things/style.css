@@ -66,7 +66,7 @@ body {
 }
 
 
-.b , .d {
+.b{
 	display:none;
 	position: absolute;
 	padding: 5px;
