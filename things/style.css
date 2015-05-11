@@ -25,7 +25,7 @@ body {
 .rightcontainer {
 	float:left;
 	position: relative;
-	width:100px;
+	width:50px;
 	height:600px;
 	background-color: transparent;
 	left:65%;
