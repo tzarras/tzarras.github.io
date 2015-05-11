@@ -29,6 +29,7 @@ body {
 	height:600px;
 	background-color: transparent;
 	left:65%;
+	overflow: hidden;
 }
 
 .container , .rightcontainer {
