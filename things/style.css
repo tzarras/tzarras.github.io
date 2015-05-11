@@ -55,7 +55,7 @@ body {
 	left:50%;
 }
 
-.a,.c {
+.a {
 	position: absolute;
 	width:10px;
 	height:10px;
@@ -65,8 +65,17 @@ body {
 	z-index: 999;
 }
 
+.c {
+	position: absolute;
+	width:10px;
+	height:10px;
+	background-color: red;
+	top:88%;
+	left:60%;
+	z-index: 999;
+}
 
-.b,.d {
+.b {
 	display:none;
 	position: absolute;
 	padding: 5px;
@@ -74,6 +83,7 @@ body {
 	z-index: 99999;
 	font-size: 12;
 }
+
 
 
 .notesbutton:hover{
