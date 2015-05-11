@@ -87,6 +87,7 @@ body {
 
 .notesbutton:hover{
 	cursor: pointer;
+	color: red;
 }
 
 .popupimage {
