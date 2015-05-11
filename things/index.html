@@ -8,17 +8,30 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
-			$('.1:gt(0)').hide();
+			 $(".divs div").each(function(e) {
+        		if (e != 0)
+            	$(this).hide();
+    		});
+    
+    		$(".next").click(function(){
+        		if ($(".container div:visible").next().length != 0)
+            $(".container div:visible").next().show().prev().hide();
+        	else {
+            		$(".container div:visible").hide();
+            		$(".container div:first").show();
+        	}
+        	return false;
+    		});
 
-			$('.next').click(function() {
-    		$('.1:first-child').fadeOut().next().fadeIn().end().appendTo('.container');
-			});
-
-			$('.prev').click(function() {
-    		$('.1:first-child').fadeOut();
-    		$('.1:last-child').prependTo('.container').fadeOut();
-    		$('.1:first-child').fadeIn();
-			});
+    		$(".prev").click(function(){
+        		if ($(".container div:visible").prev().length != 0)
+            		$(".container div:visible").prev().show().next().hide();
+        	else {
+            		$(".container div:visible").hide();
+          			$(".container div:last").show();
+        	}
+        	return false;
+    	});
 			
 			$(function() {
     		var moveLeft = 0;
