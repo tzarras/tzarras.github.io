@@ -56,7 +56,7 @@ body {
 	left:50%;
 }
 
-.1 {
+.a {
 	position: absolute;
 	width:20px;
 	height:20px;
@@ -64,6 +64,15 @@ body {
 	top:90%;
 	left:45%;
 	z-index: 999;
+}
+
+.b {
+	display:none;
+	position: absolute;
+	width:75px;
+	height: 30px;
+	background-color: white;
+	z-index: 99999;
 }
 
 
