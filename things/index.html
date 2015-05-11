@@ -56,6 +56,53 @@
   				$( ".12" ).hide();
   				$( ".1" ).show();
 				});
+			$(function() {
+    		var moveLeft = 0;
+    		var moveDown = 0;
+    		$('a.popper').hover(function(e) {
+   
+        	var target = '#' + ($(this).attr('data-popbox'));
+         
+        	$(target).show();
+        	moveLeft = $(this).outerWidth();
+        	moveDown = ($(target).outerHeight() / 2);
+    		}, function() {
+        	var target = '#' + ($(this).attr('data-popbox'));
+        	$(target).hide();
+    		});
+ 
+    		$('a.popper').mousemove(function(e) {
+        	var target = '#' + ($(this).attr('data-popbox'));
+         
+        	leftD = e.pageX + parseInt(moveLeft);
+        	maxRight = leftD + $(target).outerWidth();
+        	windowLeft = $(window).width() - 40;
+        	windowRight = 0;
+        	maxLeft = e.pageX - (parseInt(moveLeft) + $(target).outerWidth() + 20);
+         
+        	if(maxRight > windowLeft && maxLeft > windowRight)
+        	{	
+            leftD = maxLeft;
+        	}
+     
+        	topD = e.pageY - parseInt(moveDown);
+        	maxBottom = parseInt(e.pageY + parseInt(moveDown) + 20);
+        	windowBottom = parseInt(parseInt($(document).scrollTop()) + parseInt($(window).height()));
+        	maxTop = topD;
+        	windowTop = parseInt($(document).scrollTop());
+        	if(maxBottom > windowBottom)
+        	{
+            topD = windowBottom - $(target).outerHeight() - 20;
+        	} else if(maxTop < windowTop){
+            topD = windowTop + 20;
+        }	
+     
+        $(target).css('top', topD).css('left', leftD);
+     
+     
+    });
+ 
+});
 			});
 	
 		</script>
@@ -80,11 +127,12 @@
 			</div> 
 		</div>
 		<div class="info">
-		<div class="1"> 
-		<b> 5/11/15 11:30PM </b> <br><br>
-		Jasper is that you? <br><br>
-		<b> 4/12/15 6:23PM </b> <br><br>
-		Odd
+		<div class="1">
+				<a href="#" class="popper" data-popbox="pop1"></a>
+				<div id="pop1" class="popbox">
+						<b> 5/11/15 11:30PM </b> <br><br>
+						Jasper is that you? <br><br>
+				</div>
 		</div>
 		<div class="2" style="display: none;"> hello! </div>
 		<div class="3" style="display: none;"> hello tim! </div>
