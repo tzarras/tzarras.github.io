@@ -44,7 +44,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('a.a,a.b,a.c').hover(function(e) {
+    		$('a.a,a.b,a.c,a.d').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -56,7 +56,7 @@
         	$(target).hide();
     		});
  
-    		$('a.a,a.b,a.c').mousemove(function(e) {
+    		$('a.a,a.b,a.c,a.d').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
