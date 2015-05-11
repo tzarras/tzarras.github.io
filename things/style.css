@@ -30,6 +30,7 @@ body {
 	background-color: transparent;
 	left:65%;
 	overflow: hidden;
+	font-size: 10;
 }
 
 .container , .info {
