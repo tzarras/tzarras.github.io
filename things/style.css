@@ -57,11 +57,13 @@ body {
 }
 
 .popper {
-	width:10px;
-	height:10px;
+	position: absolute;
+	width:20px;
+	height:20px;
 	background-color: red;
 	top:90%;
 	left:45%;
+	z-index: 999;
 }
 
 
