@@ -22,7 +22,7 @@ body {
 
 }
 
-.info {
+.settings {
 	float:left;
 	position: relative;
 	width:200px;
@@ -32,7 +32,7 @@ body {
 	overflow: hidden;
 }
 
-.container , .info {
+.container , .settings {
 	top: 6%;
 }
 
