@@ -46,10 +46,11 @@ body {
 
 .idea {
 	position:absolute;
-	width: 20px;
-	height: 20px;
-	background-color: red;
-	top:60%;
+	width:	10px;
+	height: 10px;
+	background-color: white;
+	border-color: black;
+	top:70%;
 	left:30%;
 }
 
