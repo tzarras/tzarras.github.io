@@ -14,21 +14,21 @@
     		});
     
     		$(".next").click(function(){
-        		if ($(".container div:visible").next().length != 0)
-            $(".container div:visible").next().show().prev().hide();
+        		if ($(".container img:visible").next().length != 0)
+            $(".container img:visible").next().show().prev().hide();
         	else {
-            		$(".container div:visible").hide();
-            		$(".container div:first").show();
+            		$(".container img:visible").hide();
+            		$(".container img:first").show();
         	}
         	return false;
     		});
 
     		$(".prev").click(function(){
-        		if ($(".container div:visible").prev().length != 0)
-            		$(".container div:visible").prev().show().next().hide();
+        		if ($(".container img:visible").prev().length != 0)
+            		$(".container img:visible").prev().show().next().hide();
         	else {
-            		$(".container div:visible").hide();
-          			$(".container div:last").show();
+            		$(".container img:visible").hide();
+          			$(".container img:last").show();
         	}
         	return false;
     	});
