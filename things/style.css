@@ -32,7 +32,7 @@ body {
 	overflow: hidden;
 }
 
-.container , .rightcontainer {
+.container , .info {
 	top: 6%;
 }
 
@@ -44,10 +44,11 @@ body {
 	height:100%;
 }
 
-#mousefollow-examples div {
-    background-color: #EEE;
-    text-align: center;
-    margin: 0 auto;
-    width: 100%;
-    padding: 50px 0;
+.idea {
+	width: 20px;
+	height: 20px;
+	background-color: red;
+	
 }
+
+
