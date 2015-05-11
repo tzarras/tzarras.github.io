@@ -30,8 +30,6 @@ body {
 	background-color: transparent;
 	left:65%;
 	overflow: hidden;
-	font-family: sans-serif;
-	font-size: 12;
 }
 
 .container , .info {
@@ -69,9 +67,11 @@ body {
 .b {
 	display:none;
 	position: absolute;
-	padding: 50px;
+	padding: 5px;
 	background-color: white;
 	z-index: 99999;
+	font-family: sans-serif;
+	font-size: 12;
 }
 
 
