@@ -4,7 +4,7 @@
 		<title>Regulated Regular</title>
 		<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-
+		<script src="jquery.powertip.js" type="text/javascript"></script>
 		<script type="text/javascript">
 		
 		$(document).ready(function() {
@@ -56,9 +56,10 @@
   				$( ".12" ).hide();
   				$( ".1" ).show();
 				});
-			$( "yes" ).hover(function() {
-  				$( this ).show();
-				});
+			$('#mousefollow-examples div').powerTip({
+    		followMouse: true
+			});
+		
 			});
 	
 		</script>
@@ -81,7 +82,17 @@
 			<img class="12" id="image" src="12.jpg" alt="" style="display: none;">
 		</div>
 		<div class="info">
-		<div class="1">   </div>
+		<div id="mousefollow-examples">
+    <h2>Mouse follow examples</h2>
+    <div title="Mouse follow {followMouse: true}">
+        The PowerTip for this box will follow the mouse.
+    </div>
+		<div class="1"> 
+			<div class="idea">
+				
+
+			</div> 
+		</div>
 		<div class="2" style="display: none;"> hello! </div>
 		<div class="3" style="display: none;"> hello tim! </div>
 		<div class="4" style="display: none;"> hello clem! </div>
