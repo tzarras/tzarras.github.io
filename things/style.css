@@ -14,10 +14,10 @@ body {
 
 .container {
 	position: absolute;
-	width:400px;
-	height:400px;
+	width:600px;
+	height:600px;
 	background-color: transparent;
-	left: 7%;
+	left: 10%;
 	overflow: scroll;
 
 }
