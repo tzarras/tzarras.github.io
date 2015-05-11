@@ -45,10 +45,12 @@ body {
 }
 
 .idea {
+	position:absolute;
 	width: 20px;
 	height: 20px;
 	background-color: red;
-	
+	top:60%;
+	left:30%;
 }
 
 
