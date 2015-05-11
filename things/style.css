@@ -25,12 +25,12 @@ body {
 .info {
 	float:left;
 	position: relative;
-	width:100px;
+	width:150px;
 	height:600px;
 	background-color: transparent;
 	left:65%;
 	overflow: hidden;
-	font-size: 10;
+	font-size: 15;
 }
 
 .container , .info {
