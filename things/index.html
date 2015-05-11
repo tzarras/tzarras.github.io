@@ -8,54 +8,17 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
-			$( ".1" ).click(function() {
-  				$( ".1" ).hide();
-  				$( ".2" ).show();
-				});
-			$( ".2" ).click(function() {
-  				$( ".2" ).hide();
-  				$( ".3" ).show();
-				});
-			$( ".3" ).click(function() {
-  				$( ".3" ).hide();
-  				$( ".4" ).show();
-				});
-			$( ".4" ).click(function() {
-  				$( ".4" ).hide();
-  				$( ".5" ).show();
-				});
-			$( ".5" ).click(function() {
-  				$( ".5" ).hide();
-  				$( ".6" ).show();
-				});
-			$( ".6" ).click(function() {
-  				$( ".6" ).hide();
-  				$( ".7" ).show();
-				});
-			$( ".7" ).click(function() {
-  				$( ".7" ).hide();
-  				$( ".8" ).show();
-				});
-			$( ".8" ).click(function() {
-  				$( ".8" ).hide();
-  				$( ".9" ).show();
-				});
-			$( ".9" ).click(function() {
-  				$( ".9" ).hide();
-  				$( ".10" ).show();
-				});
-			$( ".10" ).click(function() {
-  				$( ".10" ).hide();
-  				$( ".11" ).show();
-				});
-			$( ".11" ).click(function() {
-  				$( ".11" ).hide();
-  				$( ".12" ).show();
-				});
-			$( ".12" ).click(function() {
-  				$( ".12" ).hide();
-  				$( ".1,.a,.b" ).show();
-				});
+			$('.container div:gt(0)').hide();
+
+			$('.next').click(function() {
+    		$('.container div:first-child').fadeOut().next().fadeIn().end().appendTo('.container');
+			});
+
+			$('.prev').click(function() {
+    		$('.container div:first-child').fadeOut();
+    		$('.container div:last-child').prependTo('.container').fadeOut();
+    		$('.container div:first-child').fadeIn();
+			});
 			
 			$(function() {
     		var moveLeft = 0;
@@ -136,23 +99,48 @@
 						<img class="popupimage" src="https://s-media-cache-ak0.pinimg.com/736x/a5/72/c0/a572c07a3064eecf1967345a5050c505.jpg" alt="">
 				</div>
 		</div>
-			<img class="2" id="image" src="2.jpg" alt="" style="display: none;">
-			<img class="3" id="image" src="3.jpg" alt="" style="display: none;">
-			<img class="4" id="image" src="4.jpg" alt="" style="display: none;">
-			<img class="5" id="image" src="5.jpg" alt="" style="display: none;">
-			<img class="6" id="image" src="6.jpg" alt="" style="display: none;">
-			<img class="7" id="image" src="7yes.jpg" alt="" style="display: none;">
-			<img class="8" id="image" src="8.jpg" alt="" style="display: none;">
-			<img class="9" id="image" src="9.jpg" alt="" style="display: none;">
-			<img class="10" id="image" src="10.jpg" alt="" style="display: none;">
-			<img class="11" id="image" src="11.jpg" alt="" style="display: none;">
-			<img class="12" id="image" src="12.jpg" alt="" style="display: none;">
-			
-			</div> 
+		<div class="2">
+			<img id="image" src="2.jpg" alt="" style="display: none;">
+		</div>
+		<div class="3">
+			<img id="image" src="3.jpg" alt="" style="display: none;">
+		</div>
+		<div class="4">
+			<img id="image" src="4.jpg" alt="" style="display: none;">
+		</div>
+		<div class="5">
+			<img id="image" src="5.jpg" alt="" style="display: none;">
+		</div>
+		<div class="6">
+			<img id="image" src="6.jpg" alt="" style="display: none;">
+		</div>
+		<div class="7">
+			<img id="image" src="7yes.jpg" alt="" style="display: none;">
+		</div>
+		<div class="8">
+			<img id="image" src="8.jpg" alt="" style="display: none;">
+		</div>
+		<div class="9">
+			<img id="image" src="9.jpg" alt="" style="display: none;">
+		</div>
+		<div class="10">
+			<img id="image" src="10.jpg" alt="" style="display: none;">
+		</div>
+		<div class="11">
+			<img id="image" src="11.jpg" alt="" style="display: none;">
+		</div>
+		<div class="12">
+			<img id="image" src="12.jpg" alt="" style="display: none;">
+		</div>
+	</div> 
+
 		</div>
 		<div class="settings">
 		<div class="addbutton"> Add Note </div><br>
 		<div class="notesbutton"> Show Notes </div>
+		<div class=".next"> Next </div>
+		<div class=".prev"> Previous </div>
+
 		
 		</body>
 
