@@ -8,16 +8,16 @@
 	<script type="text/javascript">
 		
 		$(document).ready(function() {
-			$('.1 img:gt(0)').hide();
+			$('.1 :gt(0)').hide();
 
 			$('.next').click(function() {
-    		$('.1 img:first-child').fadeOut().next().fadeIn().end().appendTo('.1');
+    		$('.1:first-child').fadeOut().next().fadeIn().end().appendTo('.1');
 			});
 
 			$('.prev').click(function() {
-    		$('.1 img:first-child').fadeOut();
-    		$('.1 img:last-child').prependTo('.1').fadeOut();
-    		$('.1 img:first-child').fadeIn();
+    		$('.1:first-child').fadeOut();
+    		$('.1:last-child').prependTo('.1').fadeOut();
+    		$('.1:first-child').fadeIn();
 			});
 			
 			$(function() {
