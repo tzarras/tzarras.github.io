@@ -74,4 +74,9 @@ body {
 	font-size: 12;
 }
 
+.notesbutton:hover{
+	background-color: black;
+	color: white;
+}
+
 
