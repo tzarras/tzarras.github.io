@@ -65,6 +65,16 @@ body {
 	z-index: 999;
 }
 
+.c {
+	position: absolute;
+	width:10px;
+	height:10px;
+	background-color: red;
+	top:88%;
+	left:60%;
+	z-index: 999;
+}
+
 .b {
 	display:none;
 	position: absolute;
@@ -78,4 +88,7 @@ body {
 	cursor: pointer;
 }
 
+.popupimage {
+	height: 40px;
+}
 
