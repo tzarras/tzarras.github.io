@@ -66,7 +66,7 @@ body {
 	z-index: 999;
 }
 
-.c {
+.b {
 	position: absolute;
 	width:10px;
 	height:10px;
@@ -76,7 +76,19 @@ body {
 	z-index: 999;
 }
 
-.b {
+.c {
+	position: absolute;
+	width:10px;
+	height:10px;
+	background-color: red;
+	top:94%;
+	left:50%;
+	z-index: 999;
+}
+
+
+
+.zz {
 	display:none;
 	position: absolute;
 	padding: 5px;
