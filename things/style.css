@@ -56,9 +56,6 @@ body {
 
 .a {
 	position: absolute;
-	width:10px;
-	height:10px;
-	background-color: #9ae0ed;
 	top:70%;
 	left:35%;
 	z-index: 999;
