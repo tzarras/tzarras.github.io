@@ -25,7 +25,7 @@ body {
 	position: absolute;
 	height:600px;
 	background-color: transparent;
-	left: 26%;
+	left: 24%;
 	overflow: scroll;
 
 }
@@ -36,6 +36,7 @@ body {
 	background-color: transparent;
 	left:75%;
 	overflow: hidden;
+	font-size: 12;
 }
 
 .container , .settings, .leftinfo {
