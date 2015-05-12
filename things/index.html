@@ -99,7 +99,7 @@
 );
 
 $(".dropzone").droppable({
-    accept: "li",
+    accept: ".addbutton",
     drop: function(event,ui){
         console.log(ui.helper);
        $(this).append($(ui.helper).html());    
