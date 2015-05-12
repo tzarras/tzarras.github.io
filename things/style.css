@@ -55,10 +55,8 @@ body {
 
 .a {
 	position: absolute;
-	width:17px;
+	width:15px;
 	height:auto;
-	background-color: white;
-	background-image: url('add.svg');
 	top:70%;
 	left:35%;
 	z-index: 999;
@@ -174,4 +172,5 @@ body {
 .display{
 	display: none;
 }
+
 
