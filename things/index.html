@@ -96,15 +96,15 @@
 				});
     
     $(".addbutton").draggable(
-    	{helper: "clone"}
-	);
-
-$("body").droppable({
-    accept: ".addbutton",
-    drop: function(event,ui){
-        console.log(ui.helper);
-       $(this).append($(ui.helper).html());    
-    }
+    {helper: "clone"}
+);
+    $(".container").droppable({ 
+        accept: function(drag) {
+            var dropId = $(this).attr('data-id');
+            var dragId = $(drag).attr('data-id');
+            return dropId === dragId;
+        }
+    });
 });
 				
 
