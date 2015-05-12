@@ -44,7 +44,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('a.a,a.b,a.c,a.d,a.e').hover(function(e) {
+    		$('a.a,a.b,a.c,a.d,a.e,a.f').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -56,7 +56,7 @@
         	$(target).hide();
     		});
  
-    		$('a.a,a.b,a.c,a.d,a.e').mousemove(function(e) {
+    		$('a.a,a.b,a.c,a.d,a.e,a.f').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
@@ -88,7 +88,7 @@
 			});
 			
 			$( ".notesbutton" ).click(function() {
-  				$(".a,.b,.c,.d,.e").toggle();
+  				$(".a,.b,.c,.d,.e,.f").toggle();
   				$(this).text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
@@ -140,6 +140,12 @@
 		</div>
 		<div class="sp" id="slide">
 			<img id="image" src="9.jpg" alt="">
+			<a href="#" class="f" data-popbox="pop6" style="display: none;"></a>
+				<div id="pop6" class="zz" >
+						<b> 4/15/14 5:33PM </b> <br><br>
+						?<br><br>
+						<img class="popupimage" src="https://shard1.1stdibs.us.com/archivesE/upload/9080/09_13/sottsass_lb1/XXX_Sottsass_LB1.jpg" alt="">
+				</div>
 		</div>
 		<div class="sp" id="slide">
 			<img id="image" src="10.jpg" alt="">
