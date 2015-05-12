@@ -221,4 +221,6 @@ body {
 
 #home {
 	font-size: 13;
+	border-style: solid;
+	border-width: 1px;
 }
