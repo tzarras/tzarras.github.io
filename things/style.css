@@ -146,6 +146,13 @@ body {
 	width: auto;
 }
 
+.next, .prev {
+	border-style: solid;
+}
+
+
+
+
 .next:hover, .prev:hover {
 	cursor: pointer;
 	color: red;
