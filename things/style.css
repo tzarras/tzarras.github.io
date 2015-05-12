@@ -103,6 +103,16 @@ body {
 	z-index: 999;
 }
 
+.g {
+	position: absolute;
+	width:10px;
+	height:10px;
+	background-color: red;
+	top:36%;
+	left:40%;
+	z-index: 999;
+}
+
 
 
 .zz {

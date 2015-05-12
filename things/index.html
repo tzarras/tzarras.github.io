@@ -44,7 +44,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('a.a,a.b,a.c,a.d,a.e,a.f').hover(function(e) {
+    		$('a.a,a.b,a.c,a.d,a.e,a.f,a.g').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -56,7 +56,7 @@
         	$(target).hide();
     		});
  
-    		$('a.a,a.b,a.c,a.d,a.e,a.f').mousemove(function(e) {
+    		$('a.a,a.b,a.c,a.d,a.e,a.f,a.g').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
@@ -88,7 +88,7 @@
 			});
 			
 			$( ".notesbutton" ).click(function() {
-  				$(".a,.b,.c,.d,.e,.f").toggle();
+  				$(".a,.b,.c,.d,.e,.f,.g").toggle();
   				$(this).text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
@@ -146,6 +146,12 @@
 						?<br><br>
 						<img class="popupimage" src="https://shard1.1stdibs.us.com/archivesE/upload/9080/09_13/sottsass_lb1/XXX_Sottsass_LB1.jpg" alt="">
 				</div>
+			<a href="#" class="g" data-popbox="pop7" style="display: none;"></a>
+				<div id="pop7" class="zz" >
+						<b> 3/19/15 5:38AM </b> <br><br>
+						Those screws<br>
+				</div>
+
 		</div>
 		<div class="sp" id="slide">
 			<img id="image" src="10.jpg" alt="">
