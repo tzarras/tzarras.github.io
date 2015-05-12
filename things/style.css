@@ -163,7 +163,9 @@ body {
 .addbutton {
 	width:30px;
 	height: auto;
-	cursor: pointer
+	cursor: pointer;
+	position:fixed;
+	z-index: 999999;
 }
 
 #addextra {
