@@ -72,7 +72,7 @@
      
         	topD = e.pageY - parseInt(moveDown);
         	maxBottom = parseInt(e.pageY + parseInt(moveDown) + 20);
-        	windowBottom = parseInt(parseInt($(document).scrollTop()) + parseInt($(window).height()));
+        	windowBottom = parseInt(parseInt($(document).scrollTop()) + parseInt($('.container').height()));
         	maxTop = topD;
         	windowTop = parseInt($(document).scrollTop());
         	if(maxBottom > windowBottom)
