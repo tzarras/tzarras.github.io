@@ -94,7 +94,15 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-				
+				$('.addbutton').draggable({
+    			revert:"valid",
+    			helper:"clone"
+				});
+				$('#slide').droppable({
+    			drop: function (e, ui) {
+        		$(ui.draggable).clone().appendTo($(this));
+    			}
+				})
 				
 
 			
