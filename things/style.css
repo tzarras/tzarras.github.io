@@ -48,7 +48,7 @@ body {
 	width:10px;
 	height:10px;
 	background-color: red;
-	top:60%;
+	top:70%;
 	left:35%;
 	z-index: 999;
 }
@@ -58,7 +58,7 @@ body {
 	width:10px;
 	height:10px;
 	background-color: red;
-	top:55%;
+	top:75%;
 	left:60%;
 	z-index: 999;
 }
@@ -68,7 +68,7 @@ body {
 	width:10px;
 	height:10px;
 	background-color: red;
-	top:55%;
+	top:65%;
 	left:50%;
 	z-index: 999;
 }
