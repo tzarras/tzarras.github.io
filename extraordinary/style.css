@@ -32,7 +32,7 @@ body {
 
 .settings {
 	float:left;
-	position: fixed;
+	position: absolute;
 	background-color: transparent;
 	left:75%;
 	overflow: hidden;
