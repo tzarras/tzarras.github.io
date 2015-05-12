@@ -9,8 +9,8 @@ html {
 
 body {
 	width: 100%;
-	margin:50px 0px; padding:0px;
-	text-align:center;
+	height: 100%;
+	margin: 0;
 	overflow-y: hidden;
 }
 .leftinfo {
@@ -21,7 +21,7 @@ body {
 	font-size: 10;
 
 }
-.container {
+.container , .fakecontainer {
 	position: absolute;
 	height:600px;
 	background-color: transparent;
@@ -182,17 +182,5 @@ body {
 
 .settings{
 	top:17%;
-}
-
-.main {
-	font-size: 30;
-	position: absolute;
-    height: 200px;
-    width: 200px;
-    line-height: 1.4;
-    margin:0px auto;
-    padding-left: 38px;
-    padding:15px;
-
 }
 
