@@ -95,16 +95,38 @@
      			});
 				});
 				
-				$('.addbutton').draggable({  
-      			helper:"clone"  
-    			});  
+				var x = null;
 
-    		$('.container').droppable({  
-      			drop: function(e, ui){  
-        		$(ui.draggable).clone().appendTo($(this));  
-      			}  
-    		})
-    });
+    				$(".addbutton").draggable({
+        			helper: 'clone',
+        			cursor: 'move',
+        			tolerance: 'fit'
+    				});
+
+            		$(".container").droppable({
+
+                	drop: function (e, ui) {
+
+                    if ($(ui.draggable)[0].id != "") {
+                        x = ui.helper.clone();
+                    ui.helper.remove();
+                    x.draggable({
+                        helper: 'original',
+                        containment: '.container',
+                        tolerance: 'fit'
+                    });
+                    x.resizable({
+                        maxHeight: 40,
+                        minHeight: 40,
+                        minWidth: 50
+                    });
+                    x.appendTo('.container');
+                }
+
+                }
+            });
+
+});
 				
 
 			
