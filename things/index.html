@@ -44,7 +44,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('.addbutton,a.a,a.b,a.c,a.d,a.e,a.f,a.g').hover(function(e) {
+    		$('.word,.addbutton,a.a,a.b,a.c,a.d,a.e,a.f,a.g').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -56,7 +56,7 @@
         	$(target).hide();
     		});
  
-    		$('.addbutton,a.a,a.b,a.c,a.d,a.e,a.f,a.g').mousemove(function(e) {
+    		$('.word,.addbutton,a.a,a.b,a.c,a.d,a.e,a.f,a.g').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
@@ -106,9 +106,9 @@
 
 		<body>
 		<div class="leftinfo">
-		<b>"extraordinary"</b><br><br>
-		Extraordinary means something is amazing or outstanding, but at the same time, the word is composed of "extra" and "ordinary." 
-		</div>
+		<div class="word" data-popbox="pop100"><b>"extraordinary"</b></div>
+				<div id="pop100" class="zz" style="display: none;">Extraordinary means something is amazing or outstanding, but at the same time, the word is composed of "extra" and "ordinary." Maybe there's something more to it?
+				</div>
 		<div class="container">
 		<div class="sp" id="slide">
 			<img id="image" src="1.jpg" alt="">
