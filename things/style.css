@@ -56,6 +56,8 @@ body {
 
 .a {
 	position: absolute;
+	width:30px;
+	height: auto;
 	top:70%;
 	left:35%;
 	z-index: 999;
