@@ -187,9 +187,10 @@ body {
 .main {
 	font-size: 20;
 	position: absolute;
-	height:600px;
+	width:100px;
 	background-color: transparent;
 	left: 24%;
+	top: 6%;
 	overflow: hidden;
 
 }
