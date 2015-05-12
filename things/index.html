@@ -94,7 +94,7 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-			$(function () {
+			
     $(".addbutton").draggable({helper: 'clone', revert: 'invalid' });
     $(".container").droppable({ 
         accept: function(drag) {
@@ -103,7 +103,7 @@
             return dropId === dragId;
         }
     });
-});
+
 				
 
 			
