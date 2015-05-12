@@ -111,7 +111,7 @@
     			var origPos;
     			var ctPos = ct.offset();
 
-    			if (item.is('.container')) {
+    			if (item.is('.addbutton')) {
       			origPos = item.offset();
       			ct.append(item);
     			} else {
@@ -119,7 +119,7 @@
       			item = item.clone();
       			ct.append(item);
       			item.removeClass("ui-draggable");
-      			item.addClass('add');
+      			item.addClass('addbutton');
       			item.draggable({
         		containment: ".container",
         		snap: ".container",
