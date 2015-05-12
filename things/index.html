@@ -99,8 +99,9 @@
     			helper: "clone"
 				}).on('dragstart', function (e, ui) {
     		$(ui.helper).css('z-index','999').addClass("clone")
-    		$(".a,.b,.c,.d,.e,.f,.g").toggle()
-    		$(this).text(function(_, oldText) {
+    		$(".a,.b,.c,.d,.e,.f,.g").toggle();
+
+    		$(".notesbutton").text(function(_, oldText) {
          return oldText === 'Show Notes' ? 'Hide Notes' : 'Show Notes';
      			});;
 				}).on('dragstop', function (e, ui) {
