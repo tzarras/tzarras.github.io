@@ -16,6 +16,7 @@ body {
 .leftinfo {
 	position: absolute;
 	background-color: transparent;
+	width: 50px;
 	left: 10%;
 
 }
