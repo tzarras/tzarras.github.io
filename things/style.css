@@ -165,8 +165,6 @@ body {
 	width:30px;
 	height: auto;
 	cursor: pointer;
-	position:fixed;
-	z-index: 999999;
 }
 
 #addextra {
