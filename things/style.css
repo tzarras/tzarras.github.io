@@ -174,4 +174,8 @@ body {
 	display: none;
 }
 
+.word {
+	position: fixed;
+}
+
 
