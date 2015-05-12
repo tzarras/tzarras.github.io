@@ -16,8 +16,7 @@ body {
 
 .container {
 	position: absolute;
-	width:600px;
-	height:600px;
+	width:400px;
 	background-color: transparent;
 	left: 25%;
 	overflow: scroll;
