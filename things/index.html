@@ -94,16 +94,41 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-				$('.addbutton').draggable({
-    			revert:"valid",
-    			helper:"clone"
+				$(".addbutton").draggable({
+  				helper: "clone",
+  				appendTo: "body",
+  				revert: "invalid",
+  				stack: ".addbutton",
+  				scroll: false
 				});
-				$('#slide').droppable({
-    			drop: function (e, ui) {
-        		$(ui.draggable).clone().appendTo($(this));
-    			}
-				})
-				
+				$(".container").droppable({
+  				accept: ".addbutton",
+  				drop: function (event, ui) {
+    			var ct = $(this);
+    			var item = $(ui.draggable);
+    			var origPos;
+    			var ctPos = ct.offset();
+
+    			if (item.is('.addbutton')) {
+      			origPos = item.offset();
+      			ct.append(item);
+    			} else {
+      			origPos = ui.offset;
+      			item = item.clone();
+      			ct.append(item);
+      			item.removeClass("ui-draggable");
+      			item.addClass('addbutton');
+      			item.draggable({
+        		stack: ".addbutton",
+        		scroll: false
+      });
+    }
+    item.css({
+      top: origPos.top - ctPos.top - 1,
+      left: origPos.left - ctPos.left -1
+    });
+  }
+});
 
 			
 	});
