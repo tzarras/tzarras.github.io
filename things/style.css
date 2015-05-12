@@ -25,7 +25,7 @@ body {
 
 .settings {
 	float:left;
-	position: relative;
+	position: fixed;
 	background-color: transparent;
 	left:75%;
 	overflow: hidden;
