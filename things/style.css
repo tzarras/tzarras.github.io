@@ -103,7 +103,8 @@ body {
 	padding: 5px;
 	background-color: white;
 	z-index: 99999;
-	box-shadow: 20px 20px 5px #888888;
+	border-color: black;
+	border-width: .5px;
 	font-size: 12;
 }
 
