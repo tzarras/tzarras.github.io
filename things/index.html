@@ -62,7 +62,7 @@
         	leftD = e.pageX + parseInt(moveLeft);
         	maxRight = leftD + $(target).outerWidth();
         	windowLeft = $(window).width() - 60;
-        	windowRight = 0;
+        	windowRight = -50;
         	maxLeft = e.pageX - (parseInt(moveLeft) + $(target).outerWidth() + 20);
          
         	if(maxRight > windowLeft && maxLeft > windowRight)
