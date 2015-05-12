@@ -146,10 +146,7 @@ body {
 	width: auto;
 }
 
-.next, .prev {
-	top: 40%;
-	width:25px;
-	height: auto;
+.next:hover, .prev:hover {
 	cursor: pointer;
 	color: red;
 }
