@@ -105,7 +105,7 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});;
 				}).on('dragstop', function (e, ui) {
-    		$(this).after($(ui.helper).clone().draggable());
+    		$(this).after($(ui.helper).clone());
 				});
 	
 				
