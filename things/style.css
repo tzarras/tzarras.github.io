@@ -21,7 +21,7 @@ body {
 	font-size: 10;
 
 }
-.container , .fakecontainer {
+.container {
 	position: absolute;
 	height:600px;
 	background-color: transparent;
@@ -182,5 +182,15 @@ body {
 
 .settings{
 	top:17%;
+}
+
+.main {
+	font-size: 20;
+	position: absolute;
+	height:600px;
+	background-color: transparent;
+	left: 24%;
+	overflow: hidden;
+
 }
 
