@@ -102,7 +102,7 @@
     		$(".a,.b,.c,.d,.e,.f,.g").toggle();
 
     		$(".notesbutton").text(function(_, oldText) {
-         return oldText === 'Show Notes' ? 'Hide Notes' : 'Show Notes';
+         return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});;
 				}).on('dragstop', function (e, ui) {
     		$(this).after($(ui.helper).clone().draggable());
@@ -192,7 +192,7 @@
 
 		<div class="settings">
 			
-			<div class="notesbutton"> Hide Notes </div><br><br>
+			<div class="notesbutton"> Show Notes </div><br><br>
 			<div class="next" alt=""> <b>----></b> </div><br><br>
 			<div class="prev" alt=""> <b><----</b> </div>
 
