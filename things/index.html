@@ -96,10 +96,10 @@
 				});
 				
 				$(function() {
-    			$("..addbutton").draggable({
+    			$(".addbutton").draggable({
         		helper: "clone",
     			});
-    			$(".container").droppable({
+    			$(".fakecontainer").droppable({
         		drop: function(event, ui) {
             	$this.append(ui.draggable);
         }
@@ -119,6 +119,8 @@
 		<div class="word" data-popbox="pop200"><b>"extraordinary"</b></div><br><br>
 				<div id="pop200" class="zzz" style="display: none;">Extraordinary means something is amazing or outstanding, but at the same time, the word is composed of "extra" and "ordinary." Maybe there's something more to it?
 				</div>
+		</div>
+		<div class="fakecontainer">
 		</div>
 		<div class="container">
 		<div class="sp" id="slide">

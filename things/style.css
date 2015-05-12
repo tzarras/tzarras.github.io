@@ -21,7 +21,7 @@ body {
 	font-size: 10;
 
 }
-.container {
+.container , .fakecontainer {
 	position: absolute;
 	height:600px;
 	background-color: transparent;
@@ -41,7 +41,7 @@ body {
 	font-size: 12;
 }
 
-.container , .settings, .leftinfo {
+.container , .settings, .leftinfo, .fakecontainer {
 	top: 6%;
 }
 
