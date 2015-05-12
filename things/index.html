@@ -94,17 +94,16 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-			$(function () {
-    $(".addbutton").draggable(
+			$(".addbutton").draggable(
     {helper: "clone"}
 );
-    $(".container").droppable({ 
-        accept: function(drag) {
-            var dropId = $(this).attr('data-id');
-            var dragId = $(drag).attr('data-id');
-            return dropId === dragId;
-        }
-    });
+
+$(".dropzone").droppable({
+    accept: "li",
+    drop: function(event,ui){
+        console.log(ui.helper);
+       $(this).append($(ui.helper).html());    
+    }
 });
 				
 
@@ -116,6 +115,7 @@
 	</head>
 
 		<body>
+		<div class="dropzone"></div>
 		<div>
 			<img class="addbutton" data-popbox="pop100" src="add.svg" alt="">
 				<div id="pop100" class="zz" >
