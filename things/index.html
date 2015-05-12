@@ -94,16 +94,7 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-			
-    $(".addbutton").draggable({helper: 'clone', revert: 'invalid' });
-    $(".container").droppable({ 
-        accept: function(drag) {
-            var dropId = $(this).attr('data-id');
-            var dragId = $(drag).attr('data-id');
-            return dropId === dragId;
-        }
-    });
-
+	
 				
 
 			
@@ -128,7 +119,7 @@
 		
 		<div class="container">
 		<div class="sp" id="slide">
-			<img id="image" src="1.jpg" alt=""  >
+			<img id="image" src="1.jpg" alt="" style="display: none;">
 			<a href="#" class="a" data-popbox="pop1" style="display: none;"></a>
 				<div id="pop1" class="zz">
 						<b> 5/11/15 11:30PM </b> <br><br>
