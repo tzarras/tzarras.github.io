@@ -39,7 +39,6 @@ body {
 	width:100px;
 	height:400px;
 	font-size: 12;
-	z-index:999;
 }
 
 .container , .settings, .leftinfo, .fakecontainer {
@@ -163,7 +162,9 @@ body {
 .addbutton {
 	width:30px;
 	height: auto;
-	cursor: pointer
+	cursor: pointer;
+	position: absolute;
+	z-index: 999;
 }
 
 #addextra {
