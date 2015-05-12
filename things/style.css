@@ -99,7 +99,6 @@ body {
 
 .zz {
 	display:none;
-	position: absolute;
 	padding: 5px;
 	background-color: white;
 	z-index: 99999;
