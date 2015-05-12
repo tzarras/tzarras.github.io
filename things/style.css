@@ -117,8 +117,7 @@ body {
 }
 
 .next:hover,.prev:hover{
-	background-color: black;
-	color:white;
+	color:#06600c;
 	cursor: pointer;
 }
 
