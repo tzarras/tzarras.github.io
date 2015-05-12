@@ -95,41 +95,15 @@
      			});
 				});
 				
-				$(".addbutton").draggable({
-  				helper: "clone",
-  				appendTo: "body",
-  				revert: "invalid",
-  				snap: ".addbutton",
-  				stack: ".addbutton",
-  				scroll: false
-				});
-				$(".container").droppable({
-  				accept: ".addbutton",
-  				drop: function (event, ui) {
-    			var ct = $(this);
-    			var item = $(ui.draggable);
-    			var origPos;
-    			var ctPos = ct.offset();
+				$('.addbutton').draggable({  
+      			helper:"clone"  
+    			});  
 
-    			if (item.is('.addbutton')) {
-      			origPos = item.offset();
-      			ct.append(item);
-    			} else {
-      			origPos = ui.offset;
-      			item = item.clone();
-      			ct.append(item);
-      			item.removeClass("ui-draggable");
-      			item.addClass('addbutton');
-      			item.draggable({
-        		containment: ".container",
-        		snap: ".addbutton",
-        		stack: ".addbutton",
-        		scroll: false
-      			});
-    			}
-    			item.css({
-      			top: origPos.top - ctPos.top - 1,
-      			left: origPos.left - ctPos.left -1
+    		$('.container').droppable({  
+      			drop: function(e, ui){  
+        		$(ui.draggable).clone().appendTo($(this));  
+      			}  
+    		})
     });
   }
 });
