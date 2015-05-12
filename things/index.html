@@ -45,7 +45,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.h,.clone').hover(function(e) {
+    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.h,.i,.j,.clone').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -57,7 +57,7 @@
         	$(target).hide();
     		});
  
-    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.h,.clone').mousemove(function(e) {
+    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.h,.i,.j,.clone').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
@@ -89,7 +89,7 @@
 			});
 			
 			$( ".notesbutton" ).click(function() {
-  				$(".a,.b,.c,.d,.e,.f,.g,.h,.clone").toggle();
+  				$(".a,.b,.c,.d,.e,.f,.g,.h,.i,.j,.clone").toggle();
   				$(this).text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
@@ -99,7 +99,7 @@
     			helper: "clone"
 				}).on('dragstart', function (e, ui) {
     		$(ui.helper).css('z-index','999').addClass("clone")
-    		$(".a,.b,.c,.d,.e,.f,.g,.h,.clone").toggle();
+    		$(".a,.b,.c,.d,.e,.f,.g,.h,.i,.j,.clone").toggle();
 
     		$(".notesbutton").text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
@@ -191,7 +191,17 @@
             <img class="h" data-popbox="pop10" src="add.svg" alt="" style="display: none;">
                 <div id="pop10" class="zz" >
                         <b> 3/19/15 5:38AM </b> <br><br>
-                        This grip. <br>
+                        This grip <br>
+                </div>
+            <img class="i" data-popbox="pop11" src="add.svg" alt="" style="display: none;">
+                <div id="pop11" class="zz" >
+                        <b> 3/16/15 10:00AM </b> <br><br>
+                        Finger grip or ? <br>
+                </div>
+            <img class="j" data-popbox="pop12" src="add.svg" alt="" style="display: none;">
+                <div id="pop12" class="zz" >
+                        <b> 5/19/15 12:00AM </b> <br><br>
+                        This blue is spot on.   <br>
                 </div>
 		</div>
 			
