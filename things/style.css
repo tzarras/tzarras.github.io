@@ -27,7 +27,6 @@ body {
 	background-color: transparent;
 	left: 24%;
 	overflow: hidden;
-	z-index: -1;
 
 }
 
@@ -185,11 +184,5 @@ body {
 
 .settings{
 	top:20%;
-}
-
-.dropzone {
-	background-color: blue;
-	width:400px;
-	height: 400px;
 }
 
