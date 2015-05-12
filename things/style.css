@@ -150,7 +150,8 @@ body {
 	top: 40%;
 	width:25px;
 	height: auto;
-	cursor: pointer
+	cursor: pointer;
+	color: red;
 }
 
 .addbutton {
