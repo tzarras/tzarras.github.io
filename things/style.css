@@ -160,7 +160,9 @@ body {
 }
 
 #addextra {
-	position:absolute;
-	top:5px;
+	position:fixed;
+	top:10px;
+	left: 5px;
+
 }
 
