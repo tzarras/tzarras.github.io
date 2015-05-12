@@ -103,7 +103,7 @@
         			tolerance: 'fit'
     				});
 
-            		$(".container").droppable({
+            		$("#image").droppable({
 
                 	drop: function (e, ui) {
 
@@ -112,7 +112,7 @@
                     ui.helper.remove();
                     x.draggable({
                         helper: 'original',
-                        containment: '.container',
+                        containment: '#image',
                         tolerance: 'fit'
                     });
                     x.resizable({
@@ -120,7 +120,7 @@
                         minHeight: 40,
                         minWidth: 50
                     });
-                    x.appendTo('.container');
+                    x.appendTo('#image');
                 }
 
                 }
