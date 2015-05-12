@@ -125,8 +125,6 @@ body {
 	padding: 5px;
 	background-color: white;
 	z-index: 99999;
-	border-style: solid;
-    border-width: .5px;
 	font-size: 12;
 }
 
@@ -172,7 +170,14 @@ body {
 }
 
 .zzz{
-	width:50px;
+
+	display:none;
+	position: fixed;
+	padding: 5px;
+	background-color: #fcf9c9;
+	z-index: 99999;
+	font-size: 12;
+	
 }
 
 .settings{
