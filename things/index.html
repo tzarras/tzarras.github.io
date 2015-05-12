@@ -93,12 +93,11 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-			$( ".addbutton" ).hover(
-  				function() {
-    		$( this ).append( $( "<span>Add a note</span>" ) );
-  				}, function() {
-    		$( this ).find( "span:last" ).remove();
-			});
+			$(".addbutton").hover(function(){
+    
+    			$(this).toggleClass('.addbutton');
+
+});
 	});
 	
 		</script>
@@ -179,6 +178,7 @@
 		<div class="settings">
 		
 			<img class="addbutton" src="add.svg" alt=""><br><br><br>
+			<div class="addbutton" id="slide"> Add a note</div>
 			<div class="notesbutton"> Show Notes </div><br><br>
 			<img class="next" src="next.svg" alt=""><br><br><br>
 			<img class="prev" src="previous.svg" alt="">
