@@ -98,7 +98,7 @@
 			$('.addbutton').draggable({
     			helper: "clone"
 				}).on('dragstart', function (e, ui) {
-    		$(ui.helper).css('z-index','999').addClass("clone")
+    		$(ui.helper).addClass("clone")
     		$(".a,.b,.c,.d,.e,.f,.g,.h,.i,.j,.clone").show();
 
     		$(".notesbutton").text(function(_, oldText) {
