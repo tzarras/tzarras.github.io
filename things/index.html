@@ -95,14 +95,7 @@
      			});
 				});
 			$(function () {
-  $('.addbutton').draggable({
-        cancel: "a.ui-icon",
-        revert: true, 
-        helper: "clone",
-        cursor: "move"
-        , revertDuration: 0
-    });
-  
+    $(".addbutton").draggable({ revert: 'invalid' }).add($('.addbutton').clone());
     $(".container").droppable({ 
         accept: function(drag) {
             var dropId = $(this).attr('data-id');
