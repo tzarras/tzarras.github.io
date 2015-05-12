@@ -98,7 +98,7 @@
     $(".addbutton").draggable(
     {helper: "clone"}
 );
-    $(".container").droppable({ 
+    $("#image").droppable({ 
         accept: function(drag) {
             var dropId = $(this).attr('data-id');
             var dragId = $(drag).attr('data-id');
