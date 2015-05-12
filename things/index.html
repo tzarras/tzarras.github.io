@@ -95,54 +95,17 @@
      			});
 				});
 				
-				$(function(){  
- //Make every clone image unique.  
-   				var counts = [0];
-    			var resizeOpts = { 
-      			handles: "all" ,autoHide:true
-    			};    
-   				$(".addbutton").draggable({
-                         helper: "clone",
-                         //Create counter
-                         start: function() { counts[0]++; }
-                        });
-
-				$(".container").droppable({
-       			drop: function(e, ui){
-               if(ui.draggable.hasClass("addbutton")) {
-     			$(this).append($(ui.helper).clone());
-   //Pointing to the dragImg class in dropHere and add new class.
-         		$(".container .addbutton").addClass("item-"+counts[0]);
-            	$(".container .addbutton").addClass("imgSize-"+counts[0]);
-                
-   //Remove the current class (ui-draggable and dragImg)
-         		$(".container .item-"+counts[0]).removeClass("addbutton ui-draggable ui-draggable-dragging");
-
-				$(".item-"+counts[0]).dblclick(function() {
-				$(this).remove();
-				});     
-				make_draggable($(".item-"+counts[0])); 
-      			$(".imgSize-"+counts[0]).resizable(resizeOpts);     
-       			}
-
-       			}
-      			});
-
-
-				var zIndex = 0;
-				function make_draggable(elements)
-				{	
-				elements.draggable({
-				containment:'parent',
-				start:function(e,ui){ ui.helper.css('z-index',++zIndex); },
-				stop:function(e,ui){
-		}
-	});
-}    
-
-
-    
-   });
+				$(function() {
+    			$("..addbutton").draggable({
+        		helper: "clone",
+    			});
+    			$(".container").droppable({
+        		drop: function(event, ui) {
+            	$this.append(ui.draggable);
+        }
+    });
+});
+				
 
 			
 	});
