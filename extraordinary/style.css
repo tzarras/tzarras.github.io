@@ -187,11 +187,11 @@ body {
 }
 
 .addbutton:hover {
-	cursor: grab;
+	cursor: -webkit-grab;
 }
 
 .addbutton:active {
-	cursor: grabbing;
+	cursor: -webkit-grabbing;
 }
 
 #addextra {
