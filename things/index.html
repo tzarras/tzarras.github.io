@@ -95,7 +95,7 @@
      			});
 				});
 			$(function () {
-    $(".addbutton").draggable({ revert: 'invalid' }).append($(this).clone());
+    $(".addbutton").draggable({helper: 'clone', revert: 'invalid' });
     $(".container").droppable({ 
         accept: function(drag) {
             var dropId = $(this).attr('data-id');
