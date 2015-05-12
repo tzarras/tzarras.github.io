@@ -12,6 +12,7 @@ body {
 	height: 100%;
 	margin: 0;
 	overflow-y: hidden;
+	padding: 0px;
 }
 .leftinfo {
 	position: fixed;
@@ -188,6 +189,7 @@ body {
 	font-size: 20;
 	position: absolute;
 	width:200px;
+	height:200px;
 	background-color: transparent;
 	margin: auto;
 	overflow: hidden;
