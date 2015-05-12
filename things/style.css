@@ -108,7 +108,7 @@ body {
 	font-size: 12;
 }
 
-.notesbutton:hover,.addbutton:hover{
+.notesbutton:hover,.addbutton:hover,.next:hover,.prev:hover{
 	cursor: pointer;
 	color: red;
 }
@@ -117,4 +117,6 @@ body {
 	height: 150px;
 	width: auto;
 }
+
+
 
