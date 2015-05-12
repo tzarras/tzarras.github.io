@@ -147,8 +147,7 @@ body {
 }
 
 .next, .prev {
-	border-style: solid;
-	border-width: 1px;
+	display: inline;
 }
 
 
