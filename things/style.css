@@ -17,6 +17,8 @@ body {
 .container {
 	position: absolute;
 	background-color: transparent;
+	width:400px;
+	height:600px;
 	left: 25%;
 	overflow: scroll;
 
@@ -37,7 +39,7 @@ body {
 }
 
 #image {
-	height: 80%;
+	width:100%;
 }
 
 .7 {
