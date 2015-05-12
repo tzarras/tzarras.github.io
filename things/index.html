@@ -89,7 +89,7 @@
 			});
 			
 			$( ".notesbutton" ).click(function() {
-  				$(".a,.b,.c,.d,.e,.f,.g,clone").toggle();
+  				$(".a,.b,.c,.d,.e,.f,.g,.clone").toggle();
   				$(this).text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
@@ -98,9 +98,9 @@
 			$('.addbutton').draggable({
     			helper: "clone"
 				}).on('dragstart', function (e, ui) {
-    		$(ui.helper).css('z-index','999999').addClass('clone');
+    		$(ui.helper).css('z-index','999999').;
 				}).on('dragstop', function (e, ui) {
-    		$(this).after($(ui.helper).clone().draggable());
+    		$(this).after($(ui.helper).clone().draggable().addClass('clone'));
 				});
 	
 				
