@@ -144,9 +144,9 @@ body {
 	width: auto;
 }
 
-.next:hover,.prev:hover{
-	color:#06600c;
-	cursor: pointer;
+.next, .previous {
+	height:5px;
+	width: auto;
 }
 
 
