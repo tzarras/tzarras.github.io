@@ -152,5 +152,11 @@ body {
 	cursor: pointer
 }
 
+.addbutton {
+	width:10px;
+	height: auto;
+	cursor: pointer
+}
+
 
 
