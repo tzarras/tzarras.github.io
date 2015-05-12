@@ -188,11 +188,11 @@ body {
 .main {
 	font-size: 20;
 	position: absolute;
-	width:200px;
-	height:200px;
-	background-color: transparent;
-	margin: auto;
-	overflow: hidden;
+    height: 200px;
+    width: 400px;
+    margin: -100px 0 0 -200px;
+    top: 50%;
+    left: 50%;
 
 }
 
