@@ -65,9 +65,8 @@ body {
 
 .b {
 	position: absolute;
-	width:10px;
-	height:10px;
-	background-color: #9ae0ed;
+	width:30px;
+	height: auto;
 	top:75%;
 	left:60%;
 	z-index: 999;
@@ -75,9 +74,8 @@ body {
 
 .c {
 	position: absolute;
-	width:10px;
-	height:10px;
-	background-color: #9ae0ed;
+	width:30px;
+	height: auto;
 	top:65%;
 	left:50%;
 	z-index: 999;
@@ -85,9 +83,8 @@ body {
 
 .d {
 	position: absolute;
-	width:10px;
-	height:10px;
-	background-color: #9ae0ed;
+	width:30px;
+	height: auto;
 	top:40%;
 	left:45%;
 	z-index: 999;
@@ -95,9 +92,8 @@ body {
 
 .e {
 	position: absolute;
-	width:10px;
-	height:10px;
-	background-color: #9ae0ed;
+	width:30px;
+	height: auto;
 	top:60%;
 	left:45%;
 	z-index: 999;
@@ -105,9 +101,8 @@ body {
 
 .f {
 	position: absolute;
-	width:10px;
-	height:10px;
-	background-color: #9ae0ed;
+	width:30px;
+	height: auto;
 	top:40%;
 	left:45%;
 	z-index: 999;
@@ -115,9 +110,8 @@ body {
 
 .g {
 	position: absolute;
-	width:10px;
-	height:10px;
-	background-color: #9ae0ed;
+	width:30px;
+	height: auto;
 	top:36%;
 	left:40%;
 	z-index: 999;
