@@ -93,6 +93,13 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
+			$( ".addbutton" ).hover(
+  				function() {
+    		$( this ).append( $( "<span>Add a note</span>" ) );
+  				}, function() {
+    		$( this ).find( "span:last" ).remove();
+  			}
+			);
 			});
 	
 		</script>
