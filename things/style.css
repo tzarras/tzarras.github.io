@@ -57,7 +57,7 @@ body {
 	position: absolute;
 	width:10px;
 	height:auto;
-	background-image: url(add.svg);
+	background-image: url('add.svg');
 	top:70%;
 	left:35%;
 	z-index: 999;
