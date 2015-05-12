@@ -189,8 +189,7 @@ body {
 	position: absolute;
 	width:200px;
 	background-color: transparent;
-	left: 24%;
-	top: 6%;
+	margin: auto;
 	overflow: hidden;
 
 }
