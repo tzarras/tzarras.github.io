@@ -187,7 +187,11 @@ body {
 }
 
 .addbutton:hover {
-	cursor: move;
+	cursor: grab;
+}
+
+.addbutton:active {
+	cursor: grabbing;
 }
 
 #addextra {
