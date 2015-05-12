@@ -19,7 +19,7 @@ body {
 	width:600px;
 	height:600px;
 	background-color: transparent;
-	left: 6%;
+	left: 25%;
 	overflow: scroll;
 
 }
@@ -30,7 +30,7 @@ body {
 	width:200px;
 	height:600px;
 	background-color: transparent;
-	left:65%;
+	left:75%;
 	overflow: hidden;
 }
 
@@ -46,23 +46,13 @@ body {
 	height:100%;
 }
 
-.idea {
-	position:absolute;
-	width:	10px;
-	height: 10px;
-	background-color: yellow;
-	border-color: black;
-	top:90%;
-	left:50%;
-}
-
 .a {
 	position: absolute;
 	width:10px;
 	height:10px;
 	background-color: red;
-	top:90%;
-	left:45%;
+	top:60%;
+	left:35%;
 	z-index: 999;
 }
 
@@ -71,7 +61,7 @@ body {
 	width:10px;
 	height:10px;
 	background-color: red;
-	top:88%;
+	top:55%;
 	left:60%;
 	z-index: 999;
 }
@@ -81,7 +71,7 @@ body {
 	width:10px;
 	height:10px;
 	background-color: red;
-	top:94%;
+	top:55%;
 	left:50%;
 	z-index: 999;
 }
