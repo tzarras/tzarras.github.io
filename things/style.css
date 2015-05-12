@@ -145,7 +145,7 @@ body {
 }
 
 .next, .prev {
-	height:10px;
+	height:15px;
 	width: auto;
 	cursor: pointer
 }
