@@ -49,7 +49,6 @@ body {
 #image {
 	position: fixed;
 	height: 100%;
-	z-index: -1;
 }
 
 .7 {
