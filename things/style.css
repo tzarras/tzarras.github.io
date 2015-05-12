@@ -41,7 +41,7 @@ body {
 	font-size: 12;
 }
 
-.container , .settings, .leftinfo, .fakecontainer {
+.container , .settings, .leftinfo, .fakecontainer, .addbutton {
 	top: 6%;
 }
 
@@ -160,6 +160,7 @@ body {
 }
 
 .addbutton {
+	left:75%;
 	width:30px;
 	height: auto;
 	cursor: pointer;
