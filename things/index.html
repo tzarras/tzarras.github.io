@@ -94,16 +94,15 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-			$(".addbutton").draggable(
-    {helper: "clone"}
-);
-
-$(".dropzone").droppable({
-    accept: ".addbutton",
-    drop: function(event,ui){
-        console.log(ui.helper);
-       $(this).append($(ui.helper).html());    
-    }
+			$(function () {
+    $(".addbutton").draggable({ revert: 'invalid' });
+    $(".container").droppable({ 
+        accept: function(drag) {
+            var dropId = $(this).attr('data-id');
+            var dragId = $(drag).attr('data-id');
+            return dropId === dragId;
+        }
+    });
 });
 				
 
@@ -115,13 +114,6 @@ $(".dropzone").droppable({
 	</head>
 
 		<body>
-		<div class="dropzone"></div>
-		<div>
-			<img class="addbutton" data-popbox="pop100" src="add.svg" alt="">
-				<div id="pop100" class="zz" >
-						To add a note, drag and drop the paper on the image
-				</div>
-		</div>
 		<div class="leftinfo">
 		<div class="word" data-popbox="pop200"><b>"extraordinary"</b></div><br><br>
 				<div id="pop200" class="zzz" style="display: none;">Extraordinary means something is amazing or outstanding, but at the same time, the word is composed of "extra" and "ordinary." Maybe there's something more to it?
@@ -130,7 +122,7 @@ $(".dropzone").droppable({
 		
 		<div class="container">
 		<div class="sp" id="slide">
-			<img id="image" src="1.jpg" alt="">
+			<img id="image" src="1.jpg" alt="" style="display: none;">
 			<a href="#" class="a" data-popbox="pop1" style="display: none;"></a>
 				<div id="pop1" class="zz">
 						<b> 5/11/15 11:30PM </b> <br><br>
@@ -195,7 +187,6 @@ $(".dropzone").droppable({
 		</div>
 
 		<div class="settings">
-			
 			<div class="notesbutton"> Show Notes </div><br><br>
 			<div class="next" alt=""> Next</div><br><br>
 			<div class="prev" alt=""> Previous </div>
