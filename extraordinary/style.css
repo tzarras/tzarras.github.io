@@ -25,7 +25,9 @@ body {
 	position: absolute;
 	height:600px;
 	background-color: transparent;
-	left: 24%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
 	overflow: hidden;
 
 }
@@ -184,6 +186,10 @@ body {
 	cursor: pointer;
 	position: absolute;
 	z-index: 999;
+}
+
+.addbutton:hover {
+	cursor: move;
 }
 
 #addextra {
