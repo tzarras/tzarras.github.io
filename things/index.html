@@ -94,11 +94,11 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-    
+			$(function () {
     $(".addbutton").draggable(
     {helper: "clone"}
 );
-    $("#image").droppable({ 
+    $(".container").droppable({ 
         accept: function(drag) {
             var dropId = $(this).attr('data-id');
             var dragId = $(drag).attr('data-id');
@@ -109,7 +109,7 @@
 				
 
 			
-	
+	});
 	
 		</script>
 
