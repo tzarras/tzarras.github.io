@@ -99,7 +99,7 @@
     			helper: "clone"
 				}).on('dragstart', function (e, ui) {
     		$(ui.helper).css('z-index','999').addClass("clone")
-    		$(".a,.b,.c,.d,.e,.f,.g,.h,.i,.j").toggle();
+    		$(".a,.b,.c,.d,.e,.f,.g,.h,.i,.j").one().toggle();
 
     		$(".notesbutton").text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
