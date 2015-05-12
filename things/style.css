@@ -138,7 +138,7 @@ body {
 
 .notesbutton:hover,.addbutton:hover{
 	cursor: pointer;
-	color: red;
+	color: #9ae0ed;
 }
 
 .popupimage {
