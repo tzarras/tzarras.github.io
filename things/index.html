@@ -45,7 +45,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g').hover(function(e) {
+    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.clone').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -57,7 +57,7 @@
         	$(target).hide();
     		});
  
-    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g').mousemove(function(e) {
+    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.clone').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
