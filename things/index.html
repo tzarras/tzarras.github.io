@@ -94,9 +94,12 @@
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
 				});
-				$(function() {
+				var MINI = require('minified'); 
+			var $ = MINI.$, $$ = MINI.$$, EE = MINI.EE;
+
+$(function() {
     $('.addbutton').on('click', function() {
-        $('.settings').add($('.addbutton').clone());
+        $('.container').add($('.addbutton').clone());
     });
 });
 				
