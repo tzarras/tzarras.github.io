@@ -45,7 +45,7 @@
 			$(function() {
     		var moveLeft = 0;
     		var moveDown = 0;
-    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.clone').hover(function(e) {
+    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.h,.clone').hover(function(e) {
    
         	var target = '#' + ($(this).attr('data-popbox'));
          
@@ -57,7 +57,7 @@
         	$(target).hide();
     		});
  
-    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,.clone').mousemove(function(e) {
+    		$('.word,.addbutton,.a,.b,.c,.d,.e,.f,.g,,.h,.clone').mousemove(function(e) {
         	var target = '#' + ($(this).attr('data-popbox'));
          
         	leftD = e.pageX + parseInt(moveLeft);
@@ -89,7 +89,7 @@
 			});
 			
 			$( ".notesbutton" ).click(function() {
-  				$(".a,.b,.c,.d,.e,.f,.g,.clone").toggle();
+  				$(".a,.b,.c,.d,.e,.f,.g,.h,.clone").toggle();
   				$(this).text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
@@ -99,7 +99,7 @@
     			helper: "clone"
 				}).on('dragstart', function (e, ui) {
     		$(ui.helper).css('z-index','999').addClass("clone")
-    		$(".a,.b,.c,.d,.e,.f,.g.clone").toggle();
+    		$(".a,.b,.c,.d,.e,.f,.g,.h,.clone").toggle();
 
     		$(".notesbutton").text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
@@ -188,6 +188,11 @@
 		</div>
 		<div class="sp" id="slide">
 			<img id="image" src="11.jpg" alt="">
+            <img class="h" data-popbox="pop10" src="add.svg" alt="" style="display: none;">
+                <div id="pop10" class="zz" >
+                        <b> 3/19/15 5:38AM </b> <br><br>
+                        This grip. <br>
+                </div>
 		</div>
 			
 			
