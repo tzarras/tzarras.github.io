@@ -89,7 +89,7 @@
 			});
 			
 			$( ".notesbutton" ).click(function() {
-  				$(".a,.b,.c,.d,.e,.f,.g").toggle();
+  				$(".a,.b,.c,.d,.e,.f,.g,clone").toggle();
   				$(this).text(function(_, oldText) {
          return oldText === 'Hide Notes' ? 'Show Notes' : 'Hide Notes';
      			});
