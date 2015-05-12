@@ -98,8 +98,7 @@
 			$('.addbutton').draggable({
     			helper: "clone"
 				}).on('dragstart', function (e, ui) {
-    		$(ui.helper).css('z-index','999999').addClass("clone");
-    		$(".a,.b,.c,.d,.e,.f,.g,.clone").toggle();
+    		$(ui.helper).css('z-index','999').addClass("clone");
 				}).on('dragstop', function (e, ui) {
     		$(this).after($(ui.helper).clone().draggable().addClass('clone'));
 				});
