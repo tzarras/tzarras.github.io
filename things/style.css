@@ -27,7 +27,6 @@ body {
 	background-color: transparent;
 	left: 24%;
 	overflow: hidden;
-	z-index: -1;
 
 }
 
@@ -47,8 +46,8 @@ body {
 }
 
 #image {
-	position: fixed;
 	height: 100%;
+	z-index: 0;
 }
 
 .7 {
@@ -163,7 +162,7 @@ body {
 .addbutton {
 	width:30px;
 	height: auto;
-	cursor: pointer;
+	cursor: pointer
 }
 
 #addextra {
