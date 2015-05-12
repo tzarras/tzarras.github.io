@@ -21,11 +21,12 @@ body {
 	font-size: 10;
 
 }
-.container {
+.container , .fakecontainer {
 	position: absolute;
 	height:600px;
 	background-color: transparent;
 	left: 24%;
+	overflow: hidden;
 
 }
 
