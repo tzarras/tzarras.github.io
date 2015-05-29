@@ -21,6 +21,11 @@ img {
 <script type="text/javascript">
 
 $(document).ready(function() {
+	$(function() {
+    $( "img" ).resizable({
+      aspectRatio: 16 / 9
+    });
+  });
 $("img").draggable();
 });
 
