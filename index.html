@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="timzarras" content="my other site" />
 <title>timzarras.me</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="jquery.powertip.js" type="text/javascript"></script>
 <style type="text/css">
 
 	html {
@@ -23,18 +26,73 @@
 		padding-left: 50px;
 		overflow: scroll;
 	}
-	.link {
-		color: #7588FF;
-	}
-	.link:hover{
-		color: white;
+	.zz {
+	display:none;
+	position: fixed;
+	padding: 5px;
+	background-color: white;
+	z-index: 99999;
+	font-size: 12;
+}
 	}
 </style>
+<script type="text/javascript">
+$(document).ready(function() {
+$(function() {
+    		var moveLeft = 0;
+    		var moveDown = 0;
+    		$('.link').hover(function(e) {
+   
+        	var target = '#' + ($(this).attr('data-popbox'));
+         
+        	$(target).show();
+        	moveLeft = $(this).outerWidth();
+        	moveDown = ($(target).outerHeight() / 2);
+    		}, function() {
+        	var target = '#' + ($(this).attr('data-popbox'));
+        	$(target).hide();
+    		});
+ 
+    		$('.link').mousemove(function(e) {
+        	var target = '#' + ($(this).attr('data-popbox'));
+         
+        	leftD = e.pageX + parseInt(moveLeft);
+        	maxRight = leftD + $(target).outerWidth();
+        	windowLeft = $(window).width() - 200;
+        	windowRight = 0;
+        	maxLeft = e.pageX - (parseInt(moveLeft) + $(target).outerWidth() + 5);
+         
+        	if(maxRight > windowLeft && maxLeft > windowRight)
+        	{	
+            leftD = maxLeft;
+        	}
+     
+        	topD = e.pageY - parseInt(moveDown);
+        	maxBottom = parseInt(e.pageY + parseInt(moveDown) + 20);
+        	windowBottom = parseInt(parseInt($(document).scrollTop()) + parseInt($(window).height()));
+        	maxTop = topD;
+        	windowTop = parseInt($(document).scrollTop());
+        	if(maxBottom > windowBottom)
+        	{
+            topD = windowBottom - $(target).outerHeight() - 20;
+        	} else if(maxTop < windowTop){
+            topD = windowTop + 20;
+        }	
+     
+        $(target).css('top', topD).css('left', leftD);
+     
+    		});
+			});
+});
+	</script>
 </head>
 <body>
 hello! <br><br><br>
 timzarras.me is a less formal, sketchbook-like site for my web "stuff" and other things. <br><br><br>
-<A class= "link" id="link" href ="/drawing" >/drawing</A> <br>
+<A data-popbox="pop1" class= "link" id="link" href ="/drawing" >/drawing</A> <br>
+<div id="pop1" class="zz">
+						drawing thing
+				</div>
 <A class= "link" id="link" href ="/3" >/3</A> <br>
 <A class= "link" id="link" href ="/hello" >/hello</A> <br>
 <A class= "link" id="link" href ="/space" >/space</A> <br>
