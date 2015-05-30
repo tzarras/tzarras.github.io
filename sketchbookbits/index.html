@@ -39,7 +39,7 @@ $("img").okshadow({
 });
 
 $("img").click(function(){
-             $(this).css('height', 2000, function(_ , cur){
+             $(this).css('height', function(_ , cur){
               return cur === '220px' ? '75%' : '220px'
             });  
         });
