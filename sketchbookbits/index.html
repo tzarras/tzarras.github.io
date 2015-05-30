@@ -29,6 +29,11 @@ img:hover {
 
 $(document).ready(function() {
 
+$("img").click(function() {
+     $("img").not(this).css("z-index", 0);
+     $(this).css("z-index", 100);
+});
+
 $("img").draggable();
 $("img").okshadow({
   transparent: true,
@@ -44,10 +49,7 @@ $("img").click(function(){
             });  
         });
 
-$("img").click(function() {
-     $("img").not(this).css("z-index", 0);
-     $(this).css("z-index", 100);
-});
+
 });
 
 </script>
