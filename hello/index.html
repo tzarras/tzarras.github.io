@@ -4,14 +4,7 @@
  <link rel="stylesheet" href="css/paperstyle.css">
 <script type="text/javascript" src="js/paper.js"></script>
 <script type="text/paperscript" canvas="canvas">
-var text2 = new PointText({
-    point: [550, 100],
-    content: 'Click it!',
-    fillColor: 'Black',
-    fontFamily: 'Helvetica',
-    fontWeight: 'bold',
-    fontSize: 12
-});
+
 
 var text = new PointText({
     point: [50, 375],
@@ -24,7 +17,7 @@ var text = new PointText({
 
 
 function onFrame(event) {
-	text.position.x += 10;
+	text.position.x += 7;
 	text.rotate(1);
 	if (text.bounds.left > view.size.width) {
 			text.position.x = -text.bounds.width;
