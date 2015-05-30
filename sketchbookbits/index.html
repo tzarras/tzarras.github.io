@@ -43,12 +43,11 @@ $("img").click(function(){
               return cur === '220px' ? '75%' : '220px'
             });  
         });
-var zIndex = 0;
-$("img").click(function(){
-  zIndex++;  
-  $(this).css('zIndex', zIndex);
-});
 
+$("img").click(function() {
+     $("img").not(this).css("z-index", 0);
+     $(this).css("z-index", 100);
+});
 });
 
 </script>
