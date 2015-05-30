@@ -43,6 +43,11 @@ $("img").click(function(){
               return cur === '220px' ? '75%' : '220px'
             });  
         });
+var zIndex = 0;
+$("img").click(function(){
+  zIndex++;  
+  $(this).css('zIndex', zIndex);
+});
 
 });
 
