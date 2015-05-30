@@ -32,6 +32,12 @@ $("img").okshadow({
   fuzz: 10
 });
 
+$("img").click(function(){
+             $(this).css('height', function(_ , cur){
+              return cur === '100px' ? '100%' : '100px'
+            });  // original width is 500px 
+        });
+
 });
 
 </script>
