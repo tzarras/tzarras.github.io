@@ -16,8 +16,12 @@ div {
 }
 img {
 	float: left;
-	height: 350px;
+	height: 220px;
 	width: auto;
+}
+img:hover {
+	cursor: zoom-in;
+	
 }
 
 </style>
@@ -36,8 +40,8 @@ $("img").okshadow({
 
 $("img").click(function(){
              $(this).css('height', function(_ , cur){
-              return cur === '350px' ? '100%' : '350px'
-            });  // original width is 500px 
+              return cur === '220px' ? '80%' : '220px'
+            });  
         });
 
 });
