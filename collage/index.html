@@ -23,6 +23,7 @@
                 helper: "clone"
             }).on('dragstart', function (e, ui) {
                 $(ui.helper).addClass("clone");
+                $(ui.helper).css("z-index","99999");
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
