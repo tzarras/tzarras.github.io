@@ -16,20 +16,10 @@
             transform:translate(-50%,-50%);
             -webkit-transform:translate(-50%,-50%);
         }
-       .groupone {
-            height:150px;
+       img {
+            height:170px;
             width:auto;
-        }
-
-        .grouptwo {
-            display: none;
-            height: 275px;
-            width:auto;
-        }
-
-        .1 , .2 {
-            float: left;
-            font-size: 50pt;
+            float:left;
         }
 
         
@@ -46,16 +36,6 @@
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
-            $( ".1" ).click(function() {
-            $( ".groupone" ).show();
-            $( ".grouptwo" ).slideUp();
-            });
-
-            $( ".2" ).click(function() {
-            $( ".grouptwo" ).show();
-            $( ".groupone" ).slideUp();
-            });
-    
     
         });
     
@@ -65,22 +45,20 @@
 
 <body>
         <div class="container">
-        <img class="groupone" id="image" src="1.png" alt="">
-        <img class="groupone" id="image" src="2.png" alt="">
-        <img class="groupone" id="image" src="3.png" alt="">
-        <img class="groupone" id="image" src="4.png" alt="">
-        <img class="groupone" id="image" src="5.png" alt="">
-        <img class="groupone"id="image" src="6.png" alt="">
-        <img class="grouptwo" id="image" src="7.png" alt="">
-        <img class="grouptwo" id="image" src="8.png" alt="">
-        <img class="grouptwo" id="image" src="9.png" alt="">
-        <img class="grouptwo" id="image" src="10.png" alt="">
-        <img class="grouptwo" id="image" src="11.png" alt="">
-        <img class="grouptwo" id="image" src="12.png" alt="">
+        <img  id="image" src="1.png" alt="">
+        <img  id="image" src="2.png" alt="">
+        <img  id="image" src="3.png" alt="">
+        <img  id="image" src="4.png" alt="">
+        <img  id="image" src="5.png" alt="">
+        <img  id="image" src="6.png" alt="">
+        <img  id="image" src="7.png" alt="">
+        <img  id="image" src="8.png" alt="">
+        <img  id="image" src="9.png" alt="">
+        <img  id="image" src="10.png" alt="">
+        <img  id="image" src="11.png" alt="">
+        <img  id="image" src="12.png" alt="">
         </div>
         
-        <div class="1"> 1 </div>
-        <div class="2"> 2 </div>
 </body>
 
 </html>
