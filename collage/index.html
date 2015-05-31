@@ -50,9 +50,9 @@
             $('img').draggable({helper: "clone"}
                 ).on('dragstart', function (e, ui) {
                 $(ui.helper).css("height", "300px");
-                $(this).css("z-index", "999");
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
+                $(ui.helper).css("z-index", "999");
                 });
             
         });
