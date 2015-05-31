@@ -20,7 +20,7 @@
             height:50px;
             width:auto;
             float:left;
-            z-index: 999;
+            z-index: 0;
             position: relative;
         }
 
@@ -34,12 +34,11 @@
 
         .top {
             z-index: 2; 
-            position: relative
         }
         
         .bottom {
             z-index: 1; 
-            position: relative
+            
         }
 
     </style>
@@ -51,8 +50,7 @@
             $('img').draggable({helper: "clone"}
                 ).on('dragstart', function (e, ui) {
                 $(ui.helper).css("height", "300px");
-                $(this).parent().css('position', 'absolute');
-                $(this).parent().css('z-index', 3000);
+                $(ui.helper).addClass('top').removeClass('bottom');
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
