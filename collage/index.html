@@ -29,9 +29,9 @@
             
             $('img').draggable({helper: "clone"}).on('dragstart', function (e, ui) {
                 $(ui.helper).addClass("clone");
-                $(this).css("z-index", 999);
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
+                $(this).css("z-index", 999);
                 });
     
         });
