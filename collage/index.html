@@ -47,7 +47,7 @@
         
         $(document).ready(function() {
             
-            $('img').draggable({helper: "clone", zIndex: "10000"}
+            $('img').draggable({helper: "clone", zIndex: 999}
                 ).on('dragstart', function (e, ui) {
                 $(ui.helper).css("height", "300px");
             }).on('dragstop', function (e, ui) {
