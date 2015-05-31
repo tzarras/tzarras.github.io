@@ -25,10 +25,12 @@
             display: none;
         }
 
-        .next {
+        .1 , .2 {
             float: left;
             font-size: 40;
         }
+
+        
 
     
     </style>
@@ -42,10 +44,16 @@
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
-            $( ".next" ).click(function() {
+            $( ".1" ).click(function() {
+            $( ".groupone" ).show()
+            $( ".grouptwo" ).hide();
+            });
+
+            $( ".2" ).click(function() {
             $( ".grouptwo" ).show();
             $( ".groupone" ).hide();
             });
+    
     
         });
     
@@ -69,7 +77,8 @@
         <img class="grouptwo" id="image" src="12.png" alt="">
         </div>
         
-        <div class="next"> ----> </div>
+        <div class="1"> 1 </div>
+        <div class="2"> 2 </div>
 </body>
 
 </html>
