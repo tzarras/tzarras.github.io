@@ -20,6 +20,7 @@
             height:50px;
             width:auto;
             float:left;
+            z-index: 0;
         }
 
         img:hover {
@@ -30,24 +31,37 @@
             cursor: -webkit-grabbing;
         }
 
+        .top {
+            z-index: 2; 
+            position: relative
+        }
+        
+        .bottom {
+            z-index: 1; 
+            position: relative
+        }
+
     </style>
     
     <script type="text/javascript">
         
         $(document).ready(function() {
-            
+                var a = 3;
             $('img').draggable({helper: "clone"}
                 ).on('dragstart', function (e, ui) {
                 $(ui.helper).addClass("clone");
                 $(ui.helper).css("height", "300px");
+                $(this).css("z-index", a++);
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
-            $(".container").mousewheel(function(event, delta) {
-            this.scrollLeft -= (delta * 30);
-            event.preventDefault();
-        });
-    
+            $('img').click(function() {
+            $(this).addClass('top').removeClass('bottom');
+            $(this).siblings().removeClass('top').addClass('bottom');
+            $(this).css("z-index", a++);
+
+    });
+            
         });
     
     </script>
