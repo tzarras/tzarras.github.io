@@ -7,7 +7,15 @@
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     
     <style type="text/css">
-        
+        .container {
+            height:200px;
+            width:800px;
+            position: absolute;
+            top:35%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            -webkit-transform:translate(-50%,-50%);
+        }
        img {
             height:150px;
             width:auto;
@@ -38,12 +46,14 @@
 </head>
 
 <body>
+        <div class="container">
         <img id="image" src="1.png" alt="">
         <img id="image" src="2.png" alt="">
         <img id="image" src="3.png" alt="">
         <img id="image" src="4.png" alt="">
         <img id="image" src="5.png" alt="">
         <img id="image" src="6.png" alt="">
+        </div>
         
 </body>
 
