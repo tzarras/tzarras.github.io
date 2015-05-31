@@ -19,11 +19,9 @@
         
         $(document).ready(function() {
             
-            $('img').draggable({
-                helper: "clone"
-            }).on('dragstart', function (e, ui) {
+            $('img').draggable({helper: "clone"}).on('dragstart', function (e, ui) {
                 $(ui.helper).addClass("clone");
-                $(ui.helper).css("z-index","99999");
+                $(this).css("z-index", 999);
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
@@ -41,6 +39,8 @@
         <img id="image" src="4.png" alt="">
         <img id="image" src="5.png" alt="">
         <img id="image" src="6.png" alt="">
+
+        <div class="droppable"
         
 </body>
 
