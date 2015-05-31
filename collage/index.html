@@ -45,6 +45,11 @@
             font-size: 100;
         }
 
+        .show {
+            float: right;
+            font-size: 100;
+        }
+
 
     </style>
     
@@ -64,7 +69,16 @@
                 $(this).css("z-index", a++);
                 });
             $( ".hide" ).click(function() {
-            $( ".container" ).slideUp();
+            $( ".container" ).hide(1000);
+            $( ".hide" ).hide();
+            $( ".show" ).show();
+
+            });
+            $( ".show" ).click(function() {
+            $( ".container" ).slideDown();
+            $( ".hide" ).show();
+            $( ".show" ).hide();
+
             });
         });
     
@@ -91,6 +105,7 @@
         </div>
 
         <div class="hide"> - </div>
+        <div class="show"> show </div
         
 </body>
 
