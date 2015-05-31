@@ -46,11 +46,11 @@
     <script type="text/javascript">
         
         $(document).ready(function() {
-            
+                var a = 3;
             $('img').draggable({helper: "clone"}
                 ).on('dragstart', function (e, ui) {
                 $(ui.helper).css("height", "300px");
-                $(ui.helper).addClass('top').removeClass('bottom');
+                $(ui.helper).css("z-index", a++);;
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
