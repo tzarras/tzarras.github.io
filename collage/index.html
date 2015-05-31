@@ -7,6 +7,7 @@
         <script src="jquery.mousewheel.js"></script>
     
     <style type="text/css">
+        
         .container {
             height:50px;
             width:auto;
@@ -40,16 +41,6 @@
             
         }
 
-        .hide {
-            float: right;
-            font-size: 100;
-        }
-
-        .show {
-            float: right;
-            font-size: 100;
-        }
-
 
     </style>
     
@@ -68,18 +59,7 @@
                 $(this).siblings().removeClass('top').addClass('bottom');
                 $(this).css("z-index", a++);
                 });
-            $( ".hide" ).click(function() {
-            $( ".container" ).hide(1000);
-            $( ".hide" ).hide();
-            $( ".show" ).show();
-
-            });
-            $( ".show" ).click(function() {
-            $( ".container" ).slideDown();
-            $( ".hide" ).show();
-            $( ".show" ).hide();
-
-            });
+            
         });
     
     </script>
@@ -87,7 +67,8 @@
 </head>
 
 <body>
-        <div class="container">
+        
+    <div class="container">
         <img  id="image" src="1.png" alt="">
         <img  id="image" src="2.png" alt="">
         <img  id="image" src="3.png" alt="">
@@ -102,11 +83,8 @@
         <img  id="image" src="12.png" alt="">
         <img  id="image" src="14.png" alt="">
         <img  id="image" src="13.png" alt="">
-        </div>
+    </div>
 
-        <div class="hide"> - </div>
-        <div class="show"> show </div
-        
 </body>
 
 </html>
