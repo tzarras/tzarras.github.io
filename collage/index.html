@@ -20,7 +20,7 @@
             height:50px;
             width:auto;
             float:left;
-            z-index: -1;
+            z-index: 999;
         }
 
         img:hover {
@@ -47,7 +47,7 @@
         
         $(document).ready(function() {
             
-            $('img').draggable({helper: "clone", zIndex: 999}
+            $('img').draggable({helper: "clone"}
                 ).on('dragstart', function (e, ui) {
                 $(ui.helper).css("height", "300px");
             }).on('dragstop', function (e, ui) {
