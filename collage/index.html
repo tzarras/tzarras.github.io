@@ -24,7 +24,7 @@
             }).on('dragstart', function (e, ui) {
                 $(ui.helper).css('z-index','999999');
             }).on('dragstop', function (e, ui) {
-                $(this).after($(ui.helper).clone().draggable());
+                $(this).after($(ui.helper).clone());
                 });
     
         });
