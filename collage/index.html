@@ -19,6 +19,16 @@
        img {
             height:150px;
             width:auto;
+            -webkit-transition: all .4s ease-in-out;
+            -moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -ms-transition: all .4s ease-in-out;
+        }
+        .transition {
+        -webkit-transform: scale(1.6); 
+        -moz-transform: scale(1.6);
+        -o-transform: scale(1.6);
+        transform: scale(1.6);
         }
 
     
@@ -34,9 +44,11 @@
                 $(this).after($(ui.helper).clone());
                 });
 
-            $("clone").hover(function() {
-                $("clone").not(this).css("z-index", 0);
-                $(this).css("z-index", 100);
+            $('img').hover(function() {
+            $("img").addClass('transition');
+    
+            }, function() {
+            $("img").removeClass('transition');
             });
     
         });
