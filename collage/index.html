@@ -47,7 +47,7 @@
         
         $(document).ready(function() {
                 var a = 3;
-            $('img').draggable({helper: "clone",opacity: 0.92,cursorAt: { top:60 }
+            $('img').draggable({helper: "clone",opacity: 0.92,cursorAt: { top: 150, left: auto }
         }).on('dragstart', function (e, ui) {
                 $(ui.helper).css("height", "300px");
                 $(ui.helper).css("cursor", "-webkit-grabbing");
