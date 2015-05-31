@@ -49,8 +49,7 @@
                 $(ui.helper).css("cursor", "-webkit-grabbing");
                 $(ui.helper).css("z-index", a++);;
             }).on('dragstop', function (e, ui) {
-                $(this).after($(ui.helper).clone());
-                $(this).css("cursor", "default");
+                $(this).after($(ui.helper).clone().css("cursor", "default"));
                 $(this).addClass('top').removeClass('bottom');
                 $(this).siblings().removeClass('top').addClass('bottom');
                 $(this).css("z-index", a++);
