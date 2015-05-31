@@ -54,6 +54,13 @@
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
+            $('img').click(function() {
+            $(this).addClass('top').removeClass('bottom');
+            $(this).siblings().removeClass('top').addClass('bottom');
+            $(this).css("z-index", a++);
+
+    });
+});
             
         });
     
