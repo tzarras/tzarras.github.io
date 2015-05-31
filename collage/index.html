@@ -50,6 +50,7 @@
             $('img').draggable({helper: "clone"}
                 ).on('dragstart', function (e, ui) {
                 $(ui.helper).css("height", "300px");
+                $(ui.helper).parent().css('position', 'relative');
                 $(ui.helper).parent().css('z-index', 3000);
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
