@@ -24,7 +24,7 @@
             }).on('dragstart', function (e, ui) {
                 $(ui.helper).addClass("clone");
             }).on('dragstop', function (e, ui) {
-                $(this).after($(ui.helper).clone());
+                $(this).after($(ui.helper).clone().resizable());
                 });
     
         });
