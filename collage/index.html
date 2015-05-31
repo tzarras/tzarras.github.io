@@ -5,6 +5,7 @@
         <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="jquery.mousewheel.js"></script>
     
     <style type="text/css">
         .container {
@@ -20,7 +21,7 @@
        img {
             height:170px;
             width:auto;
-            float:left;
+            float:right;
         }
 
         
@@ -37,6 +38,10 @@
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
+            $(".container").mousewheel(function(event, delta) {
+            this.scrollLeft -= (delta * 30);
+            event.preventDefault();
+        });
     
         });
     
