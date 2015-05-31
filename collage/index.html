@@ -12,12 +12,6 @@
             height:150px;
             width:auto;
         }
-        #image:hover{
-           cursor: -webkit-grab;
-        }
-        #image:active{
-           cursor: -webkit-grabbing;
-        }
     
     </style>
     
@@ -28,7 +22,7 @@
             $('img').draggable({
                 helper: "clone"
             }).on('dragstart', function (e, ui) {
-                $(ui.helper).addClass("clone");
+                $(ui.helper).addClass("clone")
             }).on('dragstop', function (e, ui) {
                 $(this).after($(ui.helper).clone());
                 });
