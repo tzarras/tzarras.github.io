@@ -27,7 +27,15 @@
     </style>
     
     <script type="text/javascript">
+    $(document).ready(function() {
     
+        $('.2015').click(function() {
+    $('.Chair,.container').toggle('slow');
+});
+               
+
+            
+    });
     </script>
 
 </head>
@@ -36,9 +44,11 @@
 <h1> Tim Zarras </h1>
 <div class="archive">
 <ul style="list-style: none;padding-left:0;">
-<li>2015</li>
-<li>2014</li>
-<li>2013</li>
+<li class="2015">2015</li>
+<a class="Chair" style="display: none;">Garden Chair</a>
+<a class="Container" style="display: none;">Container</a>
+<li class="2014">2014</li>
+<li class="2013">2013</li>
 </ul>
 </div>
 
