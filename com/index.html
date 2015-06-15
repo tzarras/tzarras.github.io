@@ -54,15 +54,19 @@
     </style>
     
     <script type="text/javascript">
+    
     $(document).ready(function() {
     
         $('.2015').click(function() {
-    $('.chair,.container').toggle();
-});
+        $('.chair,.container').toggle();
+        });
+        $('.2014').click(function() {
+        $('.connection,.stool,.can.fan').toggle();
+        });
 
         $('.container').click(function() {
-    $(".project").toggle();
-});
+        $(".project").toggle();
+        });
 
                
 
@@ -80,7 +84,10 @@
 <li id="project" class="chair" style="display: none;">Garden Chair</li>
 <li id="project" class="container" style="display: none;">Container</li>
 <li class="2014">2014</li>
-<li class="2013">2013</li>
+<li id="project" class="connection" style="display: none;">Connection Study (Forms)</li>
+<li id="project" class="stool" style="display: none;">Crate & Barrel / CB2 Stool</li>
+<li id="project" class="can" style="display: none;">Watering Can</li>
+<li id="project" class="fan" style="display: none;">Fan</li>
 </ul>
 </div>
 
