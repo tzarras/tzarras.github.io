@@ -45,22 +45,22 @@ function init() {
         var sides = [
           {
             url: 'gardenchair.png',
-            position: [ 0, 0, -200 ],
+            position: [ 0, 0, -500 ],
             rotation: [ 0, Math.PI, 0 ]
           },
           {
             url: 'gardenchair.png',
-            position: [ 0, 0, 200 ],
+            position: [ 0, 0, 500 ],
             rotation: [ 0, 0, 0 ]
           },
           {
             url: 'gardenchair.png',
-            position: [ 200, 0, 0 ],
+            position: [ 500, 0, 0 ],
             rotation: [ 0, Math.PI/2, 0 ]
           },
           {
             url: 'gardenchair.png',
-            position: [ -200, 0, 0 ],
+            position: [ -500, 0, 0 ],
             rotation: [ 0, Math.PI/2, 0 ]
           }
         ];
@@ -70,8 +70,8 @@ function init() {
           var side = sides[ i ];
 
           var element = document.createElement( 'img' );
-          element.width = 400; 
-          element.height = 400; 
+          element.width = 1000; 
+          element.height = 1000; 
           element.src = side.url;
 
           var object = new THREE.CSS3DObject( element );
@@ -168,7 +168,7 @@ function init() {
 
         requestAnimationFrame( animate );
 
-        lon +=  2;
+        lon +=  .5;
         lat = Math.max( - 500, Math.min( 200, lat ) );
         phi = THREE.Math.degToRad( 90 - lat );
         theta = THREE.Math.degToRad( lon );
