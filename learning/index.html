@@ -45,22 +45,22 @@ function init() {
         var sides = [
           {
             url: 'gardenchair.png',
-            position: [ 0, 0, -500 ],
+            position: [ 0, 0, -400 ],
             rotation: [ 0, Math.PI, 0 ]
           },
           {
             url: 'gardenchair.png',
-            position: [ 0, 0, 500 ],
+            position: [ 0, 0, 400 ],
             rotation: [ 0, 0, 0 ]
           },
           {
             url: 'gardenchair.png',
-            position: [ 500, 0, 0 ],
+            position: [ 400, 0, 0 ],
             rotation: [ 0, Math.PI/2, 0 ]
           },
           {
             url: 'gardenchair.png',
-            position: [ -500, 0, 0 ],
+            position: [ -400, 0, 0 ],
             rotation: [ 0, Math.PI/2, 0 ]
           }
         ];
@@ -70,8 +70,8 @@ function init() {
           var side = sides[ i ];
 
           var element = document.createElement( 'img' );
-          element.width = 1000; 
-          element.height = 1000; 
+          element.width = 800; 
+          element.height = 800; 
           element.src = side.url;
 
           var object = new THREE.CSS3DObject( element );
