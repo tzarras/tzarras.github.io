@@ -38,29 +38,29 @@ body {
       
 function init() {
 
-        camera = new THREE.PerspectiveCamera( 1000, window.innerWidth / window.innerHeight, 2000, 900 );
+        camera = new THREE.PerspectiveCamera( 800, window.innerWidth / window.innerHeight, 2000, 200 );
 
         scene = new THREE.Scene();
 
         var sides = [
           {
-            url: 'gardenchair.png',
-            position: [ 0, 0, -400 ],
+            url: 'box1.png',
+            position: [ 0, 0, -600 ],
             rotation: [ 0, Math.PI, 0 ]
           },
           {
-            url: 'gardenchair.png',
-            position: [ 0, 0, 400 ],
+            url: 'box1.png',
+            position: [ 0, 0, 600 ],
             rotation: [ 0, 0, 0 ]
           },
           {
-            url: 'gardenchair.png',
-            position: [ 400, 0, 0 ],
+            url: 'box1.png',
+            position: [ 600, 0, 0 ],
             rotation: [ 0, Math.PI/2, 0 ]
           },
           {
-            url: 'gardenchair.png',
-            position: [ -400, 0, 0 ],
+            url: 'box1.png',
+            position: [ -600, 0, 0 ],
             rotation: [ 0, Math.PI/2, 0 ]
           }
         ];
@@ -70,8 +70,8 @@ function init() {
           var side = sides[ i ];
 
           var element = document.createElement( 'img' );
-          element.width = 800; 
-          element.height = 800; 
+          element.width = 1200; 
+          element.height = 1200; 
           element.src = side.url;
 
           var object = new THREE.CSS3DObject( element );
@@ -168,7 +168,7 @@ function init() {
 
         requestAnimationFrame( animate );
 
-        lon +=  .5;
+        lon +=  0;
         lat = Math.max( - 500, Math.min( 200, lat ) );
         phi = THREE.Math.degToRad( 90 - lat );
         theta = THREE.Math.degToRad( lon );
