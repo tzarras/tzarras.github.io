@@ -1,0 +1,85 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link rel="icon" type="image/png" href="!.png">
+  <title>tim zarras</title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+</head>
+
+<script>
+
+$(document).ready(function() {
+
+  $('.p,.poop').hide();
+
+  $( "form" ).submit(function( event ) {
+  if ( $( "input:first" ).val() === "de boo" ) {
+    $( ".p" ).show();
+    $("form").hide();
+    return false;
+  }
+
+  $( ".o" ).show(800).fadeOut( 1000 );
+  event.preventDefault();
+  });
+});
+
+</script>
+
+<style>
+
+form {
+
+  position: absolute;
+  top:45%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: 999;
+
+}
+
+.o {
+
+  position: fixed;
+  top:58%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: 999;
+
+}
+
+.p {
+
+  position: absolute;
+  top:45%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  -webkit-transform:translate(-50%,-50%);
+  z-index: 999;
+
+}
+
+</style>
+  
+  <body>
+
+<form action="">
+    <div>
+        <input type="text" />
+        <input type="submit" />
+    </div>
+</form>
+<p class="p">hello</p>
+<p class="poop">hey hey!</p>
+<span class="o" style="display:none">no</span>
+    
+    
+    
+  </body>
+
+</html>
