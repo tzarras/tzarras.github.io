@@ -18,12 +18,12 @@ $(document).ready(function() {
 
   $( "form" ).submit(function( event ) {
   if ( $( "input:first" ).val() === "very pretty" ) {
-    $( ".flower" ).show();
+    $( ".flower" ).fadeIn(1000);
     $("form").hide();
     return false;
   }
 
-  $( ".o" ).show(800).fadeOut( 1000 );
+  $( ".o" ).show(800).fadeOut(1000);
   event.preventDefault();
   });
 });
