@@ -12,13 +12,13 @@
 
 $(document).ready(function() {
 
-  $('.p,.poop').hide();
+  $('.flower').hide();
 
 // you found it! //
 
   $( "form" ).submit(function( event ) {
   if ( $( "input:first" ).val() === "de boo" ) {
-    $( ".p" ).show();
+    $( ".flower" ).show();
     $("form").hide();
     return false;
   }
@@ -54,16 +54,28 @@ form {
 
 }
 
-.p {
-
+.flower {
+  height: 150px;
+  width: auto;
   position: absolute;
-  top:45%;
+  top:50%;
   left: 50%;
   transform:translate(-50%,-50%);
   -webkit-transform:translate(-50%,-50%);
   z-index: 999;
 
 }
+
+textarea:focus, input:focus{
+    outline: 0;
+}
+
+input[type=submit] {
+  background-color: white; 
+  border: none;
+  cursor:pointer;
+}
+
 
 </style>
   
@@ -75,7 +87,7 @@ form {
         <input type="submit" />
     </div>
 </form>
-<p class="p">hello</p>
+<img class="flower" src="flower.png">
 <span class="o" style="display:none">sorry</span>
     
     
