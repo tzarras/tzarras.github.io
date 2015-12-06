@@ -20,6 +20,15 @@ body {
     top: 50%;
 }
 
+.container1{
+    position:absolute;
+    width:45px;
+    height:45px;
+    left: 50%;
+    top: 50%;
+}
+
+
 #a2{
     position:absolute;
     left:35%;
@@ -47,6 +56,7 @@ body {
 .face:hover{
     cursor: zoom-in;
 }
+
 
 
 
