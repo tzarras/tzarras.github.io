@@ -7,13 +7,19 @@
 <script>
 $(document).ready(function() {
 
-        $('html').css("background-color", "white ");
 
-	var sound = new Howl ({
+	setTimeout(function() {
+
+        $('html').css("background-color", "white ");
+        var sound = new Howl ({
 		urls: ['mac.mp3' , 'mac.ogg'],
 		loop: false,
 		volume: 1,
 	}).play();
+	}, 800);
+
+
+
 
 });
 
