@@ -6,7 +6,7 @@
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 
-<script>
+<script type="text/javascript">
 $(document).ready(function() {
 
 
@@ -42,10 +42,16 @@ var counter = 0;
     	}
 
 	counter++;
-    if(counter === 450) {
+    if(counter === 250) {
         clearInterval(i);
     }
-}, 280);
+}, 90);
+
+	
+    var myarray= new Array("Is this a good opportunity to write a poem? Maybe there's poetry to this as is- I sure would hope so.","The $500 Million Battle Over Disney’s Princesses","Big IPO, Tiny Payout for Many Startup Workers","Bill Cunningham | Holiday Madness", "As Downloads Take Over, a Turning Point for the Video Game Industry","‘Star Wars: The Force Awakens’ Shatters Box Office Records","‘Star Wars’ Opens Amid Hype and Nostalgia","In Virtual Reality Headsets, Investors Glimpse the Future");
+    var random = myarray[Math.floor(Math.random() * myarray.length)];
+   document.getElementById("message").innerHTML=random;
+
 
 });
 </script>
@@ -87,7 +93,7 @@ body {
 	border-radius: 1px;
 	width:1px;
 	height: 10px;
-	margin: 1px;
+	margin: 2px;
 	top: -2%;
 	left: 0%;
 	float: left;
@@ -97,12 +103,27 @@ body {
   	transition: background-color 4s ease-in-out;
 }
 
+p {
+	width: 80%;
+	font-size: 95;
+	color: black;
+	position: absolute;
+	top:35%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	z-index: 999;
+	font-family: sans-serif;
+
+}
+
 
 </style>
 
 </head>
 
-<body>
+<body >
+		<p id = "message"></p>
 		<div class="yes"></div>
 </body>
 </html>
