@@ -1,0 +1,108 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>  | | | | | | | | |  </title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+
+<script>
+$(document).ready(function() {
+
+
+var counter = 0;
+	var i = setInterval(function(){
+    setTimeout(function() {
+			$(".yes").animate({
+								"height": "+=30px" }, 500 );
+			}, 1000);
+
+		if ($(".yes").height() > 10 ) {
+        
+        	$(".yes").css("background-color","blue");
+        	$("div:first").clone().addClass('clone').css({"width" : "1px" ,"height" : "10px","background-color" : "red"}).appendTo("body");
+    		
+        		if ($(".yes").height() > 200 ) {
+        
+        			$(".yes").css("background-color","red");
+        				
+    			
+    					if ($(".yes").height() > 350 ) {
+    						
+    						$(".yes").css("background-color","#00d82f");
+
+    						 
+    						 	if ($(".yes").height() > 450 ) {
+    						
+    								$(".yes").css("background-color","#5d39ff");
+    							
+ 								}	
+ 						}
+				}
+    	}
+
+	counter++;
+    if(counter === 450) {
+        clearInterval(i);
+    }
+}, 10);
+
+});
+</script>
+
+
+<style>
+
+
+body {
+	
+	position: absolute;
+	background-color: black;
+	width:100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	margin-left: 0px;
+	padding: 0px;
+	overflow: hidden;
+	-webkit-transition: background-color 4s ease-in-out;
+  -moz-transition: color 4s ease-in-out;
+  -o-transition: color 4s ease-in-out;
+  transition: background-color 4s ease-in-out;
+
+}
+
+.red {
+	background-color: red;
+	-webkit-transition: background-color 5s ease-in-out;
+  -moz-transition: color 5s ease-in-out;
+  -o-transition: color 5s ease-in-out;
+  transition: background-color 5s ease-in-out;
+}
+
+.yes {
+	color: red;
+	position: relative;
+	background-color: red;
+	border-radius: 1px;
+	width:1px;
+	height: 10px;
+	margin: 1px;
+	top: -2%;
+	left: 0%;
+	float: left;
+	-webkit-transition: background-color 4s ease-in-out;
+  	-moz-transition: color 4s ease-in-out;
+  	-o-transition: color 4s ease-in-out;
+  	transition: background-color 4s ease-in-out;
+}
+
+
+</style>
+
+</head>
+
+<body>
+		<div class="yes"></div>
+</body>
+</html>
