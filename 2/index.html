@@ -4,15 +4,12 @@
 <title> = } </title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-
-
 <script type="text/javascript">
 $(document).ready(function() {
 
 var counter = 0;
 	var i = setInterval(function(){
-    $("div").animate({ "width": "+=50%",
-								"height": "+=50%" }, 1000 );
+    $("div").animate({ "width": "+=50%","height": "+=50%" }, 1000 );
         	if( $("div").width() > 50) {
         		$("div").css("background-color","black");
         		$("div:first").clone().addClass("clone").css({"background-color":"blue",
@@ -25,9 +22,6 @@ var counter = 0;
         clearInterval(i);
     }
 }, 1500);
-
-
-
 });
 </script>
 
@@ -67,10 +61,8 @@ var counter = 0;
 	
 	}	
 
-	</style>
-
+</style>
 </head>
-
 <body >
 		<div class="yes"></div>
 </body>
