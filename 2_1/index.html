@@ -1,0 +1,75 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title> = } </title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+var counter = 0;
+	var i = setInterval(function(){
+    	$("div").animate({ "width": "+=10%","height": "+=10%"}, 1500 );
+        	if( $("div").width() > 10) {
+        		$("div").css({"background-color":"green",
+        			"border-color": "red"});
+        		$("div:first").clone().addClass("clone").css({"background-color":"blue",
+        				"width": "1%",
+        				"height": "1%",
+        				"border-color": "green"}).appendTo("body");
+        		if( $("div").width() > 50) {
+        			$("div").css("background-color","blue");
+        		}
+			}
+
+	counter++;
+    if(counter === 20000000) {
+        clearInterval(i);
+    }
+}, 2000);
+});
+</script>
+<style>
+
+
+	body {
+	
+	position: absolute;
+	background-color: black;
+	width:100%;
+	height: 100%;
+	top: 0%;
+	left: 0%;
+	margin: none;
+	padding: none;
+	overflow: hidden;
+
+	}
+
+	.yes {
+	border-style: solid;
+	border-color: green;
+	border-width:35px;
+	position: absolute;
+	background-color: green;
+	border-radius: 600px;
+	width:1%;
+	height: 1%;
+	top:48%;
+	left: 49%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+  	-webkit-transition: border-color 25s ease-in-out;
+  	-moz-transition: color 25s ease-in-out;
+  	-o-transition: color 25s ease-in-out;
+  	transition: border-color 25s ease-in-out;
+
+	
+	}	
+
+</style>
+</head>
+<body >
+		<div class="yes"></div>
+</body>
+</html>
