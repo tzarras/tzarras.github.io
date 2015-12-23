@@ -1,0 +1,77 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title> = } </title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$(document).mousemove(function( event ){
+		$yo = $("body").width();
+		$oy = $("body").height();
+		$("div").css("top", event.pageY)
+
+		if (event.pageX > ($yo * .5)) {
+			
+		$("html").css("cursor","w-resize");
+		$("div").css("background-color","#4d50ff");
+
+		} else {
+		
+		$("html").css("cursor","e-resize");
+		$("div").css("background-color","#ff2020");
+
+		}
+
+		
+	});
+		
+		if (event.pageX < ($yo * .25) && event.pageY < ($oy * .25)) {
+			$("html").css("cursor","crosshair");
+				$("html").click(function(){
+				$("div").animate({"width":"+=20px","height":"+=20px"});
+		});
+	}
+	
+});
+</script>
+	
+	<style>
+	
+	html {
+		background-color: purple;
+		overflow: hidden;
+		margin: none;
+		padding: none;
+		-webkit-transition: background-color 4s ease-in-out;
+  	-moz-transition: color 4s ease-in-out;
+  	-o-transition: color 4s ease-in-out;
+  	transition: background-color 4s ease-in-out;
+	}
+
+	div {
+		position: absolute;
+		width: 1px;
+		height: 6px;
+		left: 49.5%;
+		top: 50%;
+		background-color: #ff2020;
+		transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-webkit-transition: background-color .25s ease-in-out;
+  	-moz-transition: color .25s ease-in-out;
+  	-o-transition: color .25s ease-in-out;
+  	transition: background-color .25s ease-in-out;
+	}
+
+
+	</style>
+
+</head>
+<body>
+
+<div></div>
+		
+</body>
+</html>
