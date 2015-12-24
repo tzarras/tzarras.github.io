@@ -10,29 +10,26 @@ $(document).ready(function() {
 	$(document).mousemove(function( event ){
 		$yo = $("body").width();
 		$oy = $("body").height();
-		$("div").css("top", event.pageY)
-
+		$("div").css("top", event.pageY-5);
 		if (event.pageX > ($yo * .5)) {
 			
 		$("html").css("cursor","w-resize");
 		$("div").css("background-color","#4d50ff");
+		$(".right").show().css("left", event.pageX+150);;
+		$(".this").hide();
 
 		} else {
 		
 		$("html").css("cursor","e-resize");
 		$("div").css("background-color","#ff2020");
+		$(".this").show().css("left", event.pageX-100);;
+		$(".right").hide();
 
 		}
 
 		
 	});
 		
-		if (event.pageX < ($yo * .25) && event.pageY < ($oy * .25)) {
-			$("html").css("cursor","crosshair");
-				$("html").click(function(){
-				$("div").animate({"width":"+=20px","height":"+=20px"});
-		});
-	}
 	
 });
 </script>
@@ -40,7 +37,7 @@ $(document).ready(function() {
 	<style>
 	
 	html {
-		background-color: purple;
+		background-color: black;
 		overflow: hidden;
 		margin: none;
 		padding: none;
@@ -50,19 +47,48 @@ $(document).ready(function() {
   	transition: background-color 4s ease-in-out;
 	}
 
+
 	div {
-		position: absolute;
-		width: 1px;
+		position: relative;
+		width: 6px;
 		height: 6px;
-		left: 49.5%;
+		left: 50%;
 		top: 50%;
-		background-color: #ff2020;
 		transform:translate(-50%,-50%);
 	-webkit-transform:translate(-50%,-50%);
 	-webkit-transition: background-color .25s ease-in-out;
   	-moz-transition: color .25s ease-in-out;
   	-o-transition: color .25s ease-in-out;
   	transition: background-color .25s ease-in-out;
+
+	}
+
+
+	p {
+		font-size: 30;
+		font-family: serif;
+		color: white;
+		font-weight: 100;
+
+	}
+
+
+	.this {
+		display: none;
+		position: absolute;
+		top: 45%;
+		left: 25%;
+		transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	}
+
+	.right {
+		display: none;
+		position: absolute;
+		top: 45%;
+		left: 75%;
+		transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
 	}
 
 
@@ -70,8 +96,11 @@ $(document).ready(function() {
 
 </head>
 <body>
+	
+	<div></div>
 
-<div></div>
+<p class="this">Look !</p>
+<p class="right">Right there !</p>
 		
 </body>
 </html>
