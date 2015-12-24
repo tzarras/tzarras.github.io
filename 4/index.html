@@ -10,18 +10,18 @@ $(document).ready(function() {
 	$(document).mousemove(function( event ){
 		$yo = $("body").width();
 		$oy = $("body").height();
-		$("div").css("top", event.pageY);
-		if (event.pageX > ($yo * .5)) {
+			$("div").css("top", event.pageY);
+				if (event.pageX > ($yo * .5)) {
 			
-		$("html").css("cursor","w-resize");
-		$(".right").show().css("left", event.pageX+85);;
-		$(".this").hide();
+					$("html").css("cursor","w-resize");
+					$(".right").show().css("left", event.pageX+85);;
+					$(".this").hide();
 
 		} else {
 		
-		$("html").css("cursor","e-resize");
-		$(".this").show().css("left", event.pageX-50);;
-		$(".right").hide();
+					$("html").css("cursor","e-resize");
+					$(".this").show().css("left", event.pageX-50);;
+					$(".right").hide();
 
 		}
 
