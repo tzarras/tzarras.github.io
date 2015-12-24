@@ -10,19 +10,17 @@ $(document).ready(function() {
 	$(document).mousemove(function( event ){
 		$yo = $("body").width();
 		$oy = $("body").height();
-		$("div").css("top", event.pageY-5);
+		$("div").css("top", event.pageY);
 		if (event.pageX > ($yo * .5)) {
 			
 		$("html").css("cursor","w-resize");
-		$("div").css("background-color","#4d50ff");
-		$(".right").show().css("left", event.pageX+150);;
+		$(".right").show().css("left", event.pageX+85);;
 		$(".this").hide();
 
 		} else {
 		
 		$("html").css("cursor","e-resize");
-		$("div").css("background-color","#ff2020");
-		$(".this").show().css("left", event.pageX-100);;
+		$(".this").show().css("left", event.pageX-50);;
 		$(".right").hide();
 
 		}
@@ -49,11 +47,13 @@ $(document).ready(function() {
 
 
 	div {
-		position: relative;
-		width: 6px;
-		height: 6px;
-		left: 50%;
+		background-color: brown;
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		left: 49.5%;
 		top: 50%;
+		margin-bottom: 375px;
 		transform:translate(-50%,-50%);
 	-webkit-transform:translate(-50%,-50%);
 	-webkit-transition: background-color .25s ease-in-out;
@@ -65,10 +65,11 @@ $(document).ready(function() {
 
 
 	p {
-		font-size: 30;
+		font-size: 10;
 		font-family: serif;
 		color: white;
 		font-weight: 100;
+		z-index: -999;
 
 	}
 
