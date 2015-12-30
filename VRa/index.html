@@ -56,7 +56,7 @@
 
       var geometry = new THREE.BoxGeometry( 20, 20, 20 );
 
-        for ( var i = 0; i < 4000; i ++ ) {
+        for ( var i = 0; i < 1000; i ++ ) {
 
           var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: "rgb(255, 10, 0)" } ) );
 
@@ -105,29 +105,6 @@
       var light = new THREE.DirectionalLight( 0xffffff, 1 );
         light.position.set( 1, 100, 1 ).normalize();
         scene.add( light );
-
-
-      var texture = THREE.ImageUtils.loadTexture(
-        ''
-      );
-      texture.wrapS = THREE.RepeatWrapping;
-      texture.wrapT = THREE.RepeatWrapping;
-      texture.repeat = new THREE.Vector2(50, 50);
-      texture.anisotropy = renderer.getMaxAnisotropy();
-
-      var material = new THREE.MeshPhongMaterial({
-        color: "rgb(255, 0, 100)",
-        specular: "rgb(0, 0, 255)",
-        shininess: 10,
-        shading: THREE.FlatShading,
-        map: texture
-      });
-
-      var geometry = new THREE.PlaneGeometry(6000, 6000);
-
-      var mesh = new THREE.Mesh(geometry, material);
-      mesh.rotation.x = -Math.PI / 2;
-      scene.add(mesh);
 
       window.addEventListener('resize', resize, false);
       setTimeout(resize, 1);
