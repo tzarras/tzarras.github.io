@@ -49,20 +49,20 @@
       // position camera //
 
       camera = new THREE.PerspectiveCamera(90, 1, 0.001, 700);
-      camera.position.set(400, 200, 500);
+      camera.position.set(400, 100, 500);
       scene.add(camera);
 
       // create cubes //
 
       var geometry = new THREE.BoxGeometry( 20, 20, 20 );
 
-        for ( var i = 0; i < 1000; i ++ ) {
+        for ( var i = 0; i < 400; i ++ ) {
 
           var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: "rgb(255, 10, 0)" } ) );
 
           object.position.x = Math.random() * 800 - 200;
           object.position.y = Math.random() * 400 - 200;
-          object.position.z = Math.random() * 1000 - 50;
+          object.position.z = Math.random() * 1000 - 0;
 
           object.rotation.x = Math.random() * 2 * Math.PI;
           object.rotation.y = Math.random() * 2 * Math.PI;
