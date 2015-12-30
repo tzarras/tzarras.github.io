@@ -49,16 +49,16 @@
       // position camera //
 
       camera = new THREE.PerspectiveCamera(90, 1, 0.001, 700);
-      camera.position.set(400, 100, 500);
+      camera.position.set(300, 80, 600);
       scene.add(camera);
 
       // create cubes //
 
-      var geometry = new THREE.BoxGeometry( 20, 20, 20 );
+      var geometry = new THREE.BoxGeometry( 25, 25, 25 );
 
-        for ( var i = 0; i < 400; i ++ ) {
+        for ( var i = 0; i < 700; i ++ ) {
 
-          var object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: "rgb(255, 10, 0)" } ) );
+          var object = new THREE.Mesh( geometry, new THREE.MeshPhongMaterial( { color: "rgb(0, 200, 200)", specular: "rgb(0, 0, 255)", shininess: 30 } ));
 
           object.position.x = Math.random() * 800 - 200;
           object.position.y = Math.random() * 400 - 200;
@@ -102,9 +102,13 @@
       window.addEventListener('deviceorientation', setOrientationControls, true);
 
       // set scene light //
+      
       var light = new THREE.DirectionalLight( 0xffffff, 1 );
         light.position.set( 1, 100, 1 ).normalize();
         scene.add( light );
+
+      var light = new THREE.AmbientLight( 0x404040 ); // soft white light
+scene.add( light );
 
       window.addEventListener('resize', resize, false);
       setTimeout(resize, 1);
