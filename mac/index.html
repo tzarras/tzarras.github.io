@@ -8,14 +8,15 @@
 $(document).ready(function() {
 	
 	setTimeout(function() {
-		$('html').css("background-color", "white");
+		$( "div" ).animate({ "width": "+=2000px", "height": "+=1000px"
+		 }, 400 );
         	var sound = new Howl ({
 			urls: ['mac.mp3' , 'mac.ogg'],
 			loop: false,
 			volume: 1,
 			}).play();
-	}, 800);
-	
+	}, 1000);
+
 });
 </script>
 <style> 
@@ -26,8 +27,20 @@ html {
   -o-transition: color 2.2s ease-in-out;
   transition: background-color 2.2s ease-in-out;
 }
+
+div {
+	position: absolute;
+	background-color:white;
+	width:4px;
+	height: 1px;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+}
 </style>
 </head>
 <body>
+<div></div>
 </body>
 </html>
