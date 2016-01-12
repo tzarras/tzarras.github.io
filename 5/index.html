@@ -3,6 +3,8 @@
 		<meta charset="UTF-8">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/paper-full.js"></script>
+		
 		<title>nothing</title>
 		 
 
@@ -12,10 +14,13 @@
 			// show tool bar //
         	$(document).mousemove(function() {
         		if (event.pageX < 250) {
+        		
         			$(".buttonbox").css("left","12%");
 
         		} else {
+        			
         			$(".buttonbox").css("left","-100px");
+        			
         		}
         	});
 
@@ -35,15 +40,22 @@
         	});
 
 
-        	$(this).append(
-    		$('<input>', {
-        		type: 'text',
-        		val: $('#div1').text()
-    		})
-			);
+        	$( ".headline" )
+  			.keyup(function() {
+    		var value = $( this ).val();
+    		$( ".message , .doc" ).text( value );
+  			})
+  			.keyup();
+
+
+
+			
+			
+
 
 		});
 		</script>
+
 
 		<style>
 
@@ -221,30 +233,82 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 
 		input[type="text"] {
 			border: 0px solid;
-			margin-left: 5px;
 			width: 100%;
 			height: 100%;
 			font-weight: 400;
 			appearance: none;
-  box-shadow: none;
-  border-radius: none;
-  font-family: sans-serif;
-  font-size: 15px;
-  outline: none;
-}
-		}
+ 			box-shadow: none;
+  			border-radius: none;
+  			font-family: sans-serif;
+  			font-size: 15px;
+  			outline: none;
+			}
+		
 
 		input[type="text"]:focus {
-  outline: none;
-}
+  		outline: none;
+
+		}
+
+		input[type="text"]:active {
+  		-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+  		
+		}
+
+		.message , .headline{
+			z-index: 999;
+			background-color: #4285f4;
+			color: white;
+			font-size: 18;
+			width: 100%;
+			height: 5%;
+			padding: 10px;
+			font-weight: 200;
+			-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+		}
+
+		.headline {
+			background-color: transparent !important;
+			color: black;
+		}
+
+		.doc {
+			position: absolute;
+			top: 10%;
+			width: 100%;
+			background-color: transparent;
+			color: black;
+			z-index: 99999;
+			padding: 10;
+		}
+		.canvas {
+			background-color: none;
+			width: 100%;
+			height: 100%;
+		}
+
+		#canvasT {
+			position: absolute;
+			top:10%;
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			z-index: 0;
+		}
+
+
 
 		</style>
+
+		
 		
 	
 
-	   </head>
-
-	
+	   </head>	
 
 
 	<body>
@@ -265,24 +329,51 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 
 
 		<div class="smallcontainer">
-			<input type="text">Hello</input>
+			<input class="headline" type="text"></input>
 		</div>
 		
 		<div class="container">	
 		
-			<input type="text"></input>
+			<div class="message"></div>
+		
+		<div class="canvas">
+			<canvas id="canvasT" resize></canvas>
+		</div>
 				
 		</div>
 
 
 
-				
-	
-
-
-
-
-
 	</body>
+
+	<script type="text/paperscript" canvas="canvasT">
+
+
+
+		tool.minDistance = 10;
+		
+		var myPath;
+
+		function onMouseDown(event) {
+		path = new Path();
+		path.fillColor = 'blue';
+		path.strokeColor = 'black';
+		path.strokeJoin = 'round';
+	path.strokeWidth = 50;
+	path.add(event.point);
+	path2.add(event.point);
+		}
+
+		function onMouseDrag(event) {
+		myPath.add(event.point);
+		}	
+
+		function onMouseup (event) {
+		path.closed = true;
+		}
+
+
+
+		</script>
 
 </html>
