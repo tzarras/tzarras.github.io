@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -25,18 +26,19 @@
         	});
 
         	$("#first").click(function(){
-        		$(".doodle:first").clone().css("width","5%").appendTo(".smallcontainer");
+        		$(".message").css("background-color","#4285f4");
         	});
 
         	$("#second").click(function(){
-        		$(".doodle:nth-child(2)").clone().css("width","5%").appendTo(".smallcontainer");
-        	});
-        	$("#fourth").click(function(){
-        		$(".doodle:nth-child(1):first").clone().css("width","5%").appendTo(".smallcontainer");
+        		$(".message").css("background-color","#f5ba14");
         	});
 
-        	$("#fifth").click(function(){
-        		$(".doodle:nth-child(2):first").clone().css("width","5%").appendTo(".smallcontainer");
+        	$("#third").click(function(){
+        		$(".message").css("background-color","#ea4639");
+        	});
+
+        	$("#fourth").click(function(){
+        		$(".message").css("background-color","#1ba261");
         	});
 
 
@@ -47,14 +49,12 @@
   			})
   			.keyup();
 
-
-
-			
-			
-
-
-		});
+  	
+	});
 		</script>
+
+
+		
 
 
 		<style>
@@ -135,7 +135,7 @@ box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
 
 		#second {
 			width: 60%;
-			background-color: #f5ba14
+			background-color: #f5ba14;
 		}
 
 		#second:hover {
@@ -151,6 +151,17 @@ box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
 
 		#third:hover {
 			background-color: #d21102 ;
+			cursor: pointer;
+
+		}
+
+		#fourth {
+			width: 60%;
+			background-color: #1ba261;
+		}
+
+		#fourth:hover {
+			background-color: #0d8d50;
 			cursor: pointer;
 
 		}
@@ -182,7 +193,7 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 		}
 
 		.container {
-			z-index: -999;
+			z-index: 0;
 			overflow-y: scroll;
 			position: absolute;
 			width: 70%;
@@ -196,7 +207,16 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 			background-color: white;
 			transform:translate(-50%,-50%);
 			-webkit-transform:translate(-50%,-50%);
+			transition: all .6s ease-out;
+    		-webkit-transition: all .6s ease-out;
 		}
+
+		.container:hover {
+		-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+		box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+		}
+
 
 		.doodle {
 			width: 10%;
@@ -252,8 +272,8 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 
 		input[type="text"]:active {
   		-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+		box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
   		
 		}
 
@@ -276,28 +296,17 @@ box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 			color: black;
 		}
 
-		.doc {
-			position: absolute;
-			top: 10%;
-			width: 100%;
-			background-color: transparent;
-			color: black;
-			z-index: 99999;
-			padding: 10;
-		}
-		.canvas {
+		.storybox {
 			background-color: none;
 			width: 100%;
 			height: 100%;
 		}
 
-		#canvasT {
-			position: absolute;
-			top:10%;
-			width: 100%;
-			height: 100%;
-			background-color: white;
-			z-index: 0;
+
+		.story {
+			margin-left: 10px;
+			margin-top: 10px;
+			font-size: 14;
 		}
 
 
@@ -323,6 +332,9 @@ box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 			<div class="button">
 				<img class="projects" id="third" src="6.svg">
 			</div>
+			<div class="button">
+				<img class="projects" id="fourth" src="7.svg">
+			</div>
 			
 
 		</div>
@@ -335,45 +347,13 @@ box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 		<div class="container">	
 		
 			<div class="message"></div>
-		
-		<div class="canvas">
-			<canvas id="canvasT" resize></canvas>
-		</div>
+			<div class="storybox">
+			</div>
 				
 		</div>
 
 
 
 	</body>
-
-	<script type="text/paperscript" canvas="canvasT">
-
-
-
-		tool.minDistance = 10;
-		
-		var myPath;
-
-		function onMouseDown(event) {
-		path = new Path();
-		path.fillColor = 'blue';
-		path.strokeColor = 'black';
-		path.strokeJoin = 'round';
-	path.strokeWidth = 50;
-	path.add(event.point);
-	path2.add(event.point);
-		}
-
-		function onMouseDrag(event) {
-		myPath.add(event.point);
-		}	
-
-		function onMouseup (event) {
-		path.closed = true;
-		}
-
-
-
-		</script>
 
 </html>
