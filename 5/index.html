@@ -13,17 +13,6 @@
 		$(document).ready(function() {
 
 			// show tool bar //
-        	$(document).mousemove(function() {
-        		if (event.pageX < 250) {
-        		
-        			$(".buttonbox").css("left","12%");
-
-        		} else {
-        			
-        			$(".buttonbox").css("left","-100px");
-        			
-        		}
-        	});
 
         	$("#first").click(function(){
         		$(".message").css("background-color","#4285f4");
@@ -41,8 +30,7 @@
         		$(".message").css("background-color","#1ba261");
         	});
 
-
-        	$( ".headline" )
+			$( ".headline" )
   			.keyup(function() {
     		var value = $( this ).val();
     		$( ".message , .doc" ).text( value );
@@ -77,7 +65,7 @@
 			border-color: #ababab;
 			background-color: white;
 			position: absolute;
-			left: -100px;
+			left: 12%;
 			top: 50%;
 			border-radius: 3px;
 			transition: all .6s ease-out;
@@ -88,8 +76,8 @@
 
 		.buttonbox:hover{
 			-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 		}
 
 		.projects {
@@ -109,8 +97,8 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 
 		.projects:hover {
 			-webkit-box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
--moz-box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
-box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
+			-moz-box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
+			box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
 		}
 
 		.button {
@@ -170,7 +158,7 @@ box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
 			overflow-y: hidden;
 			position: absolute;
 			width: 70%;
-			height: 4%;
+			height: 6%;
 			left: 50%;
 			top: 11%;
 			border-style: solid;
@@ -186,15 +174,16 @@ box-shadow: 0px 3px 2px 1px rgba(0,0,0,0.25);
 
 		.smallcontainer:hover {
 			-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 
 
 		}
 
 		.container {
+			overflow: scroll;
+			background-color: white;
 			z-index: 0;
-			overflow-y: scroll;
 			position: absolute;
 			width: 70%;
 			height: 70%;
@@ -204,7 +193,6 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 			border-width: 1px;
 			border-color: #ababab;
 			border-radius: 3px;
-			background-color: white;
 			transform:translate(-50%,-50%);
 			-webkit-transform:translate(-50%,-50%);
 			transition: all .6s ease-out;
@@ -212,9 +200,9 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 		}
 
 		.container:hover {
-		-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
-		-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
-		box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+			-webkit-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 		}
 
 
@@ -266,14 +254,14 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 		
 
 		input[type="text"]:focus {
-  		outline: none;
+  			outline: none;
 
 		}
 
 		input[type="text"]:active {
-  		-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
-		-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
-		box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+  			-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
   		
 		}
 
@@ -285,10 +273,18 @@ box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5);
 			width: 100%;
 			height: 5%;
 			padding: 10px;
-			font-weight: 200;
+			font-weight: 300;
 			-webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
--moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+			-moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+			box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
+			transition: all .15s ease-out;
+    		-webkit-transition: all .15s ease-out;
+		}
+
+		.message {
+			font-style: italic;
+			z-index: 0;
+			overflow: hidden;
 		}
 
 		.headline {
@@ -303,10 +299,22 @@ box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 		}
 
 
-		.story {
+		.storybox {
+			color: black;
+			z-index: -3;
+			background-color: white;
+			position: absolute;
 			margin-left: 10px;
 			margin-top: 10px;
 			font-size: 14;
+			width: 85%;
+			height: 90%;
+			top: 15%;
+			left: 48%;
+			overflow: scroll;
+			transform:translate(-50%,0%);
+			-webkit-transform:translate(-50%,0%);
+		
 		}
 
 
@@ -348,6 +356,7 @@ box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.5);
 		
 			<div class="message"></div>
 			<div class="storybox">
+			I'm Mikey.
 			</div>
 				
 		</div>
