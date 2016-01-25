@@ -1,0 +1,153 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Dogme 95 </title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+$(document).ready(function() {
+
+	$(window).mousemove(function() {
+		$(".box").css({"left": event.pageX, "top": event.pageY});
+	});
+	
+	$(window).scroll(function (){
+         var scrollchunk = $("body").scrollTop();
+         $hey = $("html").width();
+		
+		setTimeout(function() {
+			
+			$(".box").css({"height": scrollchunk + "px", "width": scrollchunk + 100 + "px"
+				});
+		
+		}, 50);
+
+		if ( $(".box").height() > 900 ) {
+
+			$("html").css({"background-color": "black"});
+			$("#circle").show();
+			$("#other").hide();
+
+		} else {
+
+			$("html").css({"background-color": "white"});
+			$("#circle").hide();
+			$("#other").show();
+
+		}
+
+		
+		
+	});
+
+});
+</script>
+<style> 
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+html {
+	font-family: Georgia;
+	font-weight: 100;
+	background-color: white;
+	-webkit-transition: background-color .5s ease-in-out;
+  -moz-transition: color .5s ease-in-out;
+  -o-transition: color .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
+}
+
+body {
+	width: 100%;
+	height: 8000px;
+	
+}
+.box {
+
+	position: absolute;
+	width: 375px;
+	height: 250px;
+	left: 50%;
+	top: 50%;
+	border-radius: 5px;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	background-color: black;
+	-webkit-transition: background-color 2.2s ease-in-out;
+  	-moz-transition: color 2.2s ease-in-out;
+  	-o-transition: color 2.2s ease-in-out;
+  	transition: background-color 2.2s ease-in-out;
+}
+
+.yo {
+
+	width: 65%;
+	position: fixed;
+	font-size: 35;
+	color: white;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	z-index: 0;
+	line-height: 1.25;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.title {
+	position: fixed;
+	left: 50%;
+	top: 10%;
+	color: white;
+	font-size: 40;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	z-index: 0;
+	-webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+.circle {
+	position: fixed;
+	left: 5%;
+	top: 7%;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: red;
+	z-index: 999 !important;
+}
+
+
+
+
+
+
+</style>
+</head>
+<body>
+<div class="circle" id="circle" style="display:none"></div>
+
+<div class="box"> 
+<div class="circle" id="other"></div>
+</div>
+
+<!--<p class="title"> Dogme 95 </p> -->
+
+<p class="yo"> Dogme 95 was an avant-garde filmmaking movement started in 1995 by the Danish directors Lars von Trier and Thomas Vinterberg, who created the "Dogme 95 Manifesto" and the "Vow of Chastity" (Danish: kyskhedsløfter). These were rules to create filmmaking based on the traditional values of story, acting, and theme, and excluding the use of elaborate special effects or technology. It was an attempt to take back power for the director as artist, as opposed to the studio.[1] They were later joined by fellow Danish directors Kristian Levring and Søren Kragh-Jacobsen, forming the Dogme 95 Collective or the Dogme Brethren. Dogme (pronounced [ˈd̥ɒwmə]) is the Danish word for dogma. <br><br><br>
+
+</p>
+
+
+</body>
+</html>
