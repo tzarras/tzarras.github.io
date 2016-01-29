@@ -15,7 +15,7 @@ $(document).ready(function() {
 	});
 
 		$(".title", this).mouseover(function() {
-			$(".box").css({"width": $(this).innerWidth()+10, "height": $(this).innerHeight()+10, "background-color":"e5fffa" , "border":"none" });
+			$(".box").css({"width": $(this).innerWidth(), "height": $(this).innerHeight(), "background-color":"fff62b" , "border":"none" });
 		}).mouseout(function() {
 			$(".box").css({"width": $(this).innerWidth(), "background-color":"transparent", "border":"1px solid"});
 		});
@@ -55,17 +55,18 @@ body {
 	transform:translate(-50%,-50%);
 	-webkit-transform:translate(-50%,-50%);
 	overflow: hidden;
+
 }
 
 .title {
-	z-index: 9999;
+	z-index: 999;
 	position: relative;
 	float: left;
 	color:black;
 	margin-left: 1%;
 	margin-bottom: -10px;
 	font-size: 30;
-	background-color: white;
+	background-color: transparent;
 	padding: 1%;
 	border-radius: 2px;
 	border-radius: 3px;
