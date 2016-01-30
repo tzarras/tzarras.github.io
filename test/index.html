@@ -1,8 +1,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title> test </title>
+<meta name="timzarras" content="my other site">
+<title> timzarras.me </title>
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="howler.js"></script>
 
 <script>
 $(document).ready(function() {
@@ -14,39 +16,47 @@ $(document).ready(function() {
 
 	});
 
-		$(".title", this).mouseover(function() {
-			$(".box").css({"width": $(this).innerWidth(), "height": $(this).innerHeight(), "background-color":"fff62b" , "border":"none" });
+	$(".title", this).mouseover(function() {
+			$(".box").css({"width": $(this).innerWidth(), "height": $(this).innerHeight(), "background-color":"fdff31" , "border":"none" });
+			var sound = new Howl ({
+			urls: ['mac.mp3' , 'mac.ogg'],
+			loop: false,
+			volume: 1,
+			}).play();
 		}).mouseout(function() {
 			$(".box").css({"width": $(this).innerWidth(), "background-color":"transparent", "border":"1px solid"});
-		});
+	});
 	
+
 
 });
 </script>
+
 <style> 
 
 ::-webkit-scrollbar { 
     display: none; 
-}
+	}
 
 html {
+	
 	font-family: sans-serif;
 	font-weight: 100;
 	background-color: white;
-	-webkit-transition: background-color .5s ease-in-out;
-  -moz-transition: color .5s ease-in-out;
-  -o-transition: color .5s ease-in-out;
-  transition: background-color .5s ease-in-out;
-  cursor: crosshair !important;
+  	cursor: crosshair !important;
  
 }
 
 body {
+	
 	width: 100%;
 	height: 100%;
+	overflow: scroll;
+
 }
 
 .container {
+	
 	position: absolute;
 	left: 50%;
 	top: 50%;
@@ -55,17 +65,37 @@ body {
 	transform:translate(-50%,-50%);
 	-webkit-transform:translate(-50%,-50%);
 	overflow: hidden;
+	margin-top: 3%;
 
 }
 
+.divider {
+
+	position: absolute;
+	width: 50%;
+}
+
+.info {
+	position: relative;
+	float: right;
+	background-color: transparent;
+	width: 50%;
+	height: 100%;
+	color: black;
+	font-size: 50;
+}
+
 .title {
+	
+	cursor: crosshair;
+	text-decoration: none;
 	z-index: 999;
 	position: relative;
 	float: left;
 	color:black;
 	margin-left: 1%;
-	margin-bottom: -10px;
-	font-size: 30;
+	margin-bottom: 20px;
+	font-size: 60;
 	background-color: transparent;
 	padding: 1%;
 	border-radius: 2px;
@@ -80,24 +110,25 @@ body {
   	-webkit-box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.25);
 	-moz-box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.25);
 	box-shadow: 0px 8px 5px 0px rgba(0,0,0,0.25);
-	text-shadow: 0px 5px 2px rgba(150, 150, 150, 1);
+	text-shadow: 0px 5.5px 2px rgba(150, 150, 150, 1);
+
 }
 
 .title:hover {
+	
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
 	text-shadow: none;
-	
 	background-color: transparent;
 	color: black;
  
-
 }
 
 .box {
 	position: absolute;
-	top: 10%;
+	left: -50%;
+	top: -50%;
 	width: 25%;
 	height: 11%;
 	border-radius: 3px;
@@ -118,37 +149,40 @@ body {
   	transition: height .75s ease-in-out;
  }
 
-
-
-
-
-
-
-
-
-
 </style>
 
 </head>
+	
 	<body>
+	
 	<div class="container">
-		
-		<p class="title"> /3 </p>
-		<p class="title"> /hello </p>
-		<p class="title"> /extraordinary </p>
-		<p class="title"> /collage </p>
-		<p class="title"> /flower </p>
-		<p class="title"> /mac </p>
-		<p class="title"> /1 </p>
-		<p class="title"> /2 </p>
-		<p class="title"> /2_1 </p>
-		<p class="title"> /4 </p>
-		<p class="title"> /VRa </p>
-		<p class="title"> /dogme95 </p>
-		
+
+		<div class="divider">
+			
+			<a class="title" href="/3"> /3 </a>
+			<a class="title" href="/hello"> /hello </a>
+			<a class="title" href="/extraordinary"> /extraordinary </a>
+			<a class="title" href="/collage"> /collage </a>
+			<a class="title" href="/flower"> /flower </a>
+			<a class="title" href="/mac"> /mac </a>
+			<a class="title" href="/1"> /1 </a>
+			<a class="title" href="/2"> /2 </a>
+			<a class="title" href="/2_1"> /2_1 </a>
+			<a class="title" href="/4"> /4 </a>
+			<a class="title" href="/VRa"> /VRa </a>
+			<a class="title" href="/dogme95"> /dogme95 </a>
+
+		</div>
+
+		<div class="info">
+			
+			<p class="desc" style="display:none">Simple animation. Use it as a screen-saver. I don't know.</p>
+
+		</div>
+
 	</div>
 
-	<div class="box"></div>
+		<div class="box"></div>
 
 	
 
