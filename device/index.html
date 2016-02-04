@@ -50,30 +50,21 @@
       // position camera //
 
       camera = new THREE.PerspectiveCamera(90, 1, 0.001, 700);
-      camera.position.set(-10, 100, -200);
+      camera.position.set(-10, 0, 250);
       scene.add(camera);
 
-      // load image //
+      var img = new THREE.MeshBasicMaterial({ //CHANGED to MeshBasicMaterial
+        map:THREE.ImageUtils.loadTexture('image/plane1.jpg')
+      });
+      img.map.needsUpdate = true;
 
-      //var img = new THREE.MeshBasicMaterial({ //CHANGED to MeshBasicMaterial
-       // map:THREE.ImageUtils.loadTexture('image/plane1.jpg')
-    //});
-    //img.map.needsUpdate = true; //ADDED
 
     // create plane//
-      var photo = THREE.ImageUtils.loadTexture( "plane1.jpg" );
-      var material = new THREE.MeshBasicMaterial( {map: photo, side:THREE.DoubleSide } );
-      var geometry = new THREE.PlaneBufferGeometry( 500, 300, 200 );
-      var plane = new THREE.Mesh( geometry, photo );
-      scene.add( plane );
-
-      //var moonTexture = THREE.ImageUtils.loadTexture( 'images/moon.jpg' );
-      //var moonMaterial = new THREE.MeshBasicMaterial( { map: moonTexture } );
-      //var moon = new THREE.Mesh( sphereGeom.clone(), moonMaterial );
-      //moon.position.set(-100, 50, 0);
-      //scene.add( moon );
-
-
+      var plane = new THREE.Mesh(new THREE.PlaneGeometry(200, 200),img);
+      plane.overdraw = true;
+      scene.add(plane);
+  
+ 
       controls = new THREE.OrbitControls(camera, element);
       controls.rotateUp(Math.PI / 4);
       controls.target.set(
