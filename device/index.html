@@ -50,15 +50,28 @@
       // position camera //
 
       camera = new THREE.PerspectiveCamera(90, 1, 0.001, 700);
-      camera.position.set(0, 100, 100);
+      camera.position.set(-10, 100, -200);
       scene.add(camera);
 
-      // create cubes //
+      // load image //
 
-      var geometry = new THREE.PlaneGeometry( 500, 400, 300 );
-      var material = new THREE.MeshBasicMaterial( {color: 0xffff00, side: THREE.DoubleSide} );
-      var plane = new THREE.Mesh( geometry, material );
+      //var img = new THREE.MeshBasicMaterial({ //CHANGED to MeshBasicMaterial
+       // map:THREE.ImageUtils.loadTexture('image/plane1.jpg')
+    //});
+    //img.map.needsUpdate = true; //ADDED
+
+    // create plane//
+      var photo = THREE.ImageUtils.loadTexture( "plane1.jpg" );
+      var material = new THREE.MeshBasicMaterial( {map: photo, side:THREE.DoubleSide } );
+      var geometry = new THREE.PlaneBufferGeometry( 500, 300, 200 );
+      var plane = new THREE.Mesh( geometry, photo );
       scene.add( plane );
+
+      //var moonTexture = THREE.ImageUtils.loadTexture( 'images/moon.jpg' );
+      //var moonMaterial = new THREE.MeshBasicMaterial( { map: moonTexture } );
+      //var moon = new THREE.Mesh( sphereGeom.clone(), moonMaterial );
+      //moon.position.set(-100, 50, 0);
+      //scene.add( moon );
 
 
       controls = new THREE.OrbitControls(camera, element);
@@ -89,11 +102,12 @@
       // set scene light //
       
       var light = new THREE.DirectionalLight( 0xffffff, 1 );
-        light.position.set( 1, 100, 1 ).normalize();
+        light.position.set( 100, 100, 1 ).normalize();
         scene.add( light );
 
-      var light = new THREE.AmbientLight( 0x404040 ); 
-      scene.add( light );
+      var light = new THREE.PointLight(0xffffff);
+      light.position.set(0,150,100);
+      scene.add(light);
 
       window.addEventListener('resize', resize, false);
       setTimeout(resize, 1);
