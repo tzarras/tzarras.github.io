@@ -53,17 +53,12 @@
       camera.position.set(-10, 0, 250);
       scene.add(camera);
 
-      var img = new THREE.MeshBasicMaterial({ //CHANGED to MeshBasicMaterial
-        map:THREE.ImageUtils.loadTexture('image/plane1.jpg')
-      });
-      img.map.needsUpdate = true;
-
-
-    // create plane//
-      var plane = new THREE.Mesh(new THREE.PlaneGeometry(200, 200),img);
-      plane.overdraw = true;
-      scene.add(plane);
-  
+      var texture = THREE.ImageUtils.loadTexture( 'image/plane1.jpg' );
+      var cubeGeo = new THREE.CubeGeometry( 50, 50, 50 );
+      var cubeMat = new THREE.MeshBasicMaterial( { map: texture } );
+      var cube = new THREE.Mesh( cubeGeo, cubeMat );
+      scene.add( cube );
+      
  
       controls = new THREE.OrbitControls(camera, element);
       controls.rotateUp(Math.PI / 4);
