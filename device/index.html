@@ -53,8 +53,8 @@
       camera.position.set(-10, 0, 250);
       scene.add(camera);
 
-      var texture = THREE.ImageUtils.loadTexture( 'image/plane1.jpg' );
-      var cubeGeo = new THREE.CubeGeometry( 696, 246, 50 );
+      var texture = THREE.ImageUtils.loadTexture( 'image/planefordevice.jpg' );
+      var cubeGeo = new THREE.CubeGeometry( 696, 208, 50 );
       var cubeMat = new THREE.MeshBasicMaterial( { map: texture } );
       var cube = new THREE.Mesh( cubeGeo, cubeMat );
       scene.add( cube );
