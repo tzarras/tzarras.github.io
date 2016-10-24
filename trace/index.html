@@ -19,11 +19,11 @@ $(document).ready(function() {
 
 	});
 
+	$(".new").click(function(){
 
+		$("#randomword").show();
 
-	$(window).click(function(){
-		
-		var words= new Array("Hello","Mikey","Tim!","Marcus","Jiff","Total","FUCK","Nope!","Spike","Rocket","Zig-zag","Trophy");
+		var words= new Array("MIKEY","TIM","MARCUS","JIFF","TOTAL","FUCK","SPIKE","ROCKET","TROPHY");
     	var random = words[Math.floor(Math.random() * words.length)];
    		document.getElementById("randomword").innerHTML=random;
 
@@ -31,8 +31,16 @@ $(document).ready(function() {
 		$(".box").css("background-color","white");
 	});
 
+
 	$(".tip").delay(3000).fadeOut(700);
 
+	$(".free").click(function() {
+		$("#randomword").hide();
+	});
+
+	$(".clean").click(function() {
+		$(".box").css("background-color","white");
+	});
 
 
 });
@@ -47,6 +55,7 @@ html {
 	height: 100%;
 	font-family: arial;
 	overflow: hidden;
+	font-weight: 100;
 }
 
 body {
@@ -70,7 +79,7 @@ body {
 	z-index: 0;
 	margin-bottom: 2px;
 	background-color: white;
-	width: 10px;
+	width: 7px;
 	height: 30px;
 	position: relative;
 	float: left;
@@ -97,21 +106,57 @@ body {
 	font-size: 400;
 	position: absolute;
 	left: 50%;
-	top: 12%;
+	top: 15%;
 	transform:translate(-50%,0%);
   	-webkit-transform:translate(-50%,0%);
 }
 
 .tip {
-	border-radius: 10px;
-	padding: 2%;
+	top: 2%;
+	left: 2%;
+	border-radius: 2px;
+	padding: 1%;
 	z-index: 999;
 	position: absolute;
 	background-color: white;
 	color: black;
 	font-size: 15;
-	left: 2%;
+	-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+}
+
+.buttons {
+	position: absolute;
 	top: 2%;
+	right: 2%;
+	text-align: center;
+	width: 8%;
+}
+
+.buttons p {
+	cursor: pointer;
+	padding: 2%;
+	border-radius: 2px;
+	z-index: 999;
+	position: relative;
+	float: top;
+	background-color: white;
+	color: black;
+	font-size: 15;
+	-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+}
+
+.buttons p:hover {
+	-webkit-transition: all .3s ease-in-out;
+  	-moz-transition: all .3s ease-in-out;
+  	-o-transition: all .3s ease-in-out;
+  	transition: all .3s ease-in-out;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 </style>
@@ -121,13 +166,15 @@ body {
 
 
 <body>
-			
-			<div class="right">
-			</div>
-			<div class="left">
-			</div>
+
 			<p id="randomword">Hello</p>
 			<p class="tip"> Trace over the words. Click for another word.</p>
+			<div class="buttons">
+			<p class="new"> New word </p>
+			<p class="free"> Free draw </p>
+			<p class="clean"> Clean </p>
+			</div>
+
 </body>
 
 
