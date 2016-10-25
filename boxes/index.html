@@ -7,7 +7,13 @@
 
 $(document).ready(function() {
 
-	$("#randomword,.tip").hide();
+	$("html,body").css("cursor","none");
+
+	//$(window).mousemove(function() {
+
+	//$(".brush").css({"left":event.pageX-10,"top":event.pageY-10,"z-index":"999"});
+
+	//});
 
 
 	// lay out boxes //
@@ -81,9 +87,11 @@ html {
 	overflow: hidden;
 	font-weight: 100;
 	margin: 0;
+	cursor: none;
 }
 
 body {
+	cursor: none;
 	margin: 0;
 	margin-top: 0;
 }
@@ -105,7 +113,7 @@ body {
 	z-index: 0;
 	margin-bottom: 0px;
 	background-color: white;
-	width: 20px;
+	width: 1.25%;
 	height: 30px;
 	position: relative;
 	float: left;
@@ -188,6 +196,15 @@ body {
 	box-shadow: none;
 }
 
+.brush {
+	z-index: 999;
+	position: absolute;
+	right: 2%;
+	top: 5%;
+	width: 40px;
+	height: auto;
+}
+
 .buttons p:hover,.red:hover,.purple:hover,.blue:hover,.green:hover,.black:hover,.yellow:hover {
 	-webkit-transition: all .3s ease-in-out;
   	-moz-transition: all .3s ease-in-out;
@@ -209,7 +226,7 @@ body {
 	top: 50%;
 	transform:translate(0%,-50%);
   	-webkit-transform:translate(0%,-50%);
-  	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
 	-moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
 	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
   	
@@ -254,18 +271,6 @@ body {
 	background-color: black;
 }
 
-.tools {
-	opacity: .5;
-	border-left:1px solid black;
-	position: absolute;
-	background-color: white;
-	width: 8%;
-	height: 100%;
-	top: 0;
-	right: 0;
-	z-index: 998;
-}
-
 </style>
 </head>
 
@@ -274,8 +279,6 @@ body {
 
 <body>
 
-			<p id="randomword">Hello</p>
-			<p class="tip"> Trace over the words.</p>
 			<div class="buttons">
 			<img class="erase" src="eraser.svg">
 			<img class="clean" src="trash.svg">
@@ -288,6 +291,8 @@ body {
 			<div class="yellow"></div>
 			<div class="black"></div>
 			</div>
+
+			<img class="brush" src="paintbrush.svg">
 
 </body>
 
