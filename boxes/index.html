@@ -53,6 +53,10 @@ $(document).ready(function() {
 		color="#dd1ecb";
 	});
 
+	$(".erase").click(function() {
+		color="white";
+	});
+
 	$(".clean").click(function() {
 		$(".box").css("background-color","white");
 	});
@@ -157,7 +161,7 @@ body {
 
 }
 
-.clean {
+.clean,.erase {
 	margin-bottom: 10px;
 	border-radius: 1px;
 	background-color: white;
@@ -177,7 +181,7 @@ body {
 	box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
 }
 
-.clean:hover {
+.clean:hover,.erase:hover {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -260,8 +264,8 @@ body {
 			<p id="randomword">Hello</p>
 			<p class="tip"> Trace over the words.</p>
 			<div class="buttons">
+			<img class="erase" src="eraser.svg">
 			<img class="clean" src="trash.svg">
-			<img class="clean" src="eraser.svg">
 			</div>
 			<div class="color">
 			<div class="red"></div>
