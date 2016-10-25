@@ -30,7 +30,7 @@ $(document).ready(function() {
 	});
 
 	$(".green").click(function() {
-		color="#5fcc28";
+		color="#0ce552";
 	});
 
 	$(".red").click(function() {
@@ -46,34 +46,11 @@ $(document).ready(function() {
 	});
 
 	$(".yellow").click(function() {
-		color="#ffd525";
+		color="#d8e50c";
 	});
 
 	$(".purple").click(function() {
 		color="#dd1ecb";
-	});
-
-
-
-
-	// get a new word from array //
-
-	$(".new").click(function(){
-
-		$("#randomword").show();
-
-		var words= new Array("MIKEY","TIM","JIFF","TOTAL","SPIKE","ROCKET","TROPHY");
-    	var random = words[Math.floor(Math.random() * words.length)];
-   		document.getElementById("randomword").innerHTML=random;
-
-		$(".box").css("background-color","white");
-	});
-
-
-	$(".tip").delay(3000).fadeOut(700);
-
-	$(".free").click(function() {
-		$("#randomword").hide();
 	});
 
 	$(".clean").click(function() {
@@ -118,6 +95,7 @@ body {
 }
 
 .box {
+
 	margin-right: 0px;
 	z-index: 0;
 	margin-bottom: 0px;
@@ -134,8 +112,7 @@ body {
   	transition: all .2s ease-in-out;
   	-webkit-box-shadow: inset 0px 5px 3px -2px rgba(0,0,0,0.6);
 	-moz-box-shadow: inset 0px 5px 3px -2px rgba(0,0,0,0.6);
-	box-shadow: inset 0px 5px 3px -2px rgba(0,0,0,0.6);
-  	
+	box-shadow: inset 0px 5px 3px -2px rgba(0,0,0,0.6);  	
   	
 }
 
@@ -171,15 +148,23 @@ body {
 	box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
 }
 
+.buttons {
+	position: absolute;
+	bottom: 10%;
+	right: 1.5%;
+	width: 60px;
+	height: auto;
+
+}
+
 .clean {
-	border-radius: 2px;
-	padding: .5%;
+	margin-bottom: 10px;
+	border-radius: 1px;
 	background-color: white;
 	cursor: pointer;
 	z-index: 999;
-	position: absolute;
-	top: 6%;
-	right: 2%;
+	position: relative;
+	float: top;
 	text-align: center;
 	width: 50px;
 	height: 50px;
@@ -210,11 +195,11 @@ body {
 }
 
 .color {
-	border-radius: 2px;
+	border-radius: 1px;
 	background-color: white;
 	padding: .5%;
 	z-index: 999;
-	position: absolute;
+	position:absolute;
 	right: 2%;
 	top: 50%;
 	transform:translate(0%,-50%);
@@ -253,11 +238,11 @@ body {
 }
 
 .green {
-	background-color: #5fcc28;
+	background-color: #0ce552;
 }
 
 .yellow {
-	background-color: #ffd525;
+	background-color: #d8e50c;
 }
 
 .black {
@@ -275,7 +260,8 @@ body {
 			<p id="randomword">Hello</p>
 			<p class="tip"> Trace over the words.</p>
 			<div class="buttons">
-			<img class="clean" src="trash.png">
+			<img class="clean" src="trash.svg">
+			<img class="clean" src="eraser.svg">
 			</div>
 			<div class="color">
 			<div class="red"></div>
