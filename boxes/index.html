@@ -1,0 +1,281 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+	$("#randomword,.tip").hide();
+
+
+	// lay out boxes //
+
+	var arrayVariable = [''],
+    arrayLength = arrayVariable.length*10000;
+
+	for (i = 0; i < arrayLength; i++) {
+  	$('<div class="box" />').text(arrayVariable[i]).appendTo("body");
+	}
+
+	// on hover of this, change background color //
+
+	var color = "black";
+
+	$(".box",this).hover(function() {
+
+		$(this).css({"background-color": color});
+	
+	});
+
+	$(".green").click(function() {
+		color="#5fcc28";
+	});
+
+	$(".red").click(function() {
+		color="#ff321b";
+	});
+
+	$(".black").click(function() {
+		color="black";
+	});
+
+	$(".blue").click(function() {
+		color="#4d25fd";
+	});
+
+	$(".yellow").click(function() {
+		color="#ffd525";
+	});
+
+	$(".purple").click(function() {
+		color="#dd1ecb";
+	});
+
+
+
+
+	// get a new word from array //
+
+	$(".new").click(function(){
+
+		$("#randomword").show();
+
+		var words= new Array("MIKEY","TIM","JIFF","TOTAL","SPIKE","ROCKET","TROPHY");
+    	var random = words[Math.floor(Math.random() * words.length)];
+   		document.getElementById("randomword").innerHTML=random;
+
+		$(".box").css("background-color","white");
+	});
+
+
+	$(".tip").delay(3000).fadeOut(700);
+
+	$(".free").click(function() {
+		$("#randomword").hide();
+	});
+
+	$(".clean").click(function() {
+		$(".box").css("background-color","white");
+	});
+
+
+});
+
+</script>
+
+<style> 
+
+@font-face {
+    font-family: clear;
+    src: url(itc-clearface-lt-regular.ttf);
+}
+
+
+html {
+	width: 100%;
+	height: 100%;
+	font-family: arial;
+	overflow: hidden;
+	font-weight: 100;
+}
+
+body {
+	margin: 0;
+	margin-top: 0;
+}
+
+.container {
+	border: 1px solid black;
+	width: 90%;
+	height: 90%;
+	position: absolute;;
+	left: 50%;
+	top: 50%;
+	transform:translate(-50%,-50%);
+  	-webkit-transform:translate(-50%,-50%);
+}
+
+.box {
+	margin-right: 0px;
+	z-index: 0;
+	margin-bottom: 0px;
+	background-color: white;
+	width: 20px;
+	height: 30px;
+	position: relative;
+	float: left;
+	top: 0%;
+	left: 0%;
+	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+  	transition: all .2s ease-in-out;
+  	-webkit-box-shadow: inset 0px 5px 3px -2px rgba(0,0,0,0.6);
+	-moz-box-shadow: inset 0px 5px 3px -2px rgba(0,0,0,0.6);
+	box-shadow: inset 0px 5px 3px -2px rgba(0,0,0,0.6);
+  	
+  	
+}
+
+.box:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+#randomword {
+	margin: 0;
+	z-index: -999;
+	font-size: 400;
+	position: absolute;
+	left: 50%;
+	top: 20%;
+	transform:translate(-50%,0%);
+  	-webkit-transform:translate(-50%,0%);
+}
+
+.tip {
+	top: 2%;
+	left: 2%;
+	border-radius: 2px;
+	padding: 1%;
+	z-index: 999;
+	position: absolute;
+	background-color: white;
+	color: black;
+	font-size: 15;
+	-webkit-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 2px 2px 3px 0px rgba(0,0,0,0.2);
+}
+
+.clean {
+	cursor: pointer;
+	z-index: 999;
+	position: absolute;
+	top: 6%;
+	right: 2%;
+	text-align: center;
+	width: 50px;
+	height: 50px;
+	-webkit-transition: all .2s ease-in-out;
+  	-moz-transition: all .2s ease-in-out;
+  	-o-transition: all .2s ease-in-out;
+  	transition: all .2s ease-in-out;
+}
+
+.clean:hover {
+	top:6.5%;
+}
+
+.buttons p:hover,.red:hover,.purple:hover,.blue:hover,.green:hover,.black:hover,.yellow:hover {
+	-webkit-transition: all .3s ease-in-out;
+  	-moz-transition: all .3s ease-in-out;
+  	-o-transition: all .3s ease-in-out;
+  	transition: all .3s ease-in-out;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.color {
+	background-color: none;
+	padding: .5%;
+	z-index: 999;
+	position: absolute;
+	right: 2%;
+	top: 50%;
+	transform:translate(0%,-50%);
+  	-webkit-transform:translate(0%,-50%);
+  	
+}
+
+.red,.purple,.blue,.green,.black,.yellow {
+	right: 0;
+	margin-bottom: 10%;
+	margin-right: 30%;
+	cursor: pointer;
+	position: relative;
+	float: top;
+	width: 25px;
+	height: 25px;
+	-webkit-box-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.75);
+box-shadow: inset 0px 5px 5px -2px rgba(0,0,0,0.75);
+}
+
+.red {
+	background-color: #ff321b;
+}
+
+.purple {
+	background-color: #dd1ecb;
+}
+
+.blue {
+	background-color: #4d25fd;
+}
+
+.green {
+	background-color: #5fcc28;
+}
+
+.yellow {
+	background-color: #ffd525;
+}
+
+.black {
+	background-color: black;
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+
+			<p id="randomword">Hello</p>
+			<p class="tip"> Trace over the words.</p>
+			<div class="buttons">
+			<img class="clean" src="trash.png">
+			</div>
+			<div class="color">
+			<div class="red"></div>
+			<div class="purple"></div>
+			<div class="blue"></div>
+			<div class="green"></div>
+			<div class="yellow"></div>
+			<div class="black"></div>
+			</div>
+
+</body>
+
+
+
+
+</html>
