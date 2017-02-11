@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 	// nothing to see here, pretty simple //
 
-	// keeping just in case //
+	// keeping this just in case //
 
 	//var isResizing = false,
     //lastDownX = 0;
@@ -33,53 +33,47 @@ $(document).ready(function() {
 	    //});
 	//});
 
-	$(".bigimage > .plus").css("color","black");
 
 
 	$(".box",this).click(function() {
 
 		// height of specific info //
 
-		var h = $(".info",this).height()+75;
+		var h = $(".titles",this).height()+30;
 		var self = $(this);
 
 		$(this).css("height", h);
-		$(".box").not(this).css("height","31px");
-		$('.images').hide();
-        $('.images[rel=div' + self.attr('target') +']').fadeIn(200);
+		$(".box").not(this).css("height","88px");
+		$('.images,.iframe-c').hide();
+        $('.images[rel=div' + self.attr('target') +'],.iframe-c[rel=div' + self.attr('target') +']').fadeIn(200);
         $(".imagesection").scrollTop(0);
+
 
 	});
 
 	$(".bigimage").click(function(){
-
-		$(".text").css({"width":"15%"});
-		$(".bigimage").css({"width":"85%"});
-		$(".info,a").css({"font-size":"18"});
-		$(".left").css("width","25%");
-		$(".right").css("width","75%");
-		$(".bigimage > .plus").css("color","white");
-
-		setTimeout(function(){
-			$(".text > .plus").css("color","black");
-		},700);
-
+		$(".text").css({ "background-color":"#01ff70","width":"50px"});
+		$(".bigimage").css({ "background-color":"black","width":"20px"});
+		$(".title,.year").css("font-size","34");
+		$(".info,a").css({"font-size":"34"});
+		$(".left").css("width","80%");
+		$(".right").css("width","20%");
+		$(".iframe-c").css("margin-top","30%");
 
 	});
 
 	$(".text").click(function(){
-		$(".text").css({"width":"85%"});
-		$(".bigimage").css({"width":"15%"});
-		$(".info,a").css("font-size","33");
-		$(".left").css("width","85%");
-		$(".right").css("width","15%");
-		$(".text > .plus").css("color","white");
-
-		setTimeout(function(){
-			$(".bigimage > .plus").css("color","black");
-		},700);
+		$(".tip").hide();
+		$(".text").css({ "background-color":"black","width":"20px"});
+		$(".bigimage").css({"background-color":"#01ff70","width":"50px"});
+		$(".info,a").css({"font-size":"18"});
+		$(".title,.year").css("font-size","34");
+		$(".left").css("width","25%");
+		$(".right").css("width","75%");
+		$(".iframe-c").css("margin-top","10%");
 
 	});
+
 
 
 });
