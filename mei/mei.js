@@ -59,6 +59,8 @@ $(".box",this).click(function() {
 			$('.archive').animate({ scrollTop: $('.active').offset().top}, 300);
 		}, 60);
 
+		
+
 });
 
 $(".bigimage").click(function(){
