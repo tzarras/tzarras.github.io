@@ -50,7 +50,7 @@ $(".box",this).click(function() {
 		var a= $(".archive").height();
 
 		$(this).css("height",h).addClass("active");
-		//$(".box").not(this).css({"height": "88px"});
+		$(".box").not(this).css({"height": "88px"});
 		$('.images,.iframe-c').hide();
         $('.images[rel=div' + self.attr('target') +'],.iframe-c[rel=div' + self.attr('target') +']').fadeIn(200);
         $(".imagesection").scrollTop(0);
