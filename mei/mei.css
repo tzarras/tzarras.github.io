@@ -363,8 +363,8 @@ img{
     filter:blur(0px);
   }
   to {
-    margin-top: 11%;
-    width: 40%;
+    margin-top: 15%;
+    width: 75%;
     filter:blur(1px);
   }
 }
