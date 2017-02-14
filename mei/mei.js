@@ -42,29 +42,31 @@ $(document).ready(function() {
         //}
     //}
 
-$(".box",this).click(function() {
-
+$(".box").click(function() {
+		var boxHeight= $(this).height()+1;
 // height of this div info //
 		var h = $(".titles",this).height()+30;
 		var self = $(this);
-		var a= $(".archive").height();
-
-		$(this).css("height",h).addClass("active");
-		$(".box").not(this).css({"height": "88px"}).removeClass("active");
+		
+		$(this).delay(800).css("height",h);
+		$(".box").not(this).css({"height": "88px"});
+		
 		$('.images,.iframe-c').hide();
         $('.images[rel=div' + self.attr('target') +'],.iframe-c[rel=div' + self.attr('target') +']').fadeIn(200);
         $(".imagesection").scrollTop(0);
 		
-		setTimeout(function() {
-			$('.archive').animate({ scrollTop: $('.active').offset().top}, 300);
-		}, 60);
+		var index = $(this).index(".box");
 
+		setTimeout(function(){
+		$(".archive").animate({scrollTop: Math.floor(index*boxHeight)},500);
+	},250);
 		
 
 });
 
 $(".bigimage").click(function(){
          //changes
+
 $(".text").css({ "background-color":"#01ff70","width":"50px"});
 $(".bigimage").css({ "background-color":"black","width":"20px"});
 $(".title,.year").css("font-size","34");
@@ -73,9 +75,11 @@ $(".left").css("width","80%");
 $(".right").css("width","20%");
 $(".iframe-c").css("margin-top","30%");
 
+
 });
 
 $(".text").click(function(){
+	
 $(".tip").hide();
 $(".text").css({ "background-color":"black","width":"20px"});
 $(".bigimage").css({"background-color":"#01ff70","width":"50px"});
@@ -85,13 +89,16 @@ $(".left").css("width","25%");
 $(".right").css("width","75%");
 $(".iframe-c").css("margin-top","10%");
 
+
 });
 
-$(".box",this).mouseover(function(){
-	$(".title,.year",this).css({"-webkit-text-stroke-width":"1px","-webkit-text-stroke-color":"#542a00","color":"white"});
-}).mouseout(function(){
-	$(".title,.year",this).css({"-webkit-text-stroke-width":"0","-webkit-text-stroke-color":"none","color":"black"});
-});
+//$(".box",this).mouseover(function(){
+	//$(".title,.year",this).css({"-webkit-text-stroke-width":"1px","-webkit-text-stroke-color":"#542a00","color":"white"});
+//}).mouseout(function(){
+	//var filter = 'blur(0px)';
+	//$(".title,.year",this).css({"-webkit-text-stroke-width":"0","-webkit-text-stroke-color":"none","color":"black"});
+//});
+
 
 
 
