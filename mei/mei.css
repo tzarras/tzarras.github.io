@@ -52,10 +52,10 @@ body, html {
     min-width: 20%;
     background-color: white;
     overflow: scroll;
-    -webkit-transition: all .3s;
-  	-moz-transition: all .3s;
-  	-o-transition: all .3s;
-  	transition: all .3s;
+    -webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
 }
 
 .archive {
@@ -83,10 +83,10 @@ body, html {
     background: white;
     border-left: 1px solid #362602;
     overflow: hidden;
-	-webkit-transition: all .3s;
-  	-moz-transition: all .3s;
-  	-o-transition: all .3s;
-  	transition: all .3s;
+	-webkit-transition: all .5s;
+  	-moz-transition: all .5s;
+  	-o-transition: all .5s;
+  	transition: all .5s;
 }
 
 .median {
@@ -319,7 +319,7 @@ img{
 	font-family: ar;
 	font-size: 10;
 	position: fixed;
-	top: 2.5%;
+	top: 3%;
 	right: 100px;
 	margin: 0;
 	animation: bounce 1s infinite alternate;
@@ -418,7 +418,7 @@ img{
 		left: 10%;
 	}
 
-	.leftcontrol,.rightcontrol,.tip,.box,.right,.median{
+	.leftcontrol,.rightcontrol,.tip,.box,.right,.median,.foot{
 		display: none;
 		border: none;
 		border-left:none;
