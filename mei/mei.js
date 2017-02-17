@@ -44,8 +44,9 @@ $(document).ready(function() {
 
 $(".box").click(function() {
 		var boxHeight= $(this).height()+1;
-// height of this div info //
-		var h = $(".titles",this).height()+30;
+		
+		// height of this div info //
+		var h = $(".titles",this).height()+40;
 		var self = $(this);
 		
 		$(this).delay(800).css("height",h);
@@ -58,9 +59,9 @@ $(".box").click(function() {
 		var index = $(this).index(".box");
 
 		setTimeout(function(){
-		$(".archive").animate({scrollTop: Math.floor(index*boxHeight)},500);
+		$(".archive").animate({scrollTop: Math.floor(index*boxHeight)},250);
 	},250);
-		
+	
 
 });
 
@@ -70,7 +71,7 @@ $(".bigimage").click(function(){
 $(".text").css({ "background-color":"#01ff70","width":"50px"});
 $(".bigimage").css({ "background-color":"black","width":"20px"});
 $(".title,.year").css("font-size","34");
-$(".info,a").css({"font-size":"34"});
+$(".info,a").css({"font-size":"36"});
 $(".left").css("width","80%");
 $(".right").css("width","20%");
 $(".iframe-c").css("margin-top","30%");

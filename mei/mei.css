@@ -89,17 +89,6 @@ body, html {
   	transition: all .5s;
 }
 
-.median {
-	background-color: white;
-    position: absolute;
-    left: -4px;
-    top: 0;
-    bottom: 0;
-    width: 5px;
-    z-index: 999;
-    border-right: 1px solid #362602;
-}
-
 .box {
 	border-bottom: 1px solid #362602;
 	cursor: pointer;
@@ -111,7 +100,6 @@ body, html {
 	height: 88px;
 	background-color: white;
 	overflow: hidden;
-	max-height: 80%;
 	-webkit-transition: height .7s ease-in-out;
   	-moz-transition: height .7s ease-in-out;
   	-o-transition: height .7s ease-in-out;
@@ -121,7 +109,8 @@ body, html {
 .foot {
 	position: relative;
 	height: 100%;
-	background-color: black;
+	background-color: #fcf9ff;
+
 }
 
 .titles {
@@ -177,7 +166,7 @@ body, html {
 	z-index: 999;
 	width: 20px;
 	height: 20px;
-	left: 2px;
+	left: 0px;
 	top: 17px;
 	background-color: black;
 	border-radius: 0;
@@ -219,7 +208,7 @@ a:hover {
 	font-family: ar;
 	margin-top: 30px;
 	float: top;
-	font-size: 34;
+	font-size: 36;
 	font-weight: 100;
 	max-width: 95%;
 	-webkit-transition: all .1s;
@@ -317,13 +306,13 @@ img{
 .tip {
 	z-index: 99;
 	font-family: ar;
-	font-size: 10;
+	font-size: 34;
 	position: fixed;
-	top: 3%;
-	right: 100px;
+	top: 1%;
+	left: 65%;
 	margin: 0;
-	animation: bounce 1s infinite alternate;
-  	-webkit-animation: bounce 1s infinite alternate;
+	animation: bounce .5s infinite alternate;
+  	-webkit-animation: bounce .5s infinite alternate;
 }
 
 .mei {
@@ -334,7 +323,9 @@ img{
   	-webkit-animation: bee 1.5s infinite alternate;
   	border: 1px solid black;
   	border-radius: 2px;
-  	width: 50%;
+  	width: 70%;
+  	border-radius: 50%;
+  	margin-top: 24%;
 }
 
 
@@ -358,14 +349,12 @@ img{
 
 @keyframes bee {
   from {
-    margin-top: 10%;
-    width: 80%;
-    filter:blur(0px);
+  	margin-top: 24%;
+    border-radius: 50%;
   }
   to {
-    margin-top: 15%;
-    width: 75%;
-    filter:blur(1px);
+  	margin-top: 32%;
+    border-radius: 40%;
   }
 }
 
@@ -387,11 +376,12 @@ img{
 		margin: 0;
 		padding: 0;
 		width: 100%;
-		height: 100%;
+		height: 210%;
 		overflow: scroll;
 		overflow-x: hidden;
 		border-bottom: none;
 		background-color: white;
+		z-index: 999;
 	}
 
 	.info {
@@ -418,7 +408,7 @@ img{
 		left: 10%;
 	}
 
-	.leftcontrol,.rightcontrol,.tip,.box,.right,.median,.foot{
+	.leftcontrol,.rightcontrol,.highlighter,.tip,.box,.right,.median,.foot,.iframe-c{
 		display: none;
 		border: none;
 		border-left:none;
@@ -427,6 +417,7 @@ img{
 
 	html {
 		width: 100%;
+		height: 100%;
 		overflow-x: hidden;
 		margin: 0;
 		padding: 0;
