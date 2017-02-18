@@ -62,7 +62,7 @@ body, html {
 	overflow: scroll;
 	position: absolute;
     left: 0;
-    top: 0;
+    top: 71;
     bottom: 0;
     right: 0%;
     min-width: 20%;
@@ -97,7 +97,7 @@ body, html {
 	left: 0;
 	top: 0;
 	float: top;
-	height: 88px;
+	height: 70px;
 	background-color: white;
 	overflow: hidden;
 	-webkit-transition: height .7s ease-in-out;
@@ -106,10 +106,21 @@ body, html {
   	transition: height .7s ease-in-out;
 }
 
+.box:first-child{
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	z-index: 999;
+  	-webkit-transition: all .7s ease-in-out;
+  	-moz-transition: all .7s ease-in-out;
+  	-o-transition: all .7s ease-in-out;
+  	transition: all .7s ease-in-out;
+}
+
 .foot {
 	position: relative;
 	height: 100%;
-	background-color: #fcf9ff;
+	background-color: white;
 
 }
 
@@ -133,8 +144,7 @@ body, html {
 	position: relative;
 	float: bottom;
 	margin-top: 0;
-	font-size: 34;
-	color: black;
+	font-size: 28;
 	line-height: 1;
 	max-width: 95%;
 }
@@ -143,7 +153,7 @@ body, html {
 	padding-top: 0;
 	margin-top: -23px;
 	display: block;
-	font-size: 34;
+	font-size: 28;
 	-webkit-transition: top .2s ease-in-out;
   	-moz-transition: top .2s ease-in-out;
   	-o-transition: top .2s ease-in-out;
@@ -152,42 +162,37 @@ body, html {
 
 .text,.bigimage {
 	margin: 0;
-	bottom: 0;
 	text-align: center;
 	font-size: 10;
 	cursor: pointer;
-	z-index: 999;
+	top: 71px;
+	z-index: 999 !important;
+	cursor: pointer;
 }
 
 .bigimage {
 	position: absolute;
 	float: right;
 	font-family: helvetica;
-	z-index: 999;
-	width: 20px;
-	height: 20px;
 	left: 0px;
-	top: 17px;
-	background-color: black;
-	border-radius: 0;
-	
+	z-index: 999;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 30px 30px 0 0;
+	border-color: black transparent transparent transparent;		
 }
 
 .text {
 	position: absolute;
 	right: 0;
-	top: 17px;
 	right: 1px;
-	width: 50px;
-	height: 20px;
-	z-index: 999;
-	background-color: #01ff70;
-	border-radius: 0;
-}
-
-.text:hover,.bigimage:hover{
-	background-color: yellow !important; 
-	cursor: pointer;
+	z-index: 999 !important;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 0 30px 30px 0;
+	border-color: transparent #01ff70 transparent transparent;
 }
 
 a,a:visited {
@@ -215,6 +220,11 @@ a:hover {
   	-moz-transition: all .1s;
   	-o-transition: all .1s;
   	transition: all .1s;
+}
+
+#T {
+	position: absolute;
+	width: 60% !important;
 }
 
 .height {
@@ -246,14 +256,14 @@ a:hover {
 	position: absolute;
 	max-width: 600px;
 	display: none;
-	top: 5%;
+	top: 12%;
 	width: 100%;
 	left: 50%;
 	transform:translate(-50%,0%);
   	-webkit-transform:translate(-50%,0%);
 }
 
-img{
+.images > img{
 	position: relative;
 	float: top;
 	width: 80%;
@@ -270,7 +280,7 @@ img{
 }
 
 .iframe-c { 
-   margin-top: 30%;
+   top: 12%;
    max-width: 600px;
    min-width: 80px;
    left: 50%;
@@ -295,27 +305,23 @@ img{
    min-width: 80px;
  }
 
-.highlighter {
-	position: absolute;
-	width: 100%;
-	height: 88px;
-	background-color: white;
-	z-index: 0;
-}
-
 .tip {
 	z-index: 99;
 	font-family: ar;
-	font-size: 34;
+	font-size: 26;
 	position: fixed;
-	top: 1%;
-	left: 65%;
+	top: 2%;
+	left: 67%;
 	margin: 0;
 	animation: bounce .5s infinite alternate;
   	-webkit-animation: bounce .5s infinite alternate;
 }
 
 .mei {
+	display: none;
+	position: fixed;
+	top: 5%;
+	right: 10%;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
@@ -323,9 +329,14 @@ img{
   	-webkit-animation: bee 1.5s infinite alternate;
   	border: 1px solid black;
   	border-radius: 2px;
-  	width: 70%;
+  	width: .5%;
   	border-radius: 50%;
-  	margin-top: 24%;
+  	-webkit-transition: all .75s;
+  	-moz-transition: all .75s;
+  	-o-transition: all .75s;
+  	transition: all .75s;
+  	transform:translate(50%,0%);
+  	-webkit-transform:translate(50%,0%);
 }
 
 
@@ -349,12 +360,12 @@ img{
 
 @keyframes bee {
   from {
-  	margin-top: 24%;
+  	top: .5%;
     border-radius: 50%;
   }
   to {
-  	margin-top: 32%;
     border-radius: 40%;
+    top: 2.5%;
   }
 }
 

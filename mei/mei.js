@@ -1,106 +1,113 @@
 $(document).ready(function() {
 
-// nothing to see here, pretty simple //
 
-// keeping this just in case //
+			$(".box").click(function() {
 
-//var isResizing = false,
-    //lastDownX = 0;
+					var boxHeight= $(this).height()+1;
+					
+					// height of this div info //
+					
+					var self = $(this);
+					var h = $(".titles",this).height()+40;
 
-//$(function () {
-    //var container = $('.container'),
-        //left = $('.left'),
-        //right = $('.right'),
-        //handle = $('.drag');
+					$(".box").not(this).css({"height": "70px"});
+					$('.images,.iframe-c').hide();
+			        $('.images[rel=div' + self.attr('target') +'],.iframe-c[rel=div' + self.attr('target') +']').fadeIn(200);
+			        $(".imagesection").scrollTop(0);
 
-    //handle.on('mousedown', function (e) {
-        //isResizing = true;
-        //lastDownX = e.clientX;
-    //});
 
-    //$(document).on('mousemove', function (e) {
-        // don't do anything if we aren't resizing.
-        //if (!isResizing) 
-            //return;
-        
-        //var offsetRight = container.width() - (e.clientX - container.offset().left);
+    				var index = $(this).index(".box");
 
-        //left.css('right', offsetRight);
-        //right.css('width', offsetRight);
-    //}).on('mouseup', function (e) {
-        // stop 
-        //isResizing = false;
-    //});
-//});
+					setTimeout(function(){
+    					$(".archive").animate({scrollTop: Math.floor(index*boxHeight)-71},450);
+    				},100);
+					
 
-    // changes
-    //var currentlySelectedBox;
-    //var setHeight = function () {
-        //if (currentlySelectedBox) {
-            //var h = currentlySelectedBox.height()+30;
-            //currentlySelectedBox.css("height", h);
-        //}
-    //}
+					setTimeout(function(){
+						$(self).not(".box:first-child").css("height",h);
+					},1000);
 
-$(".box").click(function() {
-		var boxHeight= $(this).height()+1;
-		
-		// height of this div info //
-		var h = $(".titles",this).height()+40;
-		var self = $(this);
-		
-		$(this).delay(800).css("height",h);
-		$(".box").not(this).css({"height": "88px"});
-		
-		$('.images,.iframe-c').hide();
-        $('.images[rel=div' + self.attr('target') +'],.iframe-c[rel=div' + self.attr('target') +']').fadeIn(200);
-        $(".imagesection").scrollTop(0);
-		
-		var index = $(this).index(".box");
 
+					scro();
+				
+			});
+
+		$(".box:first-child").click(function(){
+			tog();
+		});
+
+		$(".bigimage").click(function(){
+		         //changes
+
+				$(".text").css({ "border-color":"transparent #01ff70 transparent transparent"});
+				$(".bigimage").css({ "border-color":"black transparent transparent transparent"});
+				$(".title,.year").css("font-size","28");
+				$(".info,a").css({"font-size":"36"});
+				$(".left").css("width","80%");
+				$(".right").css("width","20%");
+				$(".iframe-c").css("margin-top","30%");
+
+
+		});
+
+		$(".text").click(function(){
+			
+				$(".tip").hide();
+				$(".text").css({ "border-color":"transparent black transparent transparent"});
+				$(".bigimage").css({"border-color":"#01ff70 transparent transparent transparent"});
+				$(".info,a").css({"font-size":"18"});
+				$(".title,.year").css("font-size","28");
+				$(".left").css("width","25%");
+				$(".right").css("width","75%");
+				$(".iframe-c").css("margin-top","10%");
+
+		});
+
+
+});
+
+var once = false;
+
+function tog() {
+    if(once=== false)
+    {
+    	once = true;
+        var winH = $(window).height()
+		$(".box:first-child").css({"height":winH,"z-index":"999"});
+		$(".bigimage,.text").hide(100);
+		$(".mei").show();
 		setTimeout(function(){
-		$(".archive").animate({scrollTop: Math.floor(index*boxHeight)},250);
-	},250);
-	
+		$(".mei").css({"width":"25%","right":"20%","margin-top":"100px"});
+	},200);
 
-});
+    } else {
 
-$(".bigimage").click(function(){
-         //changes
+    	once = false;
+		$(".box:first-child").css({"height":"71","z-index":"999"});
+		$(".mei").css({"width":".5%","right":"10%","margin-top":"0"});
+		setTimeout(function(){
+		$(".mei").hide();
+		},800);
+		setTimeout(function(){
+		$(".bigimage,.text").show();
+	},900);
 
-$(".text").css({ "background-color":"#01ff70","width":"50px"});
-$(".bigimage").css({ "background-color":"black","width":"20px"});
-$(".title,.year").css("font-size","34");
-$(".info,a").css({"font-size":"36"});
-$(".left").css("width","80%");
-$(".right").css("width","20%");
-$(".iframe-c").css("margin-top","30%");
+    }
+    
+}
 
+var open = false;
+var previousTarget=null;
 
-});
+function scro() {
+    if(open=== false) {
+    	open = true;
 
-$(".text").click(function(){
-	
-$(".tip").hide();
-$(".text").css({ "background-color":"black","width":"20px"});
-$(".bigimage").css({"background-color":"#01ff70","width":"50px"});
-$(".info,a").css({"font-size":"18"});
-$(".title,.year").css("font-size","34");
-$(".left").css("width","25%");
-$(".right").css("width","75%");
-$(".iframe-c").css("margin-top","10%");
-
-
-});
-
-//$(".box",this).mouseover(function(){
-	//$(".title,.year",this).css({"-webkit-text-stroke-width":"1px","-webkit-text-stroke-color":"#542a00","color":"white"});
-//}).mouseout(function(){
-	//var filter = 'blur(0px)';
-	//$(".title,.year",this).css({"-webkit-text-stroke-width":"0","-webkit-text-stroke-color":"none","color":"black"});
-//});
-
-
-
-
-});
+        
+    } else {
+ 		
+ 	
+		
+    }
+    
+}
