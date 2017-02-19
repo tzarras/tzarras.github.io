@@ -52,10 +52,10 @@ body, html {
     min-width: 20%;
     background-color: white;
     overflow: scroll;
-    -webkit-transition: all .5s;
-  	-moz-transition: all .5s;
-  	-o-transition: all .5s;
-  	transition: all .5s;
+    -webkit-transition: all .25s;
+  	-moz-transition: all .25s;
+  	-o-transition: all .25s;
+  	transition: all .25s;
 }
 
 .archive {
@@ -140,7 +140,6 @@ body, html {
 }
 
 .title {
-	font-family: u;
 	position: relative;
 	float: bottom;
 	margin-top: 0;
@@ -225,6 +224,17 @@ a:hover {
 #T {
 	position: absolute;
 	width: 60% !important;
+	z-index: 99;
+	font-family: ar;
+	margin-top: 30px;
+	float: top;
+	font-size: 36;
+	font-weight: 100;
+	max-width: 95%;
+	-webkit-transition: all .1s;
+  	-moz-transition: all .1s;
+  	-o-transition: all .1s;
+  	transition: all .1s;
 }
 
 .height {
