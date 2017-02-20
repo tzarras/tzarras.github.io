@@ -96,7 +96,6 @@ $(document).ready(function() {
 				}
 		});
 
-
 		// just in case //
 
 		$( window ).resize(function() {
@@ -105,6 +104,14 @@ $(document).ready(function() {
 					// reset div height //
 						$(".box.open").css("height",newH);
 					},800);
+			 	if ($(window).width() < 767) {   
+      				location.reload();  // refresh page // 
+
+    			}
+    			
+    			else { 
+
+      			}
 		});
 
 
