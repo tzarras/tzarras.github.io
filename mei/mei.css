@@ -52,25 +52,23 @@ body, html {
     min-width: 20%;
     background-color: white;
     overflow: scroll;
-    -webkit-transition: all .25s;
-  	-moz-transition: all .25s;
-  	-o-transition: all .25s;
-  	transition: all .25s;
+    -webkit-transition: width .3s linear;
+  	-moz-transition: width .3s linear;
+  	-o-transition: width .3s linear;
+  	transition: width .3s linear;
+
 }
 
 .archive {
 	overflow: scroll;
 	position: absolute;
     left: 0;
-    top: 71;
+    top: 73;
     bottom: 0;
     right: 0%;
     min-width: 20%;
     background-color: white;
-    -webkit-transition: all .3s;
-  	-moz-transition: all .3s;
-  	-o-transition: all .3s;
-  	transition: all .3s;
+   
 }
 
 .right {
@@ -80,25 +78,25 @@ body, html {
     bottom: 0;
     width: 20%;
     max-width: 80%;
-    background: white;
-    border-left: 1px solid #362602;
+    background-color: #fdfdfd;
+    border-left: 1px solid black;
     overflow: hidden;
-	-webkit-transition: all .5s;
-  	-moz-transition: all .5s;
-  	-o-transition: all .5s;
-  	transition: all .5s;
+	-webkit-transition: width .3s linear;
+  	-moz-transition: width .3s linear;
+  	-o-transition: width .3s linear;
+  	transition: width .3s linear;
 }
 
 .box {
-	border-bottom: 1px solid #362602;
+	border-bottom: 2px solid black;
 	cursor: pointer;
 	position: relative;
 	width: 100%;
 	left: 0;
 	top: 0;
 	float: top;
-	height: 70px;
-	background-color: white;
+	height: 71px;
+	background-color: #fdfdfd;
 	overflow: hidden;
 	-webkit-transition: height .7s ease-in-out;
   	-moz-transition: height .7s ease-in-out;
@@ -106,22 +104,16 @@ body, html {
   	transition: height .7s ease-in-out;
 }
 
+
 .box:first-child{
 	position: fixed !important;
 	top: 0;
 	left: 0;
 	z-index: 999;
-  	-webkit-transition: all .7s ease-in-out;
-  	-moz-transition: all .7s ease-in-out;
-  	-o-transition: all .7s ease-in-out;
-  	transition: all .7s ease-in-out;
-}
-
-.foot {
-	position: relative;
-	height: 100%;
-	background-color: white;
-
+  	-webkit-transition: height .7s ease-in-out;
+  	-moz-transition: height .7s ease-in-out;
+  	-o-transition: height .7s ease-in-out;
+  	transition: height .7s ease-in-out;
 }
 
 .titles {
@@ -153,20 +145,21 @@ body, html {
 	margin-top: -23px;
 	display: block;
 	font-size: 28;
-	-webkit-transition: top .2s ease-in-out;
-  	-moz-transition: top .2s ease-in-out;
-  	-o-transition: top .2s ease-in-out;
-  	transition: top .2s ease-in-out;
 }
 
 .text,.bigimage {
+	opacity: .9;
 	margin: 0;
 	text-align: center;
 	font-size: 10;
 	cursor: pointer;
 	top: 71px;
-	z-index: 999 !important;
 	cursor: pointer;
+	filter:blur(1px);
+}
+
+.text:hover,.bigimage:hover{
+	opacity: .7;
 }
 
 .bigimage {
@@ -174,23 +167,22 @@ body, html {
 	float: right;
 	font-family: helvetica;
 	left: 0px;
-	z-index: 999;
+	z-index: 998;
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 30px 30px 0 0;
-	border-color: black transparent transparent transparent;		
+	border-width: 40px 40px 0 0;
+	border-color: #06db55 transparent transparent transparent;		
 }
 
 .text {
 	position: absolute;
-	right: 0;
 	right: 1px;
 	z-index: 999 !important;
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 0 30px 30px 0;
+	border-width: 0 40px 40px 0;
 	border-color: transparent #01ff70 transparent transparent;
 }
 
@@ -215,15 +207,11 @@ a:hover {
 	font-size: 36;
 	font-weight: 100;
 	max-width: 95%;
-	-webkit-transition: all .1s;
-  	-moz-transition: all .1s;
-  	-o-transition: all .1s;
-  	transition: all .1s;
 }
 
 #T {
 	position: absolute;
-	width: 60% !important;
+	width: 60%;
 	z-index: 99;
 	font-family: ar;
 	margin-top: 30px;
@@ -255,10 +243,7 @@ a:hover {
 	left: 50%;
 	transform:translate(-50%,0%);
   -webkit-transform:translate(-50%,0%);
-  -webkit-transition: all .5s;
-  	-moz-transition: all .5s;
-  	-o-transition: all .5s;
-  	transition: all .5s;
+
 }
 
 .images {
@@ -290,6 +275,7 @@ a:hover {
 }
 
 .iframe-c { 
+   margin-top: 28%;
    top: 12%;
    max-width: 600px;
    min-width: 80px;
@@ -313,18 +299,21 @@ a:hover {
    width: 100%;
    height: 100%;
    min-width: 80px;
+   padding-bottom: 56.25%;
  }
 
 .tip {
-	z-index: 99;
+	background-color: transparent;
+	z-index: 999;
 	font-family: ar;
-	font-size: 26;
+	font-size: 16;
 	position: fixed;
-	top: 2%;
-	left: 67%;
+	top: 80px;
+	right: 22%;
 	margin: 0;
-	animation: bounce .5s infinite alternate;
-  	-webkit-animation: bounce .5s infinite alternate;
+	animation: bounce 1s infinite alternate;
+  	-webkit-animation: bounce 1s infinite alternate;
+  	animation-timing-function: ease-in;
 }
 
 .mei {
@@ -335,8 +324,9 @@ a:hover {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
-	animation: bee 1.5s infinite alternate;
-  	-webkit-animation: bee 1.5s infinite alternate;
+	animation: bee 1s infinite alternate;
+  	-webkit-animation: bee 1s infinite alternate;
+  	animation-timing-function: ease-in;
   	border: 1px solid black;
   	border-radius: 2px;
   	width: .5%;
@@ -349,22 +339,67 @@ a:hover {
   	-webkit-transform:translate(50%,0%);
 }
 
+.other {
+	font-family: ar;
+	font-weight: 100;
+	font-size: 28;
+	position: absolute;
+	left: 10px;
+	margin-top: 0;
+	padding: 0;
+	top:-20px;
+	width: 50%;
+}
+
+.foot {
+	cursor: pointer;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	height: 100%;
+	background-color: #fdfdfd;
+
+}
+
+.z {
+	position: absolute;
+}
+
+.works {
+	position: absolute;
+	top: 5%;
+}
+
+.works > ul > li > a {
+	font-family: ar;
+	color: #4a21ff;
+	font-size: 20;
+	cursor: pointer;
+}
+
+.works > ul > li > a:hover {
+	color: black;
+}
+
+ul {
+	line-height: 1.25;
+}
 
 
 @keyframes bounce {
   from {
-    color: black;
+    font-size: 16;
   }
   to {
-    color: white;
+    font-size: 20;
   }
 }
 @-webkit-keyframes bounce {
   from {
-    color: black;
+    font-size: 16;
   }
   to {
-    color: white;
+    font-size: 20;
   }
 }
 
@@ -379,7 +414,21 @@ a:hover {
   }
 }
 
+@-webkit-keyframes bee {
+  from {
+  	top: .5%;
+    border-radius: 50%;
+  }
+  to {
+    border-radius: 40%;
+    top: 2.5%;
+  }
+}
+
+/* phone stuff */
+
 @media screen and (max-width: 736px){
+
 	.right {
 		display: none;
 	}
@@ -396,8 +445,8 @@ a:hover {
 		display: inline-block;
 		margin: 0;
 		padding: 0;
+		height: 100%;
 		width: 100%;
-		height: 210%;
 		overflow: scroll;
 		overflow-x: hidden;
 		border-bottom: none;
@@ -405,28 +454,35 @@ a:hover {
 		z-index: 999;
 	}
 
-	.info {
+	#T {
 		left: 0;
 		padding: 0;
 		margin: 0;
-		width: 100%;
-		padding-top: 10%;
+		width: 100% !important;
+		padding-top: 30%;
 		padding-bottom: 20%;
 		overflow-x: hidden;
 	}
 
 	.title,.year {
+		background-color: transparent;
+		overflow: scroll;
 		width: 100%;
 		margin: 0;
 		padding: 0;
-		padding-top: 10%;
 
 	}
 
-	img:first-child{
-		display: inline-block;
+	.title {
+		padding-top: 10%;
+	}
+
+	.mei{
+		display: inline;
 		position: absolute;
-		left: 10%;
+		right: 25%;
+		margin-top: 10%;
+		width: 25% !important;
 	}
 
 	.leftcontrol,.rightcontrol,.highlighter,.tip,.box,.right,.median,.foot,.iframe-c{
@@ -438,7 +494,7 @@ a:hover {
 
 	html {
 		width: 100%;
-		height: 100%;
+		overflow: scroll;
 		overflow-x: hidden;
 		margin: 0;
 		padding: 0;

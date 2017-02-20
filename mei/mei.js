@@ -3,67 +3,91 @@ $(document).ready(function() {
 
 		$(".box").click(function() {
 
-
-
-				var boxHeight= $(this).height()+1;
+			var boxHeight= $(this).height()+2;
 					
-					// height of this div info //
+				// height of this div info //
 					
-				var self = $(this);
-				var h = $(".titles",this).height()+40;
+			var self = $(this);
+			var h = $(".titles",this).height()+40;
 
-				$(".box").not(this).css({"height": "70px"}).removeClass("open");
-				$('.images,.iframe-c').hide();
-			    $('.images[rel=div' + self.attr('target') +'],.iframe-c[rel=div' + self.attr('target') +']').fadeIn(200);
-			    $(".imagesection").scrollTop(0);
+			$(".box").not(this).css({"height": "71px"}).removeClass("open");
+			$('.images,.iframe-c').hide();
+			$(".imagesection").scrollTop(0);
 
-    			var index = $(this).index(".box");
-
-				setTimeout(function(){
-					$(self).not(".box:first-child").css("height",h).addClass("open");
-				},1000);
+    		var index = $(this).index(".box");
 
 					// if box is already open, don't scroll //
 
-				if ($(".box").hasClass("open")){
+			if ($(".box").hasClass("open")){
 						// don't. move. //
-				} else {
-
+					$(".box").css({"height": "71px"}).removeClass("open");
+					$('.images,.iframe-c').hide();
+			} else {
 					setTimeout(function(){
-    				$(".archive").animate({scrollTop: Math.floor(index*boxHeight)-71},300);},2000);
-				}
-
-				
+    				$(".archive").animate({scrollTop: Math.floor(index*boxHeight)-71},500);},300);
+    				setTimeout(function(){
+					$(self).not(".box:first-child").css("height",h).addClass("open");
+					$('.images[rel=div' + self.attr('target') +'],.iframe-c[rel=div' + self.attr('target') +']').fadeIn(1000);
+					},1000);
+			}
+		
 		});
 
+
+
+		$(".foot").click(function(){
+
+			setTimeout(function(){
+    				$(".archive").animate({scrollTop: 8*73},500);}
+    		,300);
+
+					$(".box").css("height","71px");
+					$('.images,.iframe-c').hide();
+		});
+
+
+
 		$(".box:first-child").click(function(){
+			
+			if ($(window).width() < 736){
+
+			// do nothing //
+
+			} else {
+
 				tog();
+
+			}
 		});
 
 		$(".bigimage").click(function(){
-		         //changes
-				$(".info:first-child").css("font-size","36");
-				$(".text").css({ "border-color":"transparent #01ff70 transparent transparent"});
-				$(".bigimage").css({ "border-color":"black transparent transparent transparent"});
-				$(".title,.year").css("font-size","28");
+
+			//var hh = $(".box.open").height()+40;
+
 				$(".info").css({"font-size":"36"});
 				$(".left").css("width","80%");
 				$(".right").css("width","20%");
-				$(".iframe-c").css("margin-top","30%");
+				$(".iframe-c").css("margin-top","28%");
 
+				//if ($(".box").hasClass("open")) {
+					//$(this).css("height",hh)
+				//}
 
 		});
 
 		$(".text").click(function(){
+
+			//var hh = $(".box.open").height()+40;
+
 				$(".tip").hide();
-				$(".text").css({ "border-color":"transparent black transparent transparent"});
-				$(".bigimage").css({"border-color":"#01ff70 transparent transparent transparent"});
 				$(".info").css({"font-size":"18"});
-				$(".title,.year").css("font-size","28");
 				$(".left").css("width","25%");
 				$(".right").css("width","75%");
-				$(".iframe-c").css("margin-top","10%");
+				$(".iframe-c").css("margin-top","5%");
 
+				//if ($(".box").hasClass("open")) {
+					//$(this).css("height",hh)
+				//}
 		});
 
 
@@ -72,28 +96,28 @@ $(document).ready(function() {
 		var once = false;
 
 		function tog() {
-		    if(once=== false)
-		    {
+
+		    if(once=== false) {
 		    	once = true;
 		        var winH = $(window).height()
-				$(".box:first-child").css({"height":winH,"z-index":"999"});
-				$(".bigimage,.text").hide(100);
-				$(".mei").show();
+					$(".box:first-child").css({"height":winH,"z-index":"999"});
+					$(".bigimage,.text").hide(100);
+					$(".mei").show();
 				setTimeout(function(){
-				$(".mei").css({"width":"25%","right":"20%","margin-top":"100px"});
-			},200);
+					$(".mei").css({"width":"25%","right":"20%","margin-top":"100px"});
+				},200);
 
 		    } else {
 
 		    	once = false;
-				$(".box:first-child").css({"height":"71","z-index":"999"});
-				$(".mei").css({"width":".5%","right":"10%","margin-top":"0"});
+					$(".box:first-child").css({"height":"71","z-index":"999"});
+					$(".mei").css({"width":".5%","right":"10%","margin-top":"0"});
 				setTimeout(function(){
-				$(".mei").hide();
+					$(".mei").hide();
 				},800);
 				setTimeout(function(){
-				$(".bigimage,.text").show();
-			},900);
+					$(".bigimage,.text").show();
+				},900);
 
 		    }
 		    
