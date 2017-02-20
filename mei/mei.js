@@ -69,9 +69,14 @@ $(document).ready(function() {
 				$(".right").css("width","20%");
 				$(".iframe-c").css("margin-top","28%");
 
-				//if ($(".box").hasClass("open")) {
-					//$(this).css("height",hh)
-				//}
+				if ($(".box").hasClass("open")) {
+					// wait to get new height //
+					setTimeout(function(){
+						var newH = $(".box.open > .titles").height()+40;
+					// reset div height //
+						$(".box.open").css("height",newH);
+					},1000);
+				}
 
 		});
 
@@ -85,9 +90,14 @@ $(document).ready(function() {
 				$(".right").css("width","75%");
 				$(".iframe-c").css("margin-top","5%");
 
-				//if ($(".box").hasClass("open")) {
-					//$(this).css("height",hh)
-				//}
+				if ($(".box").hasClass("open")) {
+					// wait to get new height //
+					setTimeout(function(){
+						var newH = $(".box.open > .titles").height()+40;
+					// reset div height //
+						$(".box.open").css("height",newH);
+					},1000);
+				}
 		});
 
 
