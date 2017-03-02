@@ -1,0 +1,144 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+	// lay out boxes //
+
+	var arrayVariable = [''],
+    arrayLength = arrayVariable.length*100;
+	for (i = 0; i < arrayLength; i++) {
+  	$('<div class="box" />').appendTo(".bob");
+	}
+
+	$( ".box",this ).click(function( event ) {
+  			var position = $( this ).position();
+  			var middleX = $(window).width()/2;
+  			var middleY = $(window).height()/2;
+
+  			event.stopPropagation();
+  			$(".bob").css({"top":-position.top+100,"left":-position.left+100});
+  			$(this).addClass("selected");
+  			$(".box").not(this).removeClass("selected");
+	});
+
+	$(".bob").click(function(){
+		$(this).css({"top":50,"left":50});
+	});
+
+
+});
+
+</script>
+
+<style> 
+
+@font-face {
+    font-family: clear;
+    src: url(itc-clearface-lt-regular.ttf);
+}
+
+
+html {
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	font-family: arial;
+	overflow: scroll;
+	font-weight: 100;
+	margin: 0;
+}
+
+body {
+	margin: 0;
+	margin-top: 0;
+	overflow: scroll;
+}
+
+.bob {
+	background-color: white;
+	position: fixed;
+	width: 400%;
+	height: 400%;
+	top: 0;
+	left: 0;
+	-webkit-transition: all .8s ease-in-out;
+  	-moz-transition: all .8s ease-in-out;
+  	-o-transition: all .8s ease-in-out;
+  	transition: all .8s ease-in-out;
+}
+
+.selected {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none; 
+}
+
+.box {
+	border: 1px solid black;
+	z-index: 999;
+	background-color: white;
+	width: 200px;
+	height: 350px;
+	position: relative;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: left;
+	top: 50px;
+	left: 50px;	
+	-webkit-transition: left .8s ease-in-out;
+  	-moz-transition: left .8s ease-in-out;
+  	-o-transition: left .8s ease-in-out;
+  	transition: left .8s ease-in-out;
+  	-webkit-transition: top .8s ease-in-out;
+  	-moz-transition: top .8s ease-in-out;
+  	-o-transition: top .8s ease-in-out;
+  	transition: top .8s ease-in-out; 
+  	cursor: pointer;
+}
+
+.box:hover {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none; 
+}
+
+#result {
+	position: fixed;
+	top: 100;
+	left: 100;
+	width: 200px;
+	height: 350px;
+	margin-right: 10px;
+	margin-top: 10px;
+	border-radius: 20;
+	z-index: 999;
+	font-size: 20;
+	-webkit-box-shadow: inset 0px 0px 27px 17px rgba(171,27,171,1);
+-moz-box-shadow: inset 0px 0px 27px 17px rgba(171,27,171,1);
+box-shadow: inset 0px 0px 27px 17px rgba(171,27,171,1);
+filter:blur(10px);
+}
+
+</style>
+</head>
+
+
+
+
+<body>
+
+<div class="bob"></div>
+<div id="result"></div>
+
+
+</body>
+
+
+
+
+</html>
