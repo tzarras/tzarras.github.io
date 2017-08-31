@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-		<script type="text/javascript" src="js/paper-full.js"></script>
+		<script src="js/typed.js.js"></script>
 		
 		<title>nothing</title>
 		 
@@ -37,7 +37,20 @@
   			})
   			.keyup();
 
-  	
+  			var showText = function (target, message, index, interval) {    
+  			if (index < message.length) { 
+    		$(target).append(message[index++]); 
+    		setTimeout(function () { showText(target, message, index, interval); }, interval); 
+  			} 
+			}
+    
+			$(function () { 
+ 
+  			showText(".storybox", "I had an incident at work today -          which                  especially sucked      because I was already anxious about my presentation which was supposed to instill confidence in our VCs that we had enough runway to make it to next year -              nonetheless,          I had to fuck it up somehow right?                     Anyways,                  I arrive early             -of course-          and proceeded to drape my jacket over the furthest chair from the projection screen.              The plan was to treat my jacket as the            'person'          I'd make eye contact with in the event I didn't know where to look - which happens to me a lot.           This was a trick they taught us at Geneseo.         A few minutes later, everyone arrives.      My jacket was now just visible enough so I could see it, but not enough where it'd seem like I just really liked jackets -this was good.             Greg sits next to it. He took his jacket off and now our sleeves were overlapping which kind of bothered me.           I start talking and get about halfway through before Greg starts reaching into 'a pocket' -look, I didn't whose it was, but it really looked like he was reaching into my jacket! So I yell, 'Greg! Whatever you took, put it back            NOW and we'll forget I saw that.'       ", -30, 50);
+  
+ 
+}); 
+
 	});
 		</script>
 
@@ -53,7 +66,7 @@
 			height: 100%;
 			margin: none;
 			overflow: scroll;
-			font-family: sans-serif;
+			font-family: serif;
 
 		}
 
@@ -282,6 +295,7 @@
 		}
 
 		.message {
+			font-family: sans-serif !important;
 			font-style: italic;
 			z-index: 0;
 			overflow: hidden;
@@ -301,7 +315,7 @@
 
 		.storybox {
 			color: black;
-			z-index: -3;
+			z-index: 9999;
 			background-color: white;
 			position: absolute;
 			margin-left: 10px;
@@ -354,7 +368,7 @@
 		
 		<div class="container">	
 		
-			<div class="message"></div>
+			<div class="message">Mikey</div>
 			<div class="storybox">
 
 			</div>

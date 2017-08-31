@@ -1,0 +1,163 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="timzarras" content="my other site">
+<title> timzarras.me </title>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="howler.js"></script>
+
+<script>
+$(document).ready(function() {
+
+	$(window).mousemove(function() {
+		
+		$(".box").css({"left": event.pageX, "top": event.pageY });
+		$(".smallerbox").css({"left": event.pageX*.25, "top": event.pageY*.25});
+
+
+	});
+
+	$(window).click(function() {
+		
+		$(".box").css({"left": event.pageX, "top": event.pageY });
+		$(".smallerbox").css({"left": event.pageX*.25, "top": event.pageY*.25});
+
+
+	});
+
+
+
+	$(".container").mouseover(function() {
+			$("html").css("background-color","white");
+			//var sound = new Howl ({
+			//urls: ['thump.wav' , 'thump.ogg'],
+			//loop: false,
+			//volume: .5,
+			//}).play();//
+		}).mouseout(function() {
+			$("html").css("background-color","#111");
+
+	});
+
+	//$(".title", this).hover(function() {
+
+		//$(".info", this).show().css({"left": event.pageX, "top" : event.pageY);
+
+	//});
+	
+
+
+});
+</script>
+
+<style> 
+
+::-webkit-scrollbar { 
+    display: none; 
+	}
+
+html {
+	background-color: #111;
+	font-family: sans-serif;
+	font-weight: 100;
+  	cursor: crosshair !important;
+  	-webkit-transition: all .25s ease-in-out;
+  	-moz-transition: all .25s ease-in-out;
+  	-o-transition: all .25s ease-in-out;
+  	transition: all .25s ease-in-out;
+ 
+}
+
+body {
+	
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+
+}
+
+.container {
+	position: absolute;
+	width: 25%;
+	height: 25%;
+	overflow: hidden;
+	background-color: white;
+	z-index: 99;
+	-webkit-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	
+}
+
+.box {
+	position: absolute;
+	left: -50%;
+	top: -50%;
+	width: 20%;
+	height: 20%;
+	background-color: white;
+	border: 1px solid;
+	z-index: -999;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+  	-webkit-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	text-shadow: 0px 12px 2px rgba(150, 150, 150, 1);
+ }
+
+ .smallerbox {
+ 	position: absolute;
+ 	width: 5%;
+ 	height: 5%;
+ 	background-color: white;
+ 	border: 1px solid;
+	z-index: -999;
+	-webkit-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 12px 5px 0px rgba(0,0,0,0.25);
+	z-index: 999;
+	
+ }
+
+ .word {
+ 	position: absolute;
+ 	left: 50%;
+ 	top: 50%;
+ 	font-size: 10;
+ 	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+ }
+
+ .face {
+ 	position: absolute;;
+ 	width: auto;
+ 	height: 60%;
+ 	left: 50%;
+ 	top: 50%;
+ 	font-size: 10;
+ 	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+ }
+
+</style>
+
+</head>
+	
+	<body>
+
+		<div class="container">
+			<div class="smallerbox"></div>
+			<img class="face" src="marble.svg">
+		</div>
+	
+
+		<div class="box"></div>
+
+		<img class="face" src="marble.svg">
+
+	</body>
+</html>

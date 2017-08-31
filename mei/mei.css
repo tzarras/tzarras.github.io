@@ -1,5 +1,5 @@
-::-moz-selection { none; }
-::selection { none; }
+::-moz-selection { background: yellow; }
+::selection { background: yellow; }
 
 ::-webkit-scrollbar { 
     display: none; 
@@ -29,12 +29,6 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none; 
-     -khtml-user-select: none; 
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none;
 }
 
 .container {
@@ -63,7 +57,7 @@ body, html {
 	overflow: scroll;
 	position: absolute;
     left: 0;
-    top: 73;
+    top: 64;
     bottom: 0;
     right: 0%;
     min-width: 20%;
@@ -88,14 +82,14 @@ body, html {
 }
 
 .box {
-	border-bottom: 2px solid black;
+	border-bottom: 1px solid black;
 	cursor: pointer;
 	position: relative;
 	width: 100%;
 	left: 0;
 	top: 0;
 	float: top;
-	height: 71px;
+	height: 64px;
 	background-color: #fdfdfd;
 	overflow: hidden;
 	-webkit-transition: height .7s ease-in-out;
@@ -127,24 +121,23 @@ body, html {
 }
 
 .title,.year {
-	font-family: u;
+	font-family: ar;
 	font-weight: normal;
+	font-size: 25;
+	max-width: 90%;
 }
 
 .title {
 	position: relative;
 	float: bottom;
 	margin-top: 0;
-	font-size: 28;
 	line-height: 1;
-	max-width: 95%;
 }
 
 .year {
 	padding-top: 0;
-	margin-top: -23px;
+	margin-top: -18px;
 	display: block;
-	font-size: 28;
 }
 
 .text,.bigimage {
@@ -153,7 +146,7 @@ body, html {
 	text-align: center;
 	font-size: 10;
 	cursor: pointer;
-	top: 71px;
+	top: 64px;
 	cursor: pointer;
 	filter:blur(1px);
 }
@@ -207,6 +200,7 @@ a:hover {
 	font-size: 36;
 	font-weight: 100;
 	max-width: 95%;
+	cursor: grab;
 }
 
 #T {
