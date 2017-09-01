@@ -1,167 +1,311 @@
 
+<!-- 
+
+Made by me, 
+
+.-. .-. .  .   .-. .-. .-. .-. .-. .-.   
+ |   |  |\/|    /  |-| |(  |(  |-| `-.   !
+ '  `-' '  `   `-' ` ' ' ' ' ' ` ' `-'   
+
+ -->
+
+
 <html>
+
 <head>
-<meta charset="UTF-8"/>
-<meta name="timzarras" content="my other site" />
-<title>timzarras.me</title>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<script src="jquery.powertip.js" type="text/javascript"></script>
-<style type="text/css">
+<meta charset="UTF-8">
+<meta name="description" content="Website of Tim Zarras.">
+<meta name="keywords" content="Tim Zarras, Creative Direction, Industrial Design, Furniture Design, Web Design, RISD">
+<meta name="viewport" content="width=device-width">
+<link rel="icon" type="image/png" href="!.png">
+<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<link rel="stylesheet" type="text/css" href="tim3.css">
+<title> Tim Zarras </title>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script src="jquery.fullPage.js"></script>
 
-	body{
-        position: absolute;
-		font-family: sans-serif;
-		font-weight: 100;
-		font-size: 30;
-		color: black;
-		line-height: 1;
-		top: 10%;
-		left: 5%;
-		width: 700px;
-		overflow: scroll;
-        margin-bottom: 100px;
-	}
-	.link {
-		color: black;
-	}
-	.link:hover{
-		color:#6699FF;
-
-	}
-	.zz {
-	display:none;
-	position: fixed;
-	padding: 5px;
-	background-color: #fcf9c9;
-	z-index: 99999;
-	font-size: 12;
-	color:black;
-	width:150px;
-	line-height: 1.2;
-	}
-	
-</style>
-<script type="text/javascript">
-$(document).ready(function() {
-$(function() {
-    		var moveLeft = 0;
-    		var moveDown = 0;
-    		$('.link').hover(function(e) {
-   
-        	var target = '#' + ($(this).attr('data-popbox'));
-         
-        	$(target).show();
-        	moveLeft = $(this).outerWidth();
-        	moveDown = ($(target).outerHeight() / 2);
-    		}, function() {
-        	var target = '#' + ($(this).attr('data-popbox'));
-        	$(target).hide();
-    		});
- 
-    		$('.link').mousemove(function(e) {
-        	var target = '#' + ($(this).attr('data-popbox'));
-         
-        	leftD = e.pageX + parseInt(moveLeft);
-        	maxRight = leftD + $(target).outerWidth();
-        	windowLeft = $(window).width() - 200;
-        	windowRight = 0;
-        	maxLeft = e.pageX - (parseInt(moveLeft) + $(target).outerWidth() + 5);
-         
-        	if(maxRight > windowLeft && maxLeft > windowRight)
-        	{	
-            leftD = maxLeft;
-        	}
-     
-        	topD = e.pageY - parseInt(moveDown);
-        	maxBottom = parseInt(e.pageY + parseInt(moveDown) + 20);
-        	windowBottom = parseInt(parseInt($(document).scrollTop()) + parseInt($(window).height()));
-        	maxTop = topD;
-        	windowTop = parseInt($(document).scrollTop());
-        	if(maxBottom > windowBottom)
-        	{
-            topD = windowBottom - $(target).outerHeight() - 20;
-        	} else if(maxTop < windowTop){
-            topD = windowTop + 20;
-        }	
-     
-        $(target).css('top', topD).css('left', leftD);
-     
-    		});
-			});
-});
-	</script>
 </head>
-<body>
-hello! <br><br>
-<A data-popbox="pop2" class= "link" id="link" href ="/3" >/3</A> <br>
-<div id="pop2" class="zz">
-Simple animation. Use it as a screen-saver. I don't know.
-</div>
-<A data-popbox="pop3" class= "link" id="link" href ="/hello" >/hello</A> <br>
-<div id="pop3" class="zz">
-(Try to) click the flying "hello?"
-</div>
-<A data-popbox="pop4" class= "link" id="link" href ="/space" >/space</A> <br>
-<div id="pop4" class="zz">
-Explore this small section of the universe on the internet. Still in progess.
-</div>
-<A data-popbox="pop5" class= "link" id="link" href ="/extraordinary" >/extraordinary</A><br>
-<div id="pop5" class="zz">
-Prototype for a site that would be a place for people to discuss extraordinary found objects by pinning notes. Still in progess.
-</div>
-<A data-popbox="pop6" class= "link" id="link" href ="/collage" >/collage</A> <br>
-<div id="pop6" class="zz">
-Click and drag out the scraps to collage.
-</div>
-<A data-popbox="pop7" class= "link" id="link" href ="/flower" >/flower</A>
-<div id="pop7" class="zz">
-"very pretty"...
-</div><br>
-<A data-popbox="pop8" class= "link" id="link" href ="/mac" >/mac</A>
-<div id="pop8" class="zz">
-Self-explanatory
-</div><br>
-<A data-popbox="pop9" class= "link" id="link" href ="/1" >/1</A>
-<div id="pop9" class="zz">
-Another simple animation. 
-</div><br>
-<A data-popbox="pop10" class= "link" id="link" href ="/2" >/2</A>
-<div id="pop10" class="zz">
-Yet another simple animation.
-</div><br>
-<A data-popbox="pop11" class= "link" id="link" href ="/2_1" >/2_1</A>
-<div id="pop11" class="zz">
-Variation of /2.
-</div><br>
-<A data-popbox="pop12" class= "link" id="link" href ="/4" >/4</A>
-<div id="pop12" class="zz">
-Look ! Right there !
-</div><br>
-<A data-popbox="pop13" class= "link" id="link" href ="/VRa" >/VRa</A>
-<div id="pop13" class="zz">
-This big wall is meant to be viewed on a mobile device with Google Cardboard. This is my first exploration of a Cardboard compatible website.
-</div><br>
-<A data-popbox="pop14" class= "link" id="link" href ="/dogme95" >/dogme95</A>
-<div id="pop14" class="zz">
-Interaction inspired partly by the Dogme 95 film movement.
-</div><br>
-<A data-popbox="pop15" class= "link" id="link" href ="/test" >/test</A>
-<div id="pop15" class="zz">
-Just a test. Does it feel good?
-</div><br><br>
 
-<A class= "link" id="link" href ="https://vimeo.com/user15886159" >videos</A> <br>
-<A class= "link" id="link" href ="https://soundcloud.com/timzarras" >music and sounds</A> <br>
-<A data-popbox="pop100" class= "link" id="link" href ="/sketchbookbits" >sketchbook bits</A> <br>
-<div id="pop100" class="zz">
-Selected sketchbook pages from 2014 onward.<br><br>Click and drag the images out of the stack. Click again to enlarge and minimize.
+<body>
+
+
+
+<div id="fullpage">
+  <div class="section">
+    <p class="name"> Tim Zarras </p>
+    <p class="about"> About </p>
+    <p class="about" style="display:none">X</p>
+    <div class="aboutme">
+    <div class="hey">X</div>
+      <p> 
+          Tim Zarras is a recent graduate (2016) of the Furniture Design Department at the Rhode Island School of Design.<br><br> His focus encompasses furniture and objects, web design and development, creative direction, and imagery.<br><br>
+          He is currently available for freelance.<br><br>
+          He has an <a class="me" href="http://www.instagram.com/timzarras/">Instagram</a> as well.<br><br>
+          Say hello : <a class="me" href="mailto:tzarras@alumni.risd.edu">tzarras@alumni.risd.edu</a><br><br>
+          <i class="copyright"> Website built by Tim Zarras </i><br>
+          <i class="copyright"> © Tim Zarras 2016. All Rights Reserved</i><br>
+          <i class="copyright">All project photos taken by Tim Zarras</i>
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <p class="title">meilenehan.com</p>
+    <p class="date">2017</p>
+    <div class="imgbox">
+    	<img class="mei" src="images/meisite/1.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/2.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/3.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/4.jpg">
+    	<img class="mei" style="display:none" src="images/meisite/5.jpg">
+      <img class="mei" style="display:none" src="images/meisite/mei.gif">
+    </div>
+      <p class="info">
+        I worked with Mei to design and develop a portfolio site. <br><br> 
+
+        <a class="me" href="/temporary/mei">meilenehan.com</a>        
+      </p>
+  </div>
+  <div class="section">
+    <p class="title">Senior Show Poster</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
+      <img class="poster" src="images/poster/combo2.png">
+    </div>
+      <p class="info">
+        For our senior show, I created two promotional posters which were hung next to eachother around campus. The posters aimed to acknowledge and represent the complexity, versatility, and actuality of the Department of Furniture Design in 2016 at RISD. <br><br>
+
+        In one case, people simply know the department for our explorations in materials and making- often tied with a playful nickname "Furn." On the other hand, the work we produce is often involved with much larger ideas and practices. The department name begins to feel like a poor representation of its actual output.<br><br>
+
+        Inkjet on newsprint.         
+      </p>
+  </div>
+
+  <div class="section">
+    <p class="title">Table</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
+      <img class="table"src="images/table/composition1.png">
+      <img style="display:none" class="table" src="images/table/empty.png">
+    </div>
+      <p class="info">
+        This table was inspired by communal architectural plans and the idea of microcosms that exist in architecture.<br><br>
+
+        Through the architectural framing / cropping of the table plane view, a sense of magnitude is added to the object. A person must physically move around and look through the table to access or view an object that may be hidden. The experience of the object is similar to that of one which is much larger.<br><br>  
+
+        Similar to larger communal architectural spaces, the center space highlights and frames a public work of this scale, which may be a vase of flowers or bowl of fruit. <br><br>
+
+        Constructed in all oaks.<br><br>
+      </p>
+  </div>
+
+  <div class="section">
+    <p class="date">2016</p>
+    <p class="title">Display Objects</p>
+    <div class="imgbox">
+      <img class="displayobjects" src="images/displayobjects/couple2.png">
+      <img class="displayobjects" style="display:none"src="images/displayobjects/couple1 copy.png">
+      <img class="displayobjects" style="display:none" src="images/displayobjects/toweldisplay1.png">
+      <img class="displayobjects" style="display:none" src="images/displayobjects/cupspace2.png">
+    </div>
+      <p class="info">
+        These armatures are for the organization and framing of collections, areas of collection, and objects that inevitably decorate people's homes.<br><br>
+
+        These are advanced concept models. Imagined in nylon - actually made of machined plywood, and PLA.
+      </p>
+  </div>
+
+  <div class="section">
+    <p class="date">2015</p>
+    <p class="title">GH 1</p>
+    <div class="imgbox">
+      <img class="heater" src="images/heater/10.png">
+      <img class="heater" style="display:none" src="images/heater/2.png">
+      <img class="heater" style="display:none" src="images/heater/3.png">
+      <img class="heater" style="display:none" src="images/heater/1.png">
+      <img class="heater" style="display:none" src="images/heater/4.png">
+      <img class="heater" style="display:none" src="images/heater/6.png">
+    </div>
+      <p class="info">
+        A form study / concept for a column heater. The heater is intended for gallery spaces as a supplementary solution to basic climate control issues - that of which are crucial in preserving artworks. Understanding the distant way in which viewers would acknowledge and approach it - when placed in a space, I liked the idea that it may also behave as an artwork. <br><br>
+        The heater can be stored vertically to take up minimal space.
+        <br><br>
+        As the precursor to my Senior Degree Project, this project served as a vehicle to raise questions on the use and perception of objects / products analogous to our experience of artworks.  
+        <br><br> This is an advanced concept model. Imagined in steel and polypropylene - actually made of machined plywood, and PLA.
+      </p>
+  </div>
+
+  <div class="section">
+    <p class="title">t 21 i</p>
+    <p class="date">2015</p>
+    <div class="imgbox">
+      <img class="t21i"src="images/t21i/t21i.png">
+      <img class="t21i"  style="display:none" src="images/t21i/quarterview.png">
+      <img class="t21i" id="custom"  style="display:none" src="images/t21i/connectioncloseup2.png">
+    </div>
+      <p class="info">
+        t 21 i is an excersise in working with a semi-fictional context in mind and looking elsewhere for furniture forms- in hopes of bringing you elsewhere.
+        <br><br> This is an advanced concept model. Imagined in polypropylene, ABS, steel and nylon - actually made of machined poplar, ABS, steel and nylon.
+      </p>
+    </div>
+
+  <div class="section">
+    <p class="date">2015</p>
+    <p class="title">Garden Chair</p>
+    <div class="imgbox">
+      <img class="chair" src="images/gardenchair/gardenchair.png">
+      <img class="chair" style="display:none" src="images/gardenchair/scene.jpg">
+    </div>
+      <p class="info">
+        A garden chair that's meant to co-exist amongst the lawn / yard landscape. The reserved form of the chair suggests that it is equally as much a tool for sitting, as it is for any other form of use in this setting.
+        Legs and back are constructed as solid bent laminations.
+        <br><br> Dyed ash.
+      </p>
+  </div>
+
+  <div class="section">
+    <p class="title">Renderings</p>
+    <p class="date">2016</p>
+    <div class="imgbox">
+      <img class="renderings"src="images/rendering/roof.jpg">
+      <img class="renderings" style="display:none" src="images/rendering/coneandcan.jpg">
+      <img class="renderings" style="display:none" src="images/rendering/2.jpg">
+      <img class="renderings" style="display:none" src="images/rendering/glassobject.jpg">
+      <img class="renderings" style="display:none" src="images/rendering/postit.jpg">
+    </div>
+      <p class="info">
+        Assorted concept renderings. <br><br>
+        Modeled in Solidworks and rendered in Keyshot.<br><br>       
+      </p>
+  </div>
+
 </div>
-<A data-popbox="pop101" class= "link" id="link" href ="/untitled1" >Untitled 1</A> <br>
-<div id="pop101" class="zz">
-Tiny series of casual collages. 
-</div>
+
+  <p class="click">Click</p>
+	
+	<!-- buttons -->
+
+	<p class="hide" style="display:none"> Image </p>
+    <p class="hide"> Text </p>
+     <img class="down" src="down.svg">
+    <img class="up" src="up.svg">
+
+    <!-- menu -->
+
+    <ul id="menu">
+        <li data-menuanchor="2"><a href="#2">1</a></li>
+        <li data-menuanchor="3"><a href="#3">2</a></li>
+        <li data-menuanchor="4"><a href="#4">3</a></li>
+        <li data-menuanchor="5"><a href="#5">4</a></li>
+        <li data-menuanchor="6"><a href="#6">5</a></li>
+        <li data-menuanchor="7"><a href="#7">6</a></li>
+        <li data-menuanchor="8"><a href="#8">7</a></li>
+        <li data-menuanchor="8"><a href="#9">8</a></li>
+     </ul>
 
 
 </body>
+
+<script type="text/javascript">
+    
+    $(document).ready(function() {
+
+        $("html").hide().fadeIn(900);
+
+      // iniate fullpage.js//
+
+        $('#fullpage').fullpage({
+            sectionsColor: ['none', 'none', 'none', 'none', 'none'],
+            anchors: ['1','2','3','4','5','6','7','8'],
+            scrollingSpeed: 600,
+            autoScrolling: false,
+            scrollOverflow: false,
+            continuousScrolling: false
+        });
+
+
+        // arrows //
+
+        $('.up').click(function(){
+          $.fn.fullpage.moveSectionUp();
+        });
+
+        $('.down').click(function(){
+          $.fn.fullpage.moveSectionDown();
+        });
+
+        $(".aboutme").hide();
+
+        // hide and show images //
+
+        $(".hide").click(function(e){
+            $(".hide,.imgbox").toggle();
+
+        });
+
+        // cycle images of the same class //
+
+        $('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB,.mei').click(function() {
+          $(this).hide();
+            var next = $(this).next();
+            console.log(next.length);
+            if (next.length == 0)
+            next = $(this).parent().find('.renderings,.table,.displayobjects,.heater,.t21i,.chair,.connection,.fan,.TAB,.mei').first();
+            next.show();
+        });
+
+        //  //
+
+        $('.about').click(function(){
+          $(".aboutme").show();  
+        });
+
+        $('.hey').click(function(){
+          $(".aboutme").hide();  
+        });
+
+        // click tip //
+
+        $(".imgbox > img").mouseover(function() {
+          $(".click").show();
+        }).mouseout(function() {
+          $(".click").hide();
+        });
+
+        // just to be sure // 
+
+        if ($(window).width() < 737) {
+          $(".click").remove();
+          $("img").click(function() {
+            $(".click").remove();
+          });
+        }
+
+
+        // hide some stuff in landscape on mobile  //
+
+    		$(window).on("orientationchange",function(){
+    	    	if(window.orientation == 0) {
+    	      		$("img").css("width","80%");
+    	    	} else {
+    	      		$("img").css("width","60%");
+    	    	}
+      		});
+
+
+    });
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-70350403-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+
 </html>

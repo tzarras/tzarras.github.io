@@ -29,6 +29,7 @@ body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    background-color: #fdfdfd;
 }
 
 .container {
@@ -57,7 +58,7 @@ body, html {
 	overflow: scroll;
 	position: absolute;
     left: 0;
-    top: 64;
+    top: 57;
     bottom: 0;
     right: 0%;
     min-width: 20%;
@@ -89,7 +90,7 @@ body, html {
 	left: 0;
 	top: 0;
 	float: top;
-	height: 64px;
+	height: 57px;
 	background-color: #fdfdfd;
 	overflow: hidden;
 	-webkit-transition: height .7s ease-in-out;
@@ -123,7 +124,7 @@ body, html {
 .title,.year {
 	font-family: ar;
 	font-weight: normal;
-	font-size: 25;
+	font-size: 22;
 	max-width: 90%;
 }
 
@@ -136,7 +137,7 @@ body, html {
 
 .year {
 	padding-top: 0;
-	margin-top: -18px;
+	margin-top: -16px;
 	display: block;
 }
 
@@ -146,37 +147,30 @@ body, html {
 	text-align: center;
 	font-size: 10;
 	cursor: pointer;
-	top: 64px;
+	top: 62px;
 	cursor: pointer;
-	filter:blur(1px);
+	width: 40px;
+	height: 20px;
+	background-color: black;
+	border-radius: 50%;
 }
 
 .text:hover,.bigimage:hover{
-	opacity: .7;
+	background-color: #93ec2c;
 }
 
 .bigimage {
 	position: absolute;
 	float: right;
 	font-family: helvetica;
-	left: 0px;
-	z-index: 998;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 40px 40px 0 0;
-	border-color: #06db55 transparent transparent transparent;		
+	left: 4px;
+	z-index: 999;
 }
 
 .text {
 	position: absolute;
-	right: 1px;
+	right: 5px;
 	z-index: 999 !important;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 40px 40px 0;
-	border-color: transparent #01ff70 transparent transparent;
 }
 
 a,a:visited {
@@ -197,7 +191,7 @@ a:hover {
 	font-family: ar;
 	margin-top: 30px;
 	float: top;
-	font-size: 36;
+	font-size: 34;
 	font-weight: 100;
 	max-width: 95%;
 	cursor: grab;
@@ -210,7 +204,7 @@ a:hover {
 	font-family: ar;
 	margin-top: 30px;
 	float: top;
-	font-size: 36;
+	font-size: 34;
 	font-weight: 100;
 	max-width: 95%;
 	-webkit-transition: all .1s;
@@ -302,15 +296,18 @@ a:hover {
 	font-family: ar;
 	font-size: 16;
 	position: fixed;
-	top: 80px;
-	right: 22%;
+	top: 72px;
+	right: 25%;
 	margin: 0;
 	animation: bounce 1s infinite alternate;
   	-webkit-animation: bounce 1s infinite alternate;
   	animation-timing-function: ease-in;
+  		transform:translate(0%,-50%);
+  	-webkit-transform:translate(0%,-50%);
 }
 
 .mei {
+
 	display: none;
 	position: fixed;
 	top: 5%;
@@ -357,11 +354,12 @@ a:hover {
 
 .z {
 	position: absolute;
+	font-size: 22;
 }
 
 .works {
 	position: absolute;
-	top: 5%;
+	top: 2%;
 }
 
 .works > ul > li > a {
